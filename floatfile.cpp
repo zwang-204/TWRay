@@ -1,0 +1,53 @@
+#include "floatfile.h"
+#include <ctype.h>
+#include <stdlib.h>
+#include <iostream>
+namespace pbrt {
+
+bool ReadFloatFile(const char *filename, std::vector<float> *values) {
+    FILE *f = fopen(filename, "r");
+    if (!f) {
+        // Error("Unable to open file \"%s\"", filename);
+        std::cerr << "Unable to open file WZT" << std::endl;
+        return false;
+    }
+
+    int c;
+    bool inNumber = false;
+    char curNumber[32];
+    int curNumberPos = 0;
+    int lineNumber = 1;
+    while ((c = getc(f)) != EOF) {
+        if (c == '\n') ++lineNumber;
+        if (inNumber) {
+            CHECK_LT(curNumberPos, (int)sizeof(curNumber))
+                << "Overflowed buffer for parsing number in file: " << filename
+                << ", at line " << lineNumber;
+            if (isdigit(c) || c == '.' || c == 'e' || c == '-' || c == '+')
+                curNumber[curNumberPos++] = c;
+            else {
+                curNumber[curNumberPos++] = '\0';
+                values->push_back(atof(curNumber));
+                inNumber = false;
+                curNumberPos = 0;
+            }
+        } else {
+            if (isdigit(c) || c == '.' || c == '-' || c == '+') {
+                inNumber = true;
+                curNumber[curNumberPos++] = c;
+            } else if (c == '#') {
+                while ((c = getc(f)) != '\n' && c != EOF)
+                    ;
+                ++lineNumber;
+            } else if (!isspace(c)) {
+                //Warning("Unexpected text found at line %d of float file \"%s\"",
+                //        lineNumber, filename);
+                std::clog << "Unexpected text found at line of float file WZT" << std::endl;
+            }
+        }
+    }
+    fclose(f);
+    return true;
+}
+
+}  // namespace pbrt
