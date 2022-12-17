@@ -72,6 +72,8 @@ class CoefficientSpectrum;
 class RGBSpectrum;
 class SampledSpectrum;
 struct Quaternion;
+class Material;
+
 // #ifdef PBRT_SAMPLED_SPECTRUM
 //   typedef SampledSpectrum Spectrum;
 // #else

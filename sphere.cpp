@@ -110,13 +110,10 @@ bool Sphere::Intersect(const Ray &r, float *tHit, SurfaceInteraction *isect,
     Vector3f pError = gamma(5) * Abs((Vector3f)pHit);
 
     // Initialize _SurfaceInteraction_ from parametric information
-    //*isect = (*ObjectToWorld)(SurfaceInteraction(pHit, pError, Point2f(u, v),
-    //                                             -ray.d, dpdu, dpdv, dndu, dndv,
-    //                                             ray.time, this));
+    *isect = (*ObjectToWorld)(SurfaceInteraction(pHit, pError, Point2f(u, v),
+                                                -ray.d, dpdu, dpdv, dndu, dndv,
+                                                ray.time, this));
 
-    *isect = (SurfaceInteraction(pHit, pError, Point2f(u, v),
-                                                 -ray.d, dpdu, dpdv, dndu, dndv,
-                                                 ray.time, this));
     // Update _tHit_ for quadric intersection
     *tHit = (float)tShapeHit;
     return true;

@@ -24,26 +24,21 @@ class Material {
             const Ray& r_in, const SurfaceInteraction& si, scatter_record& srec
         ) const = 0;
 
-        // virtual float scattering_pdf(
-        //     const Ray& r_in, const SurfaceInteraction& si, const Ray& scattered
-        // ) const = 0;
-
         virtual Spectrum emitted(
                 const Ray& r_in, const SurfaceInteraction& si, float u, float v, const Point3f& p
-            ) const = 0;
+            ) const {
+             return Spectrum(0.0);
+        }
         
 };
 
 class lambertian : public Material {
     public:
-        lambertian(const Spectrum& a);
-        lambertian(shared_ptr<texture> a);
+        lambertian(const Spectrum& a) : albedo(make_shared<solid_color>(a)) {};
+        lambertian(shared_ptr<texture> a) : albedo(a) {};
 
         virtual bool scatter(
             const Ray& r_in, const SurfaceInteraction& si, scatter_record& srec
-        ) const;
-        virtual float scattering_pdf(
-            const Ray& r_in, const SurfaceInteraction& si, const Ray& scattered
         ) const;
 
     public:

@@ -16,6 +16,7 @@
 #include "parallel.h"
 
 #include <iostream>
+#include <map>
 
 using namespace pbrt;
 
@@ -51,27 +52,62 @@ Spectrum ray_color(
                             * ray_color(scattered, background, world, depth-1);
 }
 
-std::shared_ptr<Primitive> test_sphere() {
-
-    std::vector<std::shared_ptr<Primitive>> objects;
-    std::shared_ptr<Primitive> accel;
+std::shared_ptr<GeometricPrimitive> add_light_sphere(Vector3f pos, float radius, float lightCol[3]){
     ParamSet paramSet;
+    auto ptr = std::make_unique<float[]>(1);
+    ptr[0] = radius;
+    paramSet.AddFloat("radius", std::move(ptr));
 
-    float lightCol[3] = {15, 15, 15};
     Spectrum lightSpec(0.0);
 
     Transform *ObjectToWorld = new Transform;
     Transform *WorldToObject = new Transform;
 
-    *WorldToObject = Translate(Vector3f(190,90,190));
-    *ObjectToWorld = Translate(-Vector3f(190,90,190));
+    *WorldToObject = Translate(-pos);
+    *ObjectToWorld = Translate(pos);
 
     std::shared_ptr<Material> light = make_shared<diffuse_light>(lightSpec.FromRGB(lightCol));
     std::shared_ptr<Shape> sphere = CreateSphereShape(ObjectToWorld, WorldToObject, false, paramSet);
     std::shared_ptr<GeometricPrimitive> light_sphere = make_shared<GeometricPrimitive>(sphere, light);
+
+    return light_sphere;
+}
+
+std::shared_ptr<GeometricPrimitive> add_sphere(Vector3f pos, float radius, float color[3]){
+    ParamSet paramSet;
+    auto ptr = std::make_unique<float[]>(1);
+    ptr[0] = radius;
+    paramSet.AddFloat("radius", std::move(ptr));
+
+    Spectrum rgbSpec(0.0);
+
+    Transform *ObjectToWorld = new Transform;
+    Transform *WorldToObject = new Transform;
+
+    *WorldToObject = Translate(-pos);
+    *ObjectToWorld = Translate(pos);
+
+    std::shared_ptr<Material> mat = make_shared<lambertian>(rgbSpec.FromRGB(color));
+    std::shared_ptr<Shape> sphere = CreateSphereShape(ObjectToWorld, WorldToObject, false, paramSet);
+    std::shared_ptr<GeometricPrimitive> sphere_geo = make_shared<GeometricPrimitive>(sphere, mat);
+
+    return sphere_geo;
+}
+
+std::shared_ptr<Primitive> test_sphere() {
+
+    std::vector<std::shared_ptr<Primitive>> objects;
+    std::shared_ptr<Primitive> accel;
+    ParamSet paramSet;
+    float lightCol[3] = {15, 15, 15};
+    auto light_sphere = add_light_sphere(Vector3f(0, 0, 0), 100.0, lightCol);
+    float color[3] = {1.0, 0.0, 0.0};
+    auto sphere1 = add_sphere(Vector3f(0, 0, -150), 50.0, color);
+
     objects.push_back(light_sphere);
+    objects.push_back(sphere1);
     std::shared_ptr<Primitive> bvh = CreateBVHAccelerator(objects, paramSet);
-    return objects.at(0);
+    return bvh;
 }
 
 int main(){
@@ -81,9 +117,9 @@ int main(){
 
     // Image
     auto aspect_ratio = 1.0;
-    int image_width = 200;
+    int image_width = 500;
     int image_height = static_cast<int>(image_width / aspect_ratio);
-    int samples_per_pixel = 30;
+    int samples_per_pixel = 50;
     const int max_depth = 5;
 
     // World
@@ -95,8 +131,8 @@ int main(){
 
     // Camera
 
-    Point3f lookfrom(278, 278, -800);
-    Point3f lookat(278,278,0);
+    Point3f lookfrom(0, 0, -800);
+    Point3f lookat(0, 0, 0);
     Vector3f vup(0,1,0);
     auto dist_to_focus = 10.0;
     auto aperture = 0.0;
