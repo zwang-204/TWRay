@@ -51,45 +51,6 @@ Spectrum ray_color(
                             * ray_color(scattered, background, world, depth-1);
 }
 
-// hittable_list cornell_box() {
-//     hittable_list objects;
-
-//     float redCol[3] = {.65, .05, .05};
-//     Spectrum redSpec(0.0);
-//     float whiteCol[3] = {.73, .73, .73};
-//     Spectrum whiteSpec(0.0);
-//     float greenCol[3] = {.12, .45, .15};
-//     Spectrum greenSpec(0.0);
-//     float lightCol[3] = {15, 15, 15};
-//     Spectrum lightSpec(0.0);
-
-//     auto red = make_shared<lambertian>(redSpec.FromRGB(redCol));
-//     auto white = make_shared<lambertian>(whiteSpec.FromRGB(whiteCol));
-//     auto green = make_shared<lambertian>(greenSpec.FromRGB(greenCol));
-//     auto light = make_shared<diffuse_light>(lightSpec.FromRGB(lightCol));
-
-//     objects.add(make_shared<yz_rect>(0, 555, 0, 555, 555, green));
-//     objects.add(make_shared<yz_rect>(0, 555, 0, 555, 0, red));
-//     objects.add(make_shared<flip_face>(make_shared<xz_rect>(213, 343, 227, 332, 554, light)));
-//     objects.add(make_shared<xz_rect>(0, 555, 0, 555, 0, white));
-//     objects.add(make_shared<xz_rect>(0, 555, 0, 555, 555, white));
-//     objects.add(make_shared<xy_rect>(0, 555, 0, 555, 555, white));
-    
-//     shared_ptr<hittable> box1 = make_shared<box>(Point3f(0,0,0), Point3f(165,330,165), white);
-//     box1 = make_shared<rotate_y>(box1, 15);
-//     box1 = make_shared<translate>(box1, Vector3f(265,0,295));
-//     objects.add(box1);
-
-//     shared_ptr<hittable> box2 = make_shared<box>(Point3f(0,0,0), Point3f(165,165,165), white);
-//     box2 = make_shared<rotate_y>(box2, -18);
-//     box2 = make_shared<translate>(box2, Vector3f(130,0,65));
-//     objects.add(box2);
-//     //auto glass = make_shared<dielectric>(1.5);
-//     //objects.add(make_shared<cylinder>(90, point3(190,90,190),0, 90, 2*pi, red));
-
-//     return objects;
-// }
-
 std::shared_ptr<Primitive> test_sphere() {
 
     std::vector<std::shared_ptr<Primitive>> objects;
@@ -99,11 +60,14 @@ std::shared_ptr<Primitive> test_sphere() {
     float lightCol[3] = {15, 15, 15};
     Spectrum lightSpec(0.0);
 
-    Transform ObjectToWorld;
-    Transform WorldToObject;
+    Transform *ObjectToWorld = new Transform;
+    Transform *WorldToObject = new Transform;
+
+    *WorldToObject = Translate(Vector3f(190,90,190));
+    *ObjectToWorld = Translate(-Vector3f(190,90,190));
 
     std::shared_ptr<Material> light = make_shared<diffuse_light>(lightSpec.FromRGB(lightCol));
-    std::shared_ptr<Shape> sphere = CreateSphereShape(&ObjectToWorld, &WorldToObject, false, paramSet);
+    std::shared_ptr<Shape> sphere = CreateSphereShape(ObjectToWorld, WorldToObject, false, paramSet);
     std::shared_ptr<GeometricPrimitive> light_sphere = make_shared<GeometricPrimitive>(sphere, light);
     objects.push_back(light_sphere);
     std::shared_ptr<Primitive> bvh = CreateBVHAccelerator(objects, paramSet);
@@ -128,7 +92,7 @@ int main(){
     // size_t start = 0;
     // size_t end = world.objects.size() -1 ;
     // auto world_bvh = bvh_node(world.objects, start, end);
-    
+
     // Camera
 
     Point3f lookfrom(278, 278, -800);

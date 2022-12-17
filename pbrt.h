@@ -163,6 +163,10 @@ inline float BitsToFloat(uint32_t ui) {
     return f;
 }
 
+inline float gamma(int n) {
+    return (n * MachineEpsilon) / (1 - n * MachineEpsilon);
+}
+
 inline float NextFloatUp(float v) {
     // Handle infinity and negative zero for _NextFloatUp()_
     if (std::isinf(v) && v > 0.) return v;

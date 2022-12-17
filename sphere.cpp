@@ -18,8 +18,7 @@ bool Sphere::Intersect(const Ray &r, float *tHit, SurfaceInteraction *isect,
     Point3f pHit;
     // Transform _Ray_ to object space
     Vector3f oErr, dErr;
-    // Ray ray = (*WorldToObject)(r, &oErr, &dErr);
-    Ray ray = r;
+    Ray ray = (*WorldToObject)(r, &oErr, &dErr);
     // Compute quadratic sphere coefficients
 
     // Initialize _EFloat_ ray coordinate values
@@ -108,7 +107,7 @@ bool Sphere::Intersect(const Ray &r, float *tHit, SurfaceInteraction *isect,
                              (f * F - g * E) * invEGF2 * dpdv);
 
     // Compute error bounds for sphere intersection
-    Vector3f pError = tgamma(5) * Abs((Vector3f)pHit);
+    Vector3f pError = gamma(5) * Abs((Vector3f)pHit);
 
     // Initialize _SurfaceInteraction_ from parametric information
     //*isect = (*ObjectToWorld)(SurfaceInteraction(pHit, pError, Point2f(u, v),
@@ -190,7 +189,7 @@ Interaction Sphere::Sample(const Point2f &u, float *pdf) const {
     if (reverseOrientation) it.n *= -1;
     // Reproject _pObj_ to sphere surface and compute _pObjError_
     pObj *= radius / Distance(pObj, Point3f(0, 0, 0));
-    Vector3f pObjError = tgamma(5) * Abs((Vector3f)pObj);
+    Vector3f pObjError = gamma(5) * Abs((Vector3f)pObj);
     it.p = (*ObjectToWorld)(pObj, pObjError, &it.pError);
     *pdf = 1 / Area();
     return it;
@@ -257,7 +256,7 @@ Interaction Sphere::Sample(const Interaction &ref, const Point2f &u,
     // Return _Interaction_ for sampled point on sphere
     Interaction it;
     it.p = pWorld;
-    it.pError = tgamma(5) * Abs((Vector3f)pWorld);
+    it.pError = gamma(5) * Abs((Vector3f)pWorld);
     it.n = Normal3f(nWorld);
     if (reverseOrientation) it.n *= -1;
 

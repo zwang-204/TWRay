@@ -251,7 +251,7 @@ inline Point3<T> Transform::operator()(const Point3<T> &p,
                  std::abs(m.m[1][2] * z) + std::abs(m.m[1][3]));
     T zAbsSum = (std::abs(m.m[2][0] * x) + std::abs(m.m[2][1] * y) +
                  std::abs(m.m[2][2] * z) + std::abs(m.m[2][3]));
-    *pError = tgamma(3) * Vector3<T>(xAbsSum, yAbsSum, zAbsSum);
+    *pError = gamma(3) * Vector3<T>(xAbsSum, yAbsSum, zAbsSum);
     CHECK_NE(wp, 0);
     if (wp == 1)
         return Point3<T>(xp, yp, zp);
@@ -269,22 +269,22 @@ inline Point3<T> Transform::operator()(const Point3<T> &pt,
     T zp = (m.m[2][0] * x + m.m[2][1] * y) + (m.m[2][2] * z + m.m[2][3]);
     T wp = (m.m[3][0] * x + m.m[3][1] * y) + (m.m[3][2] * z + m.m[3][3]);
     absError->x =
-        (tgamma(3) + (T)1) *
+        (gamma(3) + (T)1) *
             (std::abs(m.m[0][0]) * ptError.x + std::abs(m.m[0][1]) * ptError.y +
              std::abs(m.m[0][2]) * ptError.z) +
-        tgamma(3) * (std::abs(m.m[0][0] * x) + std::abs(m.m[0][1] * y) +
+        gamma(3) * (std::abs(m.m[0][0] * x) + std::abs(m.m[0][1] * y) +
                     std::abs(m.m[0][2] * z) + std::abs(m.m[0][3]));
     absError->y =
-        (tgamma(3) + (T)1) *
+        (gamma(3) + (T)1) *
             (std::abs(m.m[1][0]) * ptError.x + std::abs(m.m[1][1]) * ptError.y +
              std::abs(m.m[1][2]) * ptError.z) +
-        tgamma(3) * (std::abs(m.m[1][0] * x) + std::abs(m.m[1][1] * y) +
+        gamma(3) * (std::abs(m.m[1][0] * x) + std::abs(m.m[1][1] * y) +
                     std::abs(m.m[1][2] * z) + std::abs(m.m[1][3]));
     absError->z =
-        (tgamma(3) + (T)1) *
+        (gamma(3) + (T)1) *
             (std::abs(m.m[2][0]) * ptError.x + std::abs(m.m[2][1]) * ptError.y +
              std::abs(m.m[2][2]) * ptError.z) +
-        tgamma(3) * (std::abs(m.m[2][0] * x) + std::abs(m.m[2][1] * y) +
+        gamma(3) * (std::abs(m.m[2][0] * x) + std::abs(m.m[2][1] * y) +
                     std::abs(m.m[2][2] * z) + std::abs(m.m[2][3]));
     CHECK_NE(wp, 0);
     if (wp == 1.)
@@ -298,13 +298,13 @@ inline Vector3<T> Transform::operator()(const Vector3<T> &v,
                                         Vector3<T> *absError) const {
     T x = v.x, y = v.y, z = v.z;
     absError->x =
-        tgamma(3) * (std::abs(m.m[0][0] * v.x) + std::abs(m.m[0][1] * v.y) +
+        gamma(3) * (std::abs(m.m[0][0] * v.x) + std::abs(m.m[0][1] * v.y) +
                     std::abs(m.m[0][2] * v.z));
     absError->y =
-        tgamma(3) * (std::abs(m.m[1][0] * v.x) + std::abs(m.m[1][1] * v.y) +
+        gamma(3) * (std::abs(m.m[1][0] * v.x) + std::abs(m.m[1][1] * v.y) +
                     std::abs(m.m[1][2] * v.z));
     absError->z =
-        tgamma(3) * (std::abs(m.m[2][0] * v.x) + std::abs(m.m[2][1] * v.y) +
+        gamma(3) * (std::abs(m.m[2][0] * v.x) + std::abs(m.m[2][1] * v.y) +
                     std::abs(m.m[2][2] * v.z));
     return Vector3<T>(m.m[0][0] * x + m.m[0][1] * y + m.m[0][2] * z,
                       m.m[1][0] * x + m.m[1][1] * y + m.m[1][2] * z,
@@ -317,22 +317,22 @@ inline Vector3<T> Transform::operator()(const Vector3<T> &v,
                                         Vector3<T> *absError) const {
     T x = v.x, y = v.y, z = v.z;
     absError->x =
-        (tgamma(3) + (T)1) *
+        (gamma(3) + (T)1) *
             (std::abs(m.m[0][0]) * vError.x + std::abs(m.m[0][1]) * vError.y +
              std::abs(m.m[0][2]) * vError.z) +
-        tgamma(3) * (std::abs(m.m[0][0] * v.x) + std::abs(m.m[0][1] * v.y) +
+        gamma(3) * (std::abs(m.m[0][0] * v.x) + std::abs(m.m[0][1] * v.y) +
                     std::abs(m.m[0][2] * v.z));
     absError->y =
-        (tgamma(3) + (T)1) *
+        (gamma(3) + (T)1) *
             (std::abs(m.m[1][0]) * vError.x + std::abs(m.m[1][1]) * vError.y +
              std::abs(m.m[1][2]) * vError.z) +
-        tgamma(3) * (std::abs(m.m[1][0] * v.x) + std::abs(m.m[1][1] * v.y) +
+        gamma(3) * (std::abs(m.m[1][0] * v.x) + std::abs(m.m[1][1] * v.y) +
                     std::abs(m.m[1][2] * v.z));
     absError->z =
-        (tgamma(3) + (T)1) *
+        (gamma(3) + (T)1) *
             (std::abs(m.m[2][0]) * vError.x + std::abs(m.m[2][1]) * vError.y +
              std::abs(m.m[2][2]) * vError.z) +
-        tgamma(3) * (std::abs(m.m[2][0] * v.x) + std::abs(m.m[2][1] * v.y) +
+        gamma(3) * (std::abs(m.m[2][0] * v.x) + std::abs(m.m[2][1] * v.y) +
                     std::abs(m.m[2][2] * v.z));
     return Vector3<T>(m.m[0][0] * x + m.m[0][1] * y + m.m[0][2] * z,
                       m.m[1][0] * x + m.m[1][1] * y + m.m[1][2] * z,
