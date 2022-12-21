@@ -23,6 +23,7 @@
                 "primitive.cpp",
                 "quaternion.cpp",
                 "sampling.cpp",
+                "scene.cpp",
                 "shape.cpp",
                 "sobolmatrices.cpp",
                 "spectrum.cpp",

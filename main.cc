@@ -11,6 +11,7 @@
 #include "camera.h"
 #include "bvh.h"
 #include "sphere.h"
+#include "scene.h"
 
 #include "stats.h"
 #include "parallel.h"
@@ -23,14 +24,14 @@ using namespace pbrt;
 Spectrum ray_color(
     const Ray& r,
     const Spectrum& background, 
-    const shared_ptr<Primitive>& world,
+    Scene& scene,
     int depth
 ){
     SurfaceInteraction si;
 
     if (depth <= 0)
         return Spectrum(0.0);
-    if (!world->Intersect(r, &si)) 
+    if (!scene.Intersect(r, &si)) 
         return background;
     scatter_record srec;
     Spectrum emitted = si.primitive->GetMaterial()->emitted(r, si, si.uv[0], si.uv[1], si.p);
@@ -39,7 +40,7 @@ Spectrum ray_color(
 
     if (srec.is_specular) {
         return srec.attenuation
-            * ray_color(srec.specular_ray, background, world, depth-1);
+            * ray_color(srec.specular_ray, background, scene, depth-1);
     }
     
     // auto light_ptr = make_shared<hittable_pdf>(lights, si.p);
@@ -49,7 +50,7 @@ Spectrum ray_color(
     // auto pdf_val = p.value(scattered.direction());
 
     return emitted + srec.attenuation * si.primitive->GetMaterial()->scatter(r, si, srec)
-                            * ray_color(scattered, background, world, depth-1);
+                            * ray_color(scattered, background, scene, depth-1);
 }
 
 std::shared_ptr<GeometricPrimitive> add_light_sphere(Vector3f pos, float radius, float lightCol[3]){
@@ -124,10 +125,9 @@ int main(){
 
     // World
     // hittable_list world = cornell_box();
-    std::shared_ptr<Primitive> world = test_sphere();
-    // size_t start = 0;
-    // size_t end = world.objects.size() -1 ;
-    // auto world_bvh = bvh_node(world.objects, start, end);
+    std::shared_ptr<Primitive> objects = test_sphere();
+    std::vector<std::shared_ptr<Light>> lights;
+    Scene scene(objects, lights);
 
     // Camera
 
@@ -151,7 +151,7 @@ int main(){
                 auto u = (i + pbrt::random_float()) / (image_width - 1);
                 auto v = (j + pbrt::random_float()) / (image_height - 1);
                 Ray r = cam.get_ray(u, v);
-                pixel_color += ray_color(r, background, world, max_depth);
+                pixel_color += ray_color(r, background, scene, max_depth);
             }
             write_color(std::cout, pixel_color, samples_per_pixel);
         }
