@@ -11,6 +11,7 @@ namespace pbrt{
 class texture {
     public:
         virtual Spectrum value(float u, float v, const Point3f& p) const = 0;
+        return 0;
 };
 
 class solid_color : public texture {
