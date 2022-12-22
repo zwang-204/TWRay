@@ -10,7 +10,8 @@
 #include "primitive.h"
 #include "camera.h"
 #include "bvh.h"
-#include "sphere.h"
+#include "shapes/sphere.h"
+#include "shapes/plymesh.h"
 #include "scene.h"
 
 #include "stats.h"
@@ -64,8 +65,8 @@ std::shared_ptr<GeometricPrimitive> add_light_sphere(Vector3f pos, float radius,
     Transform *ObjectToWorld = new Transform;
     Transform *WorldToObject = new Transform;
 
-    *WorldToObject = Translate(-pos);
     *ObjectToWorld = Translate(pos);
+    *WorldToObject = Inverse(*ObjectToWorld);
 
     std::shared_ptr<Material> light = make_shared<diffuse_light>(lightSpec.FromRGB(lightCol));
     std::shared_ptr<Shape> sphere = CreateSphereShape(ObjectToWorld, WorldToObject, false, paramSet);
@@ -95,6 +96,35 @@ std::shared_ptr<GeometricPrimitive> add_sphere(Vector3f pos, float radius, float
     return sphere_geo;
 }
 
+std::vector<std::shared_ptr<Primitive>> add_stanford_bunny(Vector3f pos, float color[3]){
+    ParamSet paramSet;
+    std::vector<std::shared_ptr<Primitive>> prims;
+
+    auto filename = std::make_unique<std::string[]>(1);
+    filename[0] = std::string("ply/bunny.ply");
+    paramSet.AddString("filename", std::move(filename), 1);
+
+    std::map<std::string, std::shared_ptr<Texture<float>>> *floatTextures;
+
+    Spectrum rgbSpec(0.0);
+
+    Transform *ObjectToWorld = new Transform;
+    Transform *WorldToObject = new Transform;
+
+    *ObjectToWorld = Translate(pos) * Scale(1000, 1000, 1000);
+    *WorldToObject = Inverse(*ObjectToWorld);
+
+    std::shared_ptr<Material> mat = make_shared<lambertian>(rgbSpec.FromRGB(color));
+    std::vector<std::shared_ptr<Shape>> shapes = CreatePLYMesh(ObjectToWorld, WorldToObject, false, paramSet, floatTextures);
+
+    for (auto s : shapes) {
+        prims.push_back(
+            std::make_shared<GeometricPrimitive>(s, mat));
+    }
+
+    return prims;
+}
+
 std::shared_ptr<Primitive> test_sphere() {
 
     std::vector<std::shared_ptr<Primitive>> objects;
@@ -104,9 +134,10 @@ std::shared_ptr<Primitive> test_sphere() {
     auto light_sphere = add_light_sphere(Vector3f(0, 0, 0), 100.0, lightCol);
     float color[3] = {1.0, 0.0, 0.0};
     auto sphere1 = add_sphere(Vector3f(0, 0, -150), 50.0, color);
-
+    auto bunny = add_stanford_bunny(Vector3f(0, -150, -300), color);
     objects.push_back(light_sphere);
-    objects.push_back(sphere1);
+    //objects.push_back(sphere1);
+    objects.insert(objects.end(), bunny.begin(), bunny.end());
     std::shared_ptr<Primitive> bvh = CreateBVHAccelerator(objects, paramSet);
     return bvh;
 }
@@ -120,7 +151,7 @@ int main(){
     auto aspect_ratio = 1.0;
     int image_width = 500;
     int image_height = static_cast<int>(image_width / aspect_ratio);
-    int samples_per_pixel = 50;
+    int samples_per_pixel = 30;
     const int max_depth = 5;
 
     // World
