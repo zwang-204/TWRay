@@ -6,13 +6,14 @@
 #include "color.h"
 
 #include "paramset.h"
-//#include "box.h"
 #include "primitive.h"
 #include "camera.h"
+#include "cameras/perspective.h"
 #include "bvh.h"
 #include "shapes/sphere.h"
 #include "shapes/plymesh.h"
 #include "scene.h"
+#include "filters/box.h"
 
 #include "stats.h"
 #include "parallel.h"
@@ -162,6 +163,7 @@ int main(){
 
     // Camera
 
+    ParamSet emptyParam;
     Point3f lookfrom(0, 0, -800);
     Point3f lookat(0, 0, 0);
     Vector3f vup(0,1,0);
@@ -169,8 +171,23 @@ int main(){
     auto aperture = 0.0;
     Spectrum background(0.0);
 
-    camera cam(lookfrom, lookat, vup, 40.0, aspect_ratio, aperture, dist_to_focus, 0.0, 1.0);
+    Transform *camToWorld = new Transform;
+    *camToWorld = Translate(Vector3f(0, 0, -800));
+
+    AnimatedTransform animatedCam2World(camToWorld, 0, camToWorld, 1.0);
+    std::unique_ptr<Filter> boxFilter = std::unique_ptr<Filter>(CreateBoxFilter(emptyParam));
     
+    ParamSet filmParam;
+    auto x_res = std::make_unique<int[]>(1);
+    x_res[0] = image_width;
+    auto y_res = std::make_unique<int[]>(1);
+    y_res[0] = image_height;
+    filmParam.AddInt("xresolution", std::move(x_res), 1);
+    filmParam.AddInt("yresolution", std::move(y_res), 1);
+    Film *film = CreateFilm(filmParam, std::move(boxFilter));
+
+    PerspectiveCamera *cam = CreatePerspectiveCamera(emptyParam, animatedCam2World, film);
+    std::unique_ptr<Sampler> tileSampler;
     // Render
     std::cout<<"P3/n"<< image_width << ' ' << image_height << "\n255\n";
     
@@ -179,9 +196,14 @@ int main(){
         for(int i = 0; i<image_width; i++){
             Spectrum pixel_color(0.0);
             for (int s = 0; s < samples_per_pixel; ++s){
-                auto u = (i + pbrt::random_float()) / (image_width - 1);
-                auto v = (j + pbrt::random_float()) / (image_height - 1);
-                Ray r = cam.get_ray(u, v);
+                // auto u = (i + pbrt::random_float()) / (image_width - 1);
+                // auto v = (j + pbrt::random_float()) / (image_height - 1);
+                CameraSample cs;
+                cs.pFilm = Point2f(i, j) + Point2f(pbrt::random_float(), pbrt::random_float());
+                cs.time = pbrt::random_float();
+                cs.pLens = Point2f(pbrt::random_float(),pbrt::random_float());
+                Ray r;
+                cam->GenerateRay(cs, &r);
                 pixel_color += ray_color(r, background, scene, max_depth);
             }
             write_color(std::cout, pixel_color, samples_per_pixel);

@@ -1,5 +1,5 @@
-#ifndef PBRT_CORE_PROGRESSREPORTER_H
-#define PBRT_CORE_PROGRESSREPORTER_H
+#ifndef PROGRESSREPORTER_H
+#define PROGRESSREPORTER_H
 
 // core/progressreporter.h*
 #include "pbrt.h"

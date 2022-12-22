@@ -59,6 +59,21 @@ class AreaLight : public Light {
     virtual Spectrum L(const Interaction &intr, const Vector3f &w) const = 0;
 };
 
+class VisibilityTester {
+  public:
+    VisibilityTester() {}
+    // VisibilityTester Public Methods
+    VisibilityTester(const Interaction &p0, const Interaction &p1)
+        : p0(p0), p1(p1) {}
+    const Interaction &P0() const { return p0; }
+    const Interaction &P1() const { return p1; }
+    bool Unoccluded(const Scene &scene) const;
+    Spectrum Tr(const Scene &scene, Sampler &sampler) const;
+
+  private:
+    Interaction p0, p1;
+};
+
 }  // namespace pbrt
 
 #endif  // PBRT_CORE_LIGHT_H

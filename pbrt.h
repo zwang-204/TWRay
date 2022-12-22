@@ -40,6 +40,7 @@ const float PiOver2 = 1.57079632679489661923;
 const float PiOver4 = 0.78539816339744830961;
 const float Sqrt2 = 1.41421356237309504880;
 
+#define ALLOCA(TYPE, COUNT) (TYPE *) alloca((COUNT) * sizeof(TYPE))
 
 namespace pbrt {
 
@@ -75,6 +76,13 @@ class CoefficientSpectrum;
 class RGBSpectrum;
 class SampledSpectrum;
 typedef RGBSpectrum Spectrum;
+class Camera;
+struct CameraSample;
+class ProjectiveCamera;
+class Sampler;
+class Filter;
+class Film;
+class FilmTile;
 struct Quaternion;
 class Material;
 template <typename T>
