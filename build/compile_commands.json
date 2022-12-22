@@ -1,7 +1,7 @@
 [
 {
   "directory": "/Users/Security/TA/C++Tutorial/RayTracing/Scripts/build",
-  "command": "/usr/bin/clang++  -std=c++11 -Wno-deprecated-register -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++11 -o CMakeFiles/RT.dir/main.cc.o -c /Users/Security/TA/C++Tutorial/RayTracing/Scripts/main.cc",
+  "command": "/usr/bin/clang++ -I../.. -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -o CMakeFiles/RayTracing.dir/main.cc.o -c /Users/Security/TA/C++Tutorial/RayTracing/Scripts/main.cc",
   "file": "/Users/Security/TA/C++Tutorial/RayTracing/Scripts/main.cc"
 }
 ]

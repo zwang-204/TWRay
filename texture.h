@@ -1,55 +1,117 @@
 #ifndef TEXTURE_H
 #define TEXTURE_H
 
+// core/texture.h*
 #include "pbrt.h"
 #include "spectrum.h"
+#include "geometry.h"
+#include "transform.h"
+#include "memory.h"
 
-#include <iostream>
+#include "textures/constant.h"
 
-namespace pbrt{
+namespace pbrt {
 
-class texture {
-    public:
-        virtual Spectrum value(float u, float v, const Point3f& p) const = 0;
-        return 0;
+// Texture Declarations
+class TextureMapping2D {
+  public:
+    // TextureMapping2D Interface
+    virtual ~TextureMapping2D();
+    virtual Point2f Map(const SurfaceInteraction &si, Vector2f *dstdx,
+                        Vector2f *dstdy) const = 0;
 };
 
-class solid_color : public texture {
-    public:
-        solid_color() {}
-        solid_color(Spectrum c) : color_value(c) {}
-        
-        virtual Spectrum value(float u, float v, const Point3f& p) const override {
-            return color_value;
-        }
-    
-    private:
-        Spectrum color_value;
+class UVMapping2D : public TextureMapping2D {
+  public:
+    // UVMapping2D Public Methods
+    UVMapping2D(float su = 1, float sv = 1, float du = 0, float dv = 0);
+    Point2f Map(const SurfaceInteraction &si, Vector2f *dstdx,
+                Vector2f *dstdy) const;
+
+  private:
+    const float su, sv, du, dv;
 };
 
-// class checker_texture : public texture {
-//     public:
-//         checker_texture() {}
+class SphericalMapping2D : public TextureMapping2D {
+  public:
+    // SphericalMapping2D Public Methods
+    SphericalMapping2D(const Transform &WorldToTexture)
+        : WorldToTexture(WorldToTexture) {}
+    Point2f Map(const SurfaceInteraction &si, Vector2f *dstdx,
+                Vector2f *dstdy) const;
 
-//         checker_texture(shared_ptr<texture> _even, shared_ptr<texture> _odd)
-//             : even(_even), odd(_odd) {}
+  private:
+    Point2f sphere(const Point3f &P) const;
+    const Transform WorldToTexture;
+};
 
-//         checker_texture(Vector3f c1, Vector3f c2)
-//             : even(make_shared<solid_color>(c1)), odd(make_shared<solid_color>(c2)) {}
-        
-//         virtual Spectrum value(float u, float v, const Point3f& p) const override {
-//             auto sines = sin(10*p.x) * sin(10*p.y) * sin(10*p.z);
-//             if (sines < 0)
-//                 return odd->value(u, v, p);
-//             else
-//                 return even->value(u, v, p);
-//         }
-    
-//     public:
-//         shared_ptr<texture> odd;
-//         shared_ptr<texture> even;
-// };
+class CylindricalMapping2D : public TextureMapping2D {
+  public:
+    // CylindricalMapping2D Public Methods
+    CylindricalMapping2D(const Transform &WorldToTexture)
+        : WorldToTexture(WorldToTexture) {}
+    Point2f Map(const SurfaceInteraction &si, Vector2f *dstdx,
+                Vector2f *dstdy) const;
 
-}
+  private:
+    // CylindricalMapping2D Private Methods
+    Point2f cylinder(const Point3f &p) const {
+        Vector3f vec = Normalize(WorldToTexture(p) - Point3f(0, 0, 0));
+        return Point2f((Pi + std::atan2(vec.y, vec.x)) * Inv2Pi, vec.z);
+    }
+    const Transform WorldToTexture;
+};
 
-#endif
+class PlanarMapping2D : public TextureMapping2D {
+  public:
+    // PlanarMapping2D Public Methods
+    Point2f Map(const SurfaceInteraction &si, Vector2f *dstdx,
+                Vector2f *dstdy) const;
+    PlanarMapping2D(const Vector3f &vs, const Vector3f &vt, float ds = 0,
+                    float dt = 0)
+        : vs(vs), vt(vt), ds(ds), dt(dt) {}
+
+  private:
+    const Vector3f vs, vt;
+    const float ds, dt;
+};
+
+class TextureMapping3D {
+  public:
+    // TextureMapping3D Interface
+    virtual ~TextureMapping3D();
+    virtual Point3f Map(const SurfaceInteraction &si, Vector3f *dpdx,
+                        Vector3f *dpdy) const = 0;
+};
+
+class IdentityMapping3D : public TextureMapping3D {
+  public:
+    // IdentityMapping3D Public Methods
+    IdentityMapping3D(const Transform &WorldToTexture)
+        : WorldToTexture(WorldToTexture) {}
+    Point3f Map(const SurfaceInteraction &si, Vector3f *dpdx,
+                Vector3f *dpdy) const;
+
+  private:
+    const Transform WorldToTexture;
+};
+
+template <typename T>
+class Texture {
+  public:
+    // Texture Interface
+    virtual T Evaluate(const SurfaceInteraction &) const = 0;
+    virtual ~Texture() {}
+};
+
+float Lanczos(float, float tau = 2);
+float Noise(float x, float y = .5f, float z = .5f);
+float Noise(const Point3f &p);
+float FBm(const Point3f &p, const Vector3f &dpdx, const Vector3f &dpdy,
+          float omega, int octaves);
+float Turbulence(const Point3f &p, const Vector3f &dpdx, const Vector3f &dpdy,
+                 float omega, int octaves);
+
+}  // namespace pbrt
+
+#endif  // PBRT_CORE_TEXTURE_H

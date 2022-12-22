@@ -5,7 +5,8 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "/Users/Security/TA/C++Tutorial/RayTracing/Scripts/**",
-                "/Users/Security/TA/C++Tutorial/RayTracing/Scripts/lights/**"
+                "/Users/Security/TA/C++Tutorial/RayTracing/Scripts/lights/**",
+                "/Users/Security/TA/C++Tutorial/RayTracing/Scripts/textures/**"
             ],
             "defines": [],
             "macFrameworkPath": [],

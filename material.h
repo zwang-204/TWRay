@@ -34,21 +34,21 @@ class Material {
 
 class lambertian : public Material {
     public:
-        lambertian(const Spectrum& a) : albedo(make_shared<solid_color>(a)) {};
-        lambertian(shared_ptr<texture> a) : albedo(a) {};
+        lambertian(const Spectrum& a) : albedo(make_shared<ConstantTexture<Spectrum>>(a)) {};
+        lambertian(shared_ptr<ConstantTexture<Spectrum>> a) : albedo(a) {};
 
         virtual bool scatter(
             const Ray& r_in, const SurfaceInteraction& si, scatter_record& srec
         ) const;
 
     public:
-        shared_ptr<texture> albedo;
+        shared_ptr<ConstantTexture<Spectrum>> albedo;
 };
 
 class diffuse_light : public Material {
     public:
-        diffuse_light(shared_ptr<texture> a) : emit(a) {}
-        diffuse_light(Spectrum c) : emit(make_shared<solid_color>(c)) {}
+        diffuse_light(shared_ptr<ConstantTexture<Spectrum>> a) : emit(a) {}
+        diffuse_light(Spectrum c) : emit(make_shared<ConstantTexture<Spectrum>>(c)) {}
 
         virtual bool scatter(
             const Ray& r_in, const SurfaceInteraction& si, scatter_record& srec
@@ -58,7 +58,7 @@ class diffuse_light : public Material {
 
         virtual Spectrum emitted(const Ray& r_in, const SurfaceInteraction& si, float u, float v, 
             const Point3f& p) const override {
-            return emit->value(u, v, p);
+            return emit->Evaluate(si);
             // if (si.front_face)
             //     return emit->value(u, v, p);
             // else
@@ -66,7 +66,7 @@ class diffuse_light : public Material {
         }
 
     public:
-        shared_ptr<texture> emit;
+        shared_ptr<ConstantTexture<Spectrum>> emit;
 };
 
 // class metal : public material {

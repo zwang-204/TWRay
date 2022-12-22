@@ -59,35 +59,36 @@ build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
 build edit_cache: phony CMakeFiles/edit_cache.util
 
 # =============================================================================
-# Object build statements for EXECUTABLE target RT
+# Object build statements for EXECUTABLE target RayTracing
 
 
 #############################################
-# Order-only phony target for RT
+# Order-only phony target for RayTracing
 
-build cmake_object_order_depends_target_RT: phony || CMakeFiles/RT.dir
+build cmake_object_order_depends_target_RayTracing: phony || CMakeFiles/RayTracing.dir
 
-build CMakeFiles/RT.dir/main.cc.o: CXX_COMPILER__RT_Debug ../main.cc || cmake_object_order_depends_target_RT
-  DEP_FILE = CMakeFiles/RT.dir/main.cc.o.d
-  FLAGS = -std=c++11 -Wno-deprecated-register -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++11
-  OBJECT_DIR = CMakeFiles/RT.dir
-  OBJECT_FILE_DIR = CMakeFiles/RT.dir
+build CMakeFiles/RayTracing.dir/main.cc.o: CXX_COMPILER__RayTracing_Debug ../main.cc || cmake_object_order_depends_target_RayTracing
+  DEP_FILE = CMakeFiles/RayTracing.dir/main.cc.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  INCLUDES = -I../..
+  OBJECT_DIR = CMakeFiles/RayTracing.dir
+  OBJECT_FILE_DIR = CMakeFiles/RayTracing.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target RT
+# Link build statements for EXECUTABLE target RayTracing
 
 
 #############################################
-# Link the executable RT
+# Link the executable RayTracing
 
-build RT: CXX_EXECUTABLE_LINKER__RT_Debug CMakeFiles/RT.dir/main.cc.o
-  FLAGS = -std=c++11 -Wno-deprecated-register -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
-  OBJECT_DIR = CMakeFiles/RT.dir
+build RayTracing: CXX_EXECUTABLE_LINKER__RayTracing_Debug CMakeFiles/RayTracing.dir/main.cc.o
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+  OBJECT_DIR = CMakeFiles/RayTracing.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = RT
-  TARGET_PDB = RT.dbg
+  TARGET_FILE = RayTracing
+  TARGET_PDB = RayTracing.dbg
 
 # =============================================================================
 # Target aliases.
@@ -100,7 +101,7 @@ build RT: CXX_EXECUTABLE_LINKER__RT_Debug CMakeFiles/RT.dir/main.cc.o
 #############################################
 # Folder: /Users/Security/TA/C++Tutorial/RayTracing/Scripts/build
 
-build all: phony RT
+build all: phony RayTracing
 
 # =============================================================================
 # Built-in targets

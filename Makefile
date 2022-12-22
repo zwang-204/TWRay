@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named RT
+# Target rules for targets named RayTracing
 
 # Build rule for target.
-RT: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 RT
-.PHONY : RT
+RayTracing: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 RayTracing
+.PHONY : RayTracing
 
 # fast build rule for target.
-RT/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/RT.dir/build.make CMakeFiles/RT.dir/build
-.PHONY : RT/fast
+RayTracing/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/build
+.PHONY : RayTracing/fast
 
 main.o: main.cc.o
 .PHONY : main.o
 
 # target to build an object file
 main.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/RT.dir/build.make CMakeFiles/RT.dir/main.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/main.cc.o
 .PHONY : main.cc.o
 
 main.i: main.cc.i
@@ -142,7 +142,7 @@ main.i: main.cc.i
 
 # target to preprocess a source file
 main.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/RT.dir/build.make CMakeFiles/RT.dir/main.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/main.cc.i
 .PHONY : main.cc.i
 
 main.s: main.cc.s
@@ -150,7 +150,7 @@ main.s: main.cc.s
 
 # target to generate assembly for a file
 main.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/RT.dir/build.make CMakeFiles/RT.dir/main.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/main.cc.s
 .PHONY : main.cc.s
 
 # Help Target
@@ -161,7 +161,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... RT"
+	@echo "... RayTracing"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

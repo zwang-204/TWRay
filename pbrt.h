@@ -11,6 +11,9 @@
 #include <alloca.h> 
 #include <stdint.h>
 
+#include "error.h"
+
+
 using std::shared_ptr;
 using std::make_shared;
 using std::sqrt;
@@ -71,15 +74,11 @@ template <int nSpectrumSamples>
 class CoefficientSpectrum;
 class RGBSpectrum;
 class SampledSpectrum;
+typedef RGBSpectrum Spectrum;
 struct Quaternion;
 class Material;
-
-// #ifdef PBRT_SAMPLED_SPECTRUM
-//   typedef SampledSpectrum Spectrum;
-// #else
-//   typedef RGBSpectrum Spectrum;
-// #endif
-typedef RGBSpectrum Spectrum;
+template <typename T>
+class Texture;
 
 
 struct Options {
@@ -99,6 +98,12 @@ struct Options {
 };
 
 extern Options PbrtOptions;
+class TextureParams;
+
+inline float Log2(float x) {
+    const float invLog2 = 1.442695040888963387004650940071;
+    return std::log(x) * invLog2;
+}
 
 template <typename T>
 inline bool isNaN(const T x) {
