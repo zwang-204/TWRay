@@ -13,6 +13,7 @@
 #include "cameras/perspective.h"
 #include "lights/point.h"
 #include "lights/diffuse.h"
+#include "lights/distant.h"
 #include "samplers/random.h"
 #include "shapes/sphere.h"
 #include "shapes/plymesh.h"
@@ -118,6 +119,31 @@ std::shared_ptr<Primitive> basic_disk(Vector3f pos, float radius){
     return std::make_shared<GeometricPrimitive>(disk, std::shared_ptr<Material>(mat), area);
 }
 
+std::shared_ptr<Light> add_point_light(Vector3f pos, float intensity){
+    ParamSet lightParams;
+    Transform light2World;
+    light2World = Translate(pos);
+    std::unique_ptr<float[]> in(new float[3]);
+    for (int j = 0; j < 3; ++j) in[j] = intensity;
+    lightParams.AddRGBSpectrum("I", std::move(in), 3);
+    auto pointLight = CreatePointLight(light2World, NULL, lightParams);
+    return pointLight;
+}
+
+std::shared_ptr<Light> add_distant_light(Point3f dir, float intensity){
+    ParamSet lightParams;
+    Transform light2World;
+    light2World = Translate(Vector3f(0,0,0));
+    std::unique_ptr<float[]> in(new float[3]);
+    for (int j = 0; j < 3; ++j) in[j] = intensity;
+    lightParams.AddRGBSpectrum("I", std::move(in), 3);
+    std::unique_ptr<Point3f[]> to(new Point3f[1]);
+    to[0] = dir;
+    lightParams.AddPoint3f("to", std::move(to), 1);
+    auto pointLight = CreateDistantLight(light2World, lightParams);
+    return pointLight;
+}
+
 int main(){
 
     ParallelInit();
@@ -140,30 +166,32 @@ int main(){
     objects.push_back(disk);
 
     // Point light
-    ParamSet lightParams;
-    Transform light2World;
-    light2World = Translate(Vector3f(0, 40, 1700));
-    std::unique_ptr<float[]> intensity(new float[3]);
-    for (int j = 0; j < 3; ++j) intensity[j] = 100000.0;
-    lightParams.AddRGBSpectrum("I", std::move(intensity), 3);
-    auto pointLight = CreatePointLight(light2World, NULL, lightParams);
+    // auto pointLight = add_point_light(Vector3f(0, 40, 1700), 100000.0);
     //lights.push_back(pointLight);
 
+    // Directional light
+    shared_ptr<Light> dirLight = add_distant_light(Point3f(0, 0, -1), 10);
+    lights.push_back(dirLight);
+
     // Area light
+    Transform light2World;
+    Vector3f pos = Vector3f(0, -10, 170);
+    light2World = Translate(pos);
     ParamSet areaLightParams;
     std::unique_ptr<float[]> Le(new float[3]);
     for (int j = 0; j < 3; ++j) Le[j] = 20.0;
     areaLightParams.AddRGBSpectrum("L", std::move(Le), 3);
-    auto areaLightShape = sphere_shape(Vector3f(0, -10, 170), 10);
+    auto areaLightShape = sphere_shape(pos, 10);
     auto areaLight = CreateDiffuseAreaLight(light2World, NULL, areaLightParams, areaLightShape);
-    lights.push_back(areaLight);
+    //lights.push_back(areaLight);
+
     auto floatTextures1 = std::make_shared<FloatTextureMap>();
     auto spectrumTextures1 = std::make_shared<SpectrumTextureMap>();
     TextureParams texParams(areaLightParams, areaLightParams, 
         *floatTextures1, *spectrumTextures1);
     Material *mat = CreateMatteMaterial(texParams);
     auto areaPrim = std::make_shared<GeometricPrimitive>(areaLightShape, std::shared_ptr<Material>(mat), areaLight);
-    objects.push_back(areaPrim);
+    //objects.push_back(areaPrim);
 
     // Create BVH
     ParamSet bvhParams;
@@ -195,11 +223,15 @@ int main(){
     PerspectiveCamera *cam = CreatePerspectiveCamera(emptyParam, animatedCam2World, film, NULL);
     std::shared_ptr<const Camera> camera(cam);
     // Sampler
-    ParamSet empty;
-    auto sampler = CreateRandomSampler(empty);
+    ParamSet sampParams;
+    auto samplePerPixel = std::make_unique<int[]>(1);
+    samplePerPixel[0] = 20;
+    sampParams.AddInt("pixelsamples", std::move(samplePerPixel), 1);
+    auto sampler = CreateRandomSampler(sampParams);
 
     // Integrator
-    auto integrator = CreatePathIntegrator(empty, std::shared_ptr<Sampler>(sampler), camera);
+    ParamSet integParams;
+    auto integrator = CreatePathIntegrator(integParams, std::shared_ptr<Sampler>(sampler), camera);
 
     // // Render
 

@@ -47,6 +47,7 @@ add_library(pbrt STATIC
   light.cpp
   lightdistrib.cpp
   lights/diffuse.cpp
+  lights/distant.cpp
   lights/point.cpp
   lowdiscrepancy.cpp
   material.cpp
