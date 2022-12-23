@@ -827,13 +827,11 @@ class Bounds2iIterator : public std::forward_iterator_tag {
 class Ray {
   public:
     // Ray Public Methods
-    Ray() : tMax(Infinity), time(0.f) {}
+    Ray() : tMax(Infinity), time(0.f), medium(nullptr) {}
     Ray(const Point3f &o, const Vector3f &d, float tMax = Infinity,
-        float time = 0.f)
-        : o(o), d(d), tMax(tMax), time(time) {}
+        float time = 0.f, const Medium *medium = nullptr)
+        : o(o), d(d), tMax(tMax), time(time), medium(medium) {}
     Point3f operator()(float t) const { return o + d * t; }
-    Point3f origin() const {return o;}
-    Vector3f direction() const {return d;}
     bool HasNaNs() const { return (o.HasNaNs() || d.HasNaNs() || isNaN(tMax)); }
     friend std::ostream &operator<<(std::ostream &os, const Ray &r) {
         os << "[o=" << r.o << ", d=" << r.d << ", tMax=" << r.tMax
@@ -846,6 +844,7 @@ class Ray {
     Vector3f d;
     mutable float tMax;
     float time;
+    const Medium *medium;
 };
 
 class RayDifferential : public Ray {
@@ -853,8 +852,8 @@ class RayDifferential : public Ray {
     // RayDifferential Public Methods
     RayDifferential() { hasDifferentials = false; }
     RayDifferential(const Point3f &o, const Vector3f &d, float tMax = Infinity,
-                    float time = 0.f)
-        : Ray(o, d, tMax, time) {
+                    float time = 0.f, const Medium *medium = nullptr)
+        : Ray(o, d, tMax, time, medium) {
         hasDifferentials = false;
     }
     RayDifferential(const Ray &ray) : Ray(ray) { hasDifferentials = false; }

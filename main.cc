@@ -146,7 +146,7 @@ int main(){
     std::unique_ptr<float[]> intensity(new float[3]);
     for (int j = 0; j < 3; ++j) intensity[j] = 100000.0;
     lightParams.AddRGBSpectrum("I", std::move(intensity), 3);
-    auto pointLight = CreatePointLight(light2World, lightParams);
+    auto pointLight = CreatePointLight(light2World, NULL, lightParams);
     //lights.push_back(pointLight);
 
     // Area light
@@ -155,7 +155,7 @@ int main(){
     for (int j = 0; j < 3; ++j) Le[j] = 20.0;
     areaLightParams.AddRGBSpectrum("L", std::move(Le), 3);
     auto areaLightShape = sphere_shape(Vector3f(0, -10, 170), 10);
-    auto areaLight = CreateDiffuseAreaLight(light2World, areaLightParams, areaLightShape);
+    auto areaLight = CreateDiffuseAreaLight(light2World, NULL, areaLightParams, areaLightShape);
     lights.push_back(areaLight);
     auto floatTextures1 = std::make_shared<FloatTextureMap>();
     auto spectrumTextures1 = std::make_shared<SpectrumTextureMap>();
@@ -192,7 +192,7 @@ int main(){
     filmParam.AddInt("yresolution", std::move(y_res), 1);
     Film *film = CreateFilm(filmParam, std::move(boxFilter));
 
-    PerspectiveCamera *cam = CreatePerspectiveCamera(emptyParam, animatedCam2World, film);
+    PerspectiveCamera *cam = CreatePerspectiveCamera(emptyParam, animatedCam2World, film, NULL);
     std::shared_ptr<const Camera> camera(cam);
     // Sampler
     ParamSet empty;

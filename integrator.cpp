@@ -90,29 +90,21 @@ Spectrum EstimateDirect(const Interaction &it, const Point2f &uScattering,
     if (lightPdf > 0 && !Li.IsBlack()) {
         // Compute BSDF or phase function's value for light sample
         Spectrum f;
-        // if (it.IsSurfaceInteraction()) {
-        //     // Evaluate BSDF for light sampling strategy
-        //     const SurfaceInteraction &isect = (const SurfaceInteraction &)it;
-        //     f = isect.bsdf->f(isect.wo, wi, bsdfFlags) *
-        //         AbsDot(wi, isect.shading.n);
-        //     scatteringPdf = isect.bsdf->Pdf(isect.wo, wi, bsdfFlags);
-        //     VLOG(2) << "  surf f*dot :" << f << ", scatteringPdf: " << scatteringPdf;
-        // } else {
-        //     // Evaluate phase function for light sampling strategy
-        //     // const MediumInteraction &mi = (const MediumInteraction &)it;
-        //     float p = mi.phase->p(mi.wo, wi);
-        //     f = Spectrum(p);
-        //     scatteringPdf = p;
-        //     VLOG(2) << "  medium p: " << p;
-        // }
-        // Evaluate BSDF for light sampling strategy
-        const SurfaceInteraction &isect = (const SurfaceInteraction &)it;
-        f = isect.bsdf->f(isect.wo, wi, bsdfFlags) *
-            AbsDot(wi, isect.shading.n);
-        scatteringPdf = isect.bsdf->Pdf(isect.wo, wi, bsdfFlags);
-        VLOG(2) << "  surf f*dot :" << f << ", scatteringPdf: " << scatteringPdf;
-
-
+        if (it.IsSurfaceInteraction()) {
+            // Evaluate BSDF for light sampling strategy
+            const SurfaceInteraction &isect = (const SurfaceInteraction &)it;
+            f = isect.bsdf->f(isect.wo, wi, bsdfFlags) *
+                AbsDot(wi, isect.shading.n);
+            scatteringPdf = isect.bsdf->Pdf(isect.wo, wi, bsdfFlags);
+            VLOG(2) << "  surf f*dot :" << f << ", scatteringPdf: " << scatteringPdf;
+        } else {
+            // Evaluate phase function for light sampling strategy
+            const MediumInteraction &mi = (const MediumInteraction &)it;
+            float p = mi.phase->p(mi.wo, wi);
+            f = Spectrum(p);
+            scatteringPdf = p;
+            VLOG(2) << "  medium p: " << p;
+        }
         if (!f.IsBlack()) {
             // Compute effect of visibility for light source sample
             if (handleMedia) {
@@ -143,29 +135,21 @@ Spectrum EstimateDirect(const Interaction &it, const Point2f &uScattering,
     if (!IsDeltaLight(light.flags)) {
         Spectrum f;
         bool sampledSpecular = false;
-        // if (it.IsSurfaceInteraction()) {
-        //     // Sample scattered direction for surface interactions
-        //     BxDFType sampledType;
-        //     const SurfaceInteraction &isect = (const SurfaceInteraction &)it;
-        //     f = isect.bsdf->Sample_f(isect.wo, &wi, uScattering, &scatteringPdf,
-        //                              bsdfFlags, &sampledType);
-        //     f *= AbsDot(wi, isect.shading.n);
-        //     sampledSpecular = (sampledType & BSDF_SPECULAR) != 0;
-        // } else {
-        //     // Sample scattered direction for medium interactions
-        //     const MediumInteraction &mi = (const MediumInteraction &)it;
-        //     float p = mi.phase->Sample_p(mi.wo, &wi, uScattering);
-        //     f = Spectrum(p);
-        //     scatteringPdf = p;
-        // }
-        // Sample scattered direction for surface interactions
-        BxDFType sampledType;
-        const SurfaceInteraction &isect = (const SurfaceInteraction &)it;
-        f = isect.bsdf->Sample_f(isect.wo, &wi, uScattering, &scatteringPdf,
-                                    bsdfFlags, &sampledType);
-        f *= AbsDot(wi, isect.shading.n);
-        sampledSpecular = (sampledType & BSDF_SPECULAR) != 0;
-        
+        if (it.IsSurfaceInteraction()) {
+            // Sample scattered direction for surface interactions
+            BxDFType sampledType;
+            const SurfaceInteraction &isect = (const SurfaceInteraction &)it;
+            f = isect.bsdf->Sample_f(isect.wo, &wi, uScattering, &scatteringPdf,
+                                     bsdfFlags, &sampledType);
+            f *= AbsDot(wi, isect.shading.n);
+            sampledSpecular = (sampledType & BSDF_SPECULAR) != 0;
+        } else {
+            // Sample scattered direction for medium interactions
+            const MediumInteraction &mi = (const MediumInteraction &)it;
+            float p = mi.phase->Sample_p(mi.wo, &wi, uScattering);
+            f = Spectrum(p);
+            scatteringPdf = p;
+        }
         VLOG(2) << "  BSDF / phase sampling f: " << f << ", scatteringPdf: " <<
             scatteringPdf;
         if (!f.IsBlack() && scatteringPdf > 0) {

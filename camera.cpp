@@ -9,11 +9,12 @@ namespace pbrt {
 Camera::~Camera() { delete film; }
 
 Camera::Camera(const AnimatedTransform &CameraToWorld, float shutterOpen,
-               float shutterClose, Film *film)
+               float shutterClose, Film *film, const Medium *medium)
     : CameraToWorld(CameraToWorld),
       shutterOpen(shutterOpen),
       shutterClose(shutterClose),
-      film(film) {
+      film(film),
+      medium(medium) {
     if (CameraToWorld.HasScale())
         Warning(
             "Scaling detected in world-to-camera transformation!\n"

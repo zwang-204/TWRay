@@ -27,7 +27,7 @@ bool Scene::IntersectTr(Ray ray, Sampler &sampler, SurfaceInteraction *isect,
     while (true) {
         bool hitSurface = Intersect(ray, isect);
         // Accumulate beam transmittance for ray segment
-        // if (ray.medium) *Tr *= ray.medium->Tr(ray, sampler);
+        if (ray.medium) *Tr *= ray.medium->Tr(ray, sampler);
 
         // Initialize next ray segment or terminate transmittance computation
         if (!hitSurface) return false;

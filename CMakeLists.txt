@@ -51,6 +51,7 @@ add_library(pbrt STATIC
   lowdiscrepancy.cpp
   material.cpp
   materials/matte.cpp
+  medium.cpp
   memory.cpp
   microfacet.cpp
   parallel.cpp

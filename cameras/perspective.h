@@ -15,7 +15,7 @@ class PerspectiveCamera : public ProjectiveCamera {
     PerspectiveCamera(const AnimatedTransform &CameraToWorld,
                       const Bounds2f &screenWindow, float shutterOpen,
                       float shutterClose, float lensRadius, float focalDistance,
-                      float fov, Film *film);
+                      float fov, Film *film, const Medium *medium);
     float GenerateRay(const CameraSample &sample, Ray *) const;
     float GenerateRayDifferential(const CameraSample &sample,
                                   RayDifferential *ray) const;
@@ -33,7 +33,7 @@ class PerspectiveCamera : public ProjectiveCamera {
 
 PerspectiveCamera *CreatePerspectiveCamera(const ParamSet &params,
                                            const AnimatedTransform &cam2world,
-                                           Film *film);
+                                           Film *film, const Medium *medium);
 
 }  // namespace pbrt
 

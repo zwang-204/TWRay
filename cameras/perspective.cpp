@@ -6,6 +6,7 @@
 #include "../light.h"
 #include "../stats.h"
 
+
 namespace pbrt {
 
 // PerspectiveCamera Method Definitions
@@ -13,10 +14,11 @@ PerspectiveCamera::PerspectiveCamera(const AnimatedTransform &CameraToWorld,
                                      const Bounds2f &screenWindow,
                                      float shutterOpen, float shutterClose,
                                      float lensRadius, float focalDistance,
-                                     float fov, Film *film)
+                                     float fov, Film *film,
+                                     const Medium *medium)
     : ProjectiveCamera(CameraToWorld, Perspective(fov, 1e-2f, 1000.f),
                        screenWindow, shutterOpen, shutterClose, lensRadius,
-                       focalDistance, film) {
+                       focalDistance, film, medium) {
     // Compute differential changes in origin for perspective camera rays
     dxCamera =
         (RasterToCamera(Point3f(1, 0, 0)) - RasterToCamera(Point3f(0, 0, 0)));
@@ -53,7 +55,7 @@ float PerspectiveCamera::GenerateRay(const CameraSample &sample,
         ray->d = Normalize(pFocus - ray->o);
     }
     ray->time = Lerp(sample.time, shutterOpen, shutterClose);
-    // ray->medium = medium;
+    ray->medium = medium;
     *ray = CameraToWorld(*ray);
     return 1;
 }
@@ -103,7 +105,7 @@ float PerspectiveCamera::GenerateRayDifferential(const CameraSample &sample,
         ray->ryDirection = Normalize(Vector3f(pCamera) + dyCamera);
     }
     ray->time = Lerp(sample.time, shutterOpen, shutterClose);
-    // ray->medium = medium;
+    ray->medium = medium;
     *ray = CameraToWorld(*ray);
     ray->hasDifferentials = true;
     return 1;
@@ -173,7 +175,7 @@ Spectrum PerspectiveCamera::Sample_Wi(const Interaction &ref, const Point2f &u,
     // Uniformly sample a lens interaction _lensIntr_
     Point2f pLens = lensRadius * ConcentricSampleDisk(u);
     Point3f pLensWorld = CameraToWorld(ref.time, Point3f(pLens.x, pLens.y, 0));
-    Interaction lensIntr(pLensWorld, ref.time);
+    Interaction lensIntr(pLensWorld, ref.time, medium);
     lensIntr.n = Normal3f(CameraToWorld(ref.time, Vector3f(0, 0, 1)));
 
     // Populate arguments and compute the importance value
@@ -192,7 +194,7 @@ Spectrum PerspectiveCamera::Sample_Wi(const Interaction &ref, const Point2f &u,
 
 PerspectiveCamera *CreatePerspectiveCamera(const ParamSet &params,
                                            const AnimatedTransform &cam2world,
-                                           Film *film) {
+                                           Film *film, const Medium *medium) {
     // Extract common camera parameters from _ParamSet_
     float shutteropen = params.FindOneFloat("shutteropen", 0.f);
     float shutterclose = params.FindOneFloat("shutterclose", 1.f);
@@ -235,7 +237,7 @@ PerspectiveCamera *CreatePerspectiveCamera(const ParamSet &params,
         // hack for structure synth, which exports half of the full fov
         fov = 2.f * halffov;
     return new PerspectiveCamera(cam2world, screen, shutteropen, shutterclose,
-                                 lensradius, focaldistance, fov, film);
+                                 lensradius, focaldistance, fov, film, medium);
 }
 
 }  // namespace pbrt

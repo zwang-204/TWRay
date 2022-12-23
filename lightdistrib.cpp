@@ -223,7 +223,7 @@ SpatialLightDistribution::ComputeDistribution(Point3i pi) const {
         Point3f po = voxelBounds.Lerp(Point3f(
             RadicalInverse(0, i), RadicalInverse(1, i), RadicalInverse(2, i)));
         Interaction intr(po, Normal3f(), Vector3f(), Vector3f(1, 0, 0),
-                         0 /* time */);
+                         0 /* time */, MediumInterface());
 
         // Use the next two Halton dimensions to sample a point on the
         // light source.

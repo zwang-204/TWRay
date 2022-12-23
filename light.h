@@ -5,8 +5,6 @@
 #include "pbrt.h"
 #include "memory.h"
 #include "interaction.h"
-#include "sampler.h"
-#include "sampling.h"
 
 namespace pbrt {
 
@@ -28,11 +26,11 @@ class Light {
   public:
     // Light Interface
     virtual ~Light();
-    Light(int flags, const Transform &LightToWorld, int nSamples = 1);
+    Light(int flags, const Transform &LightToWorld,
+          const MediumInterface &mediumInterface, int nSamples = 1);
     virtual Spectrum Sample_Li(const Interaction &ref, const Point2f &u,
                                Vector3f *wi, float *pdf,
-                               VisibilityTester *vis
-                               ) const = 0;
+                               VisibilityTester *vis) const = 0;
     virtual Spectrum Power() const = 0;
     virtual void Preprocess(const Scene &scene) {}
     virtual Spectrum Le(const RayDifferential &r) const;
@@ -46,18 +44,11 @@ class Light {
     // Light Public Data
     const int flags;
     const int nSamples;
+    const MediumInterface mediumInterface;
 
   protected:
     // Light Protected Data
     const Transform LightToWorld, WorldToLight;
-};
-
-class AreaLight : public Light {
-  public:
-    // AreaLight Interface
-    AreaLight(const Transform &LightToWorld,
-              int nSamples);
-    virtual Spectrum L(const Interaction &intr, const Vector3f &w) const = 0;
 };
 
 class VisibilityTester {
@@ -73,6 +64,14 @@ class VisibilityTester {
 
   private:
     Interaction p0, p1;
+};
+
+class AreaLight : public Light {
+  public:
+    // AreaLight Interface
+    AreaLight(const Transform &LightToWorld, const MediumInterface &medium,
+              int nSamples);
+    virtual Spectrum L(const Interaction &intr, const Vector3f &w) const = 0;
 };
 
 }  // namespace pbrt

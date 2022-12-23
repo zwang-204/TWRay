@@ -12,7 +12,8 @@ namespace pbrt {
 class DiffuseAreaLight : public AreaLight {
   public:
     // DiffuseAreaLight Public Methods
-    DiffuseAreaLight(const Transform &LightToWorld, const Spectrum &Le,
+    DiffuseAreaLight(const Transform &LightToWorld,
+                     const MediumInterface &mediumInterface, const Spectrum &Le,
                      int nSamples, const std::shared_ptr<Shape> &shape,
                      bool twoSided = false);
     Spectrum L(const Interaction &intr, const Vector3f &w) const {
@@ -40,7 +41,7 @@ class DiffuseAreaLight : public AreaLight {
 };
 
 std::shared_ptr<AreaLight> CreateDiffuseAreaLight(
-    const Transform &light2world,
+    const Transform &light2world, const Medium *medium,
     const ParamSet &paramSet, const std::shared_ptr<Shape> &shape);
 
 }  // namespace pbrt

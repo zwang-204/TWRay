@@ -6,7 +6,6 @@
 #include "geometry.h"
 #include "transform.h"
 #include "film.h"
-#include "light.h"
 
 namespace pbrt {
 
@@ -15,7 +14,7 @@ class Camera {
   public:
     // Camera Interface
     Camera(const AnimatedTransform &CameraToWorld, float shutterOpen,
-           float shutterClose, Film *film);
+           float shutterClose, Film *film, const Medium *medium);
     virtual ~Camera();
     virtual float GenerateRay(const CameraSample &sample, Ray *ray) const = 0;
     virtual float GenerateRayDifferential(const CameraSample &sample,
@@ -30,6 +29,7 @@ class Camera {
     AnimatedTransform CameraToWorld;
     const float shutterOpen, shutterClose;
     Film *film;
+    const Medium *medium;
 };
 
 struct CameraSample {
@@ -50,8 +50,9 @@ class ProjectiveCamera : public Camera {
     ProjectiveCamera(const AnimatedTransform &CameraToWorld,
                      const Transform &CameraToScreen,
                      const Bounds2f &screenWindow, float shutterOpen,
-                     float shutterClose, float lensr, float focald, Film *film)
-        : Camera(CameraToWorld, shutterOpen, shutterClose, film),
+                     float shutterClose, float lensr, float focald, Film *film,
+                     const Medium *medium)
+        : Camera(CameraToWorld, shutterOpen, shutterClose, film, medium),
           CameraToScreen(CameraToScreen) {
         // Initialize depth of field parameters
         lensRadius = lensr;
