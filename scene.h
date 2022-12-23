@@ -3,6 +3,7 @@
 
 // core/scene.h*
 #include "pbrt.h"
+#include "spectrum.h"
 #include "geometry.h"
 #include "primitive.h"
 #include "light.h"

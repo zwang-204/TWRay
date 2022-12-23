@@ -4,7 +4,7 @@
 # compile CXX with /Library/Developer/CommandLineTools/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/Security/TA/C++Tutorial/RayTracing/Scripts/..
+CXX_INCLUDES = -I/usr/local/lib -I/usr/local/include -I/usr/local/include/OpenEXR -I/usr/local/include/Imath -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/gflags/2.2.2/include -I/usr/local/Cellar/ilmbase
 
-CXX_FLAGS =  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk
+CXX_FLAGS =  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17
 

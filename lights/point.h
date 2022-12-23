@@ -2,10 +2,10 @@
 #define LIGHTS_POINT_H
 
 // lights/point.h*
-#include "pbrt.h"
-#include "light.h"
-#include "shape.h"
-#include "paramset.h"
+#include "../pbrt.h"
+#include "../light.h"
+#include "../shape.h"
+#include "../paramset.h"
 
 namespace pbrt {
 
@@ -18,7 +18,7 @@ class PointLight : public Light {
           pLight(LightToWorld(Point3f(0, 0, 0))),
           I(I) {}
     Spectrum Sample_Li(const Interaction &ref, const Point2f &u, Vector3f *wi,
-                       float *pdf) const;
+                       float *pdf, VisibilityTester *vis) const;
     Spectrum Power() const;
     float Pdf_Li(const Interaction &, const Vector3f &) const;
     Spectrum Sample_Le(const Point2f &u1, const Point2f &u2, float time,

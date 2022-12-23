@@ -4,6 +4,7 @@
             "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**",
+                "/usr/local/include/OpenEXR/**",
                 "/Users/Security/TA/C++Tutorial/RayTracing/Scripts/**",
                 "/Users/Security/TA/C++Tutorial/RayTracing/Scripts/lights/**",
                 "/Users/Security/TA/C++Tutorial/RayTracing/Scripts/textures/**"

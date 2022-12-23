@@ -248,3 +248,39 @@ Parsed CXX implicit link information from above output:
   implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk/System/Library/Frameworks]
 
 
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /Users/Security/TA/C++Tutorial/RayTracing/Scripts/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/Users/wangzitong/opt/anaconda3/bin/ninja cmTC_06838 && [1/2] Building CXX object CMakeFiles/cmTC_06838.dir/CheckIncludeFile.cxx.o
+[2/2] Linking CXX executable cmTC_06838
+
+
+
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
+Change Dir: /Users/Security/TA/C++Tutorial/RayTracing/Scripts/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/Users/wangzitong/opt/anaconda3/bin/ninja cmTC_c9497 && [1/2] Building CXX object CMakeFiles/cmTC_c9497.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_c9497
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+

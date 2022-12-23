@@ -81,12 +81,12 @@ clean: CMakeFiles/RayTracing.dir/clean
 CMakeFiles/RayTracing.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Security/TA/C++Tutorial/RayTracing/Scripts/CMakeFiles --progress-num=1,2 "Built target RayTracing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Security/TA/C++Tutorial/RayTracing/Scripts/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48 "Built target RayTracing"
 .PHONY : CMakeFiles/RayTracing.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/RayTracing.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Security/TA/C++Tutorial/RayTracing/Scripts/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Security/TA/C++Tutorial/RayTracing/Scripts/CMakeFiles 48
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/RayTracing.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Security/TA/C++Tutorial/RayTracing/Scripts/CMakeFiles 0
 .PHONY : CMakeFiles/RayTracing.dir/rule

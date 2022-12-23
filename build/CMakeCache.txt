@@ -203,6 +203,18 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//The directory containing a CMake configuration file for Imath.
+Imath_DIR:PATH=/usr/local/lib/cmake/Imath
+
+//Value Computed by CMake
+MyProject_BINARY_DIR:STATIC=/Users/Security/TA/C++Tutorial/RayTracing/Scripts/build
+
+//Value Computed by CMake
+MyProject_SOURCE_DIR:STATIC=/Users/Security/TA/C++Tutorial/RayTracing/Scripts
+
+//The directory containing a CMake configuration file for OpenEXR.
+OpenEXR_DIR:PATH=/usr/local/lib/cmake/OpenEXR
+
 //Value Computed by CMake
 PBRT-V3_BINARY_DIR:STATIC=/Users/Security/TA/C++Tutorial/RayTracing/Scripts/build
 
@@ -218,8 +230,32 @@ PBRT_SAMPLED_SPECTRUM:BOOL=OFF
 //Value Computed by CMake
 RayTracing_BINARY_DIR:STATIC=/Users/Security/TA/C++Tutorial/RayTracing/Scripts/build
 
+//Dependencies for the target
+RayTracing_LIB_DEPENDS:STATIC=general;gflags;general;glog;general;openexr;general;Imath;
+
 //Value Computed by CMake
 RayTracing_SOURCE_DIR:STATIC=/Users/Security/TA/C++Tutorial/RayTracing/Scripts
+
+//Path to a file.
+ZLIB_INCLUDE_DIR:PATH=/Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk/usr/include
+
+//Path to a library.
+ZLIB_LIBRARY_DEBUG:FILEPATH=ZLIB_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+ZLIB_LIBRARY_RELEASE:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk/usr/lib/libz.tbd
+
+//The directory containing a CMake configuration file for gflags.
+gflags_DIR:PATH=/usr/local/lib/cmake/gflags
+
+//The directory containing a CMake configuration file for glog.
+glog_DIR:PATH=/usr/local/lib/cmake/glog
+
+//Value Computed by CMake
+main_BINARY_DIR:STATIC=/Users/Security/TA/C++Tutorial/RayTracing/Scripts/build
+
+//Value Computed by CMake
+main_SOURCE_DIR:STATIC=/Users/Security/TA/C++Tutorial/RayTracing/Scripts
 
 
 ########################
@@ -292,6 +328,10 @@ CMAKE_GENERATOR_INSTANCE:INTERNAL=
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
+//Test CMAKE_HAVE_LIBC_PTHREAD
+CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=1
+//Have include pthread.h
+CMAKE_HAVE_PTHREAD_H:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=/Users/Security/TA/C++Tutorial/RayTracing/Scripts
@@ -357,4 +397,14 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding Threads
+FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//Details about finding ZLIB
+FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[/Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk/usr/lib/libz.tbd][/Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk/usr/include][v1.2.11()]
+//ADVANCED property for variable: ZLIB_INCLUDE_DIR
+ZLIB_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_LIBRARY_DEBUG
+ZLIB_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_LIBRARY_RELEASE
+ZLIB_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 

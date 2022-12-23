@@ -129,6 +129,534 @@ RayTracing/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/build
 .PHONY : RayTracing/fast
 
+bvh.o: bvh.cpp.o
+.PHONY : bvh.o
+
+# target to build an object file
+bvh.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/bvh.cpp.o
+.PHONY : bvh.cpp.o
+
+bvh.i: bvh.cpp.i
+.PHONY : bvh.i
+
+# target to preprocess a source file
+bvh.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/bvh.cpp.i
+.PHONY : bvh.cpp.i
+
+bvh.s: bvh.cpp.s
+.PHONY : bvh.s
+
+# target to generate assembly for a file
+bvh.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/bvh.cpp.s
+.PHONY : bvh.cpp.s
+
+camera.o: camera.cpp.o
+.PHONY : camera.o
+
+# target to build an object file
+camera.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/camera.cpp.o
+.PHONY : camera.cpp.o
+
+camera.i: camera.cpp.i
+.PHONY : camera.i
+
+# target to preprocess a source file
+camera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/camera.cpp.i
+.PHONY : camera.cpp.i
+
+camera.s: camera.cpp.s
+.PHONY : camera.s
+
+# target to generate assembly for a file
+camera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/camera.cpp.s
+.PHONY : camera.cpp.s
+
+cameras/perspective.o: cameras/perspective.cpp.o
+.PHONY : cameras/perspective.o
+
+# target to build an object file
+cameras/perspective.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/cameras/perspective.cpp.o
+.PHONY : cameras/perspective.cpp.o
+
+cameras/perspective.i: cameras/perspective.cpp.i
+.PHONY : cameras/perspective.i
+
+# target to preprocess a source file
+cameras/perspective.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/cameras/perspective.cpp.i
+.PHONY : cameras/perspective.cpp.i
+
+cameras/perspective.s: cameras/perspective.cpp.s
+.PHONY : cameras/perspective.s
+
+# target to generate assembly for a file
+cameras/perspective.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/cameras/perspective.cpp.s
+.PHONY : cameras/perspective.cpp.s
+
+efloat.o: efloat.cpp.o
+.PHONY : efloat.o
+
+# target to build an object file
+efloat.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/efloat.cpp.o
+.PHONY : efloat.cpp.o
+
+efloat.i: efloat.cpp.i
+.PHONY : efloat.i
+
+# target to preprocess a source file
+efloat.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/efloat.cpp.i
+.PHONY : efloat.cpp.i
+
+efloat.s: efloat.cpp.s
+.PHONY : efloat.s
+
+# target to generate assembly for a file
+efloat.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/efloat.cpp.s
+.PHONY : efloat.cpp.s
+
+error.o: error.cpp.o
+.PHONY : error.o
+
+# target to build an object file
+error.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/error.cpp.o
+.PHONY : error.cpp.o
+
+error.i: error.cpp.i
+.PHONY : error.i
+
+# target to preprocess a source file
+error.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/error.cpp.i
+.PHONY : error.cpp.i
+
+error.s: error.cpp.s
+.PHONY : error.s
+
+# target to generate assembly for a file
+error.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/error.cpp.s
+.PHONY : error.cpp.s
+
+ext/lodepng.o: ext/lodepng.cpp.o
+.PHONY : ext/lodepng.o
+
+# target to build an object file
+ext/lodepng.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/ext/lodepng.cpp.o
+.PHONY : ext/lodepng.cpp.o
+
+ext/lodepng.i: ext/lodepng.cpp.i
+.PHONY : ext/lodepng.i
+
+# target to preprocess a source file
+ext/lodepng.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/ext/lodepng.cpp.i
+.PHONY : ext/lodepng.cpp.i
+
+ext/lodepng.s: ext/lodepng.cpp.s
+.PHONY : ext/lodepng.s
+
+# target to generate assembly for a file
+ext/lodepng.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/ext/lodepng.cpp.s
+.PHONY : ext/lodepng.cpp.s
+
+ext/rply.o: ext/rply.cpp.o
+.PHONY : ext/rply.o
+
+# target to build an object file
+ext/rply.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/ext/rply.cpp.o
+.PHONY : ext/rply.cpp.o
+
+ext/rply.i: ext/rply.cpp.i
+.PHONY : ext/rply.i
+
+# target to preprocess a source file
+ext/rply.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/ext/rply.cpp.i
+.PHONY : ext/rply.cpp.i
+
+ext/rply.s: ext/rply.cpp.s
+.PHONY : ext/rply.s
+
+# target to generate assembly for a file
+ext/rply.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/ext/rply.cpp.s
+.PHONY : ext/rply.cpp.s
+
+ext/targa.o: ext/targa.cpp.o
+.PHONY : ext/targa.o
+
+# target to build an object file
+ext/targa.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/ext/targa.cpp.o
+.PHONY : ext/targa.cpp.o
+
+ext/targa.i: ext/targa.cpp.i
+.PHONY : ext/targa.i
+
+# target to preprocess a source file
+ext/targa.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/ext/targa.cpp.i
+.PHONY : ext/targa.cpp.i
+
+ext/targa.s: ext/targa.cpp.s
+.PHONY : ext/targa.s
+
+# target to generate assembly for a file
+ext/targa.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/ext/targa.cpp.s
+.PHONY : ext/targa.cpp.s
+
+fileutil.o: fileutil.cpp.o
+.PHONY : fileutil.o
+
+# target to build an object file
+fileutil.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/fileutil.cpp.o
+.PHONY : fileutil.cpp.o
+
+fileutil.i: fileutil.cpp.i
+.PHONY : fileutil.i
+
+# target to preprocess a source file
+fileutil.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/fileutil.cpp.i
+.PHONY : fileutil.cpp.i
+
+fileutil.s: fileutil.cpp.s
+.PHONY : fileutil.s
+
+# target to generate assembly for a file
+fileutil.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/fileutil.cpp.s
+.PHONY : fileutil.cpp.s
+
+film.o: film.cpp.o
+.PHONY : film.o
+
+# target to build an object file
+film.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/film.cpp.o
+.PHONY : film.cpp.o
+
+film.i: film.cpp.i
+.PHONY : film.i
+
+# target to preprocess a source file
+film.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/film.cpp.i
+.PHONY : film.cpp.i
+
+film.s: film.cpp.s
+.PHONY : film.s
+
+# target to generate assembly for a file
+film.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/film.cpp.s
+.PHONY : film.cpp.s
+
+filter.o: filter.cpp.o
+.PHONY : filter.o
+
+# target to build an object file
+filter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/filter.cpp.o
+.PHONY : filter.cpp.o
+
+filter.i: filter.cpp.i
+.PHONY : filter.i
+
+# target to preprocess a source file
+filter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/filter.cpp.i
+.PHONY : filter.cpp.i
+
+filter.s: filter.cpp.s
+.PHONY : filter.s
+
+# target to generate assembly for a file
+filter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/filter.cpp.s
+.PHONY : filter.cpp.s
+
+filters/box.o: filters/box.cpp.o
+.PHONY : filters/box.o
+
+# target to build an object file
+filters/box.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/filters/box.cpp.o
+.PHONY : filters/box.cpp.o
+
+filters/box.i: filters/box.cpp.i
+.PHONY : filters/box.i
+
+# target to preprocess a source file
+filters/box.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/filters/box.cpp.i
+.PHONY : filters/box.cpp.i
+
+filters/box.s: filters/box.cpp.s
+.PHONY : filters/box.s
+
+# target to generate assembly for a file
+filters/box.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/filters/box.cpp.s
+.PHONY : filters/box.cpp.s
+
+floatfile.o: floatfile.cpp.o
+.PHONY : floatfile.o
+
+# target to build an object file
+floatfile.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/floatfile.cpp.o
+.PHONY : floatfile.cpp.o
+
+floatfile.i: floatfile.cpp.i
+.PHONY : floatfile.i
+
+# target to preprocess a source file
+floatfile.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/floatfile.cpp.i
+.PHONY : floatfile.cpp.i
+
+floatfile.s: floatfile.cpp.s
+.PHONY : floatfile.s
+
+# target to generate assembly for a file
+floatfile.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/floatfile.cpp.s
+.PHONY : floatfile.cpp.s
+
+geometry.o: geometry.cpp.o
+.PHONY : geometry.o
+
+# target to build an object file
+geometry.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/geometry.cpp.o
+.PHONY : geometry.cpp.o
+
+geometry.i: geometry.cpp.i
+.PHONY : geometry.i
+
+# target to preprocess a source file
+geometry.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/geometry.cpp.i
+.PHONY : geometry.cpp.i
+
+geometry.s: geometry.cpp.s
+.PHONY : geometry.s
+
+# target to generate assembly for a file
+geometry.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/geometry.cpp.s
+.PHONY : geometry.cpp.s
+
+imageio.o: imageio.cpp.o
+.PHONY : imageio.o
+
+# target to build an object file
+imageio.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/imageio.cpp.o
+.PHONY : imageio.cpp.o
+
+imageio.i: imageio.cpp.i
+.PHONY : imageio.i
+
+# target to preprocess a source file
+imageio.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/imageio.cpp.i
+.PHONY : imageio.cpp.i
+
+imageio.s: imageio.cpp.s
+.PHONY : imageio.s
+
+# target to generate assembly for a file
+imageio.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/imageio.cpp.s
+.PHONY : imageio.cpp.s
+
+integrator.o: integrator.cpp.o
+.PHONY : integrator.o
+
+# target to build an object file
+integrator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/integrator.cpp.o
+.PHONY : integrator.cpp.o
+
+integrator.i: integrator.cpp.i
+.PHONY : integrator.i
+
+# target to preprocess a source file
+integrator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/integrator.cpp.i
+.PHONY : integrator.cpp.i
+
+integrator.s: integrator.cpp.s
+.PHONY : integrator.s
+
+# target to generate assembly for a file
+integrator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/integrator.cpp.s
+.PHONY : integrator.cpp.s
+
+integrators/directlighting.o: integrators/directlighting.cpp.o
+.PHONY : integrators/directlighting.o
+
+# target to build an object file
+integrators/directlighting.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/integrators/directlighting.cpp.o
+.PHONY : integrators/directlighting.cpp.o
+
+integrators/directlighting.i: integrators/directlighting.cpp.i
+.PHONY : integrators/directlighting.i
+
+# target to preprocess a source file
+integrators/directlighting.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/integrators/directlighting.cpp.i
+.PHONY : integrators/directlighting.cpp.i
+
+integrators/directlighting.s: integrators/directlighting.cpp.s
+.PHONY : integrators/directlighting.s
+
+# target to generate assembly for a file
+integrators/directlighting.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/integrators/directlighting.cpp.s
+.PHONY : integrators/directlighting.cpp.s
+
+interaction.o: interaction.cpp.o
+.PHONY : interaction.o
+
+# target to build an object file
+interaction.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/interaction.cpp.o
+.PHONY : interaction.cpp.o
+
+interaction.i: interaction.cpp.i
+.PHONY : interaction.i
+
+# target to preprocess a source file
+interaction.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/interaction.cpp.i
+.PHONY : interaction.cpp.i
+
+interaction.s: interaction.cpp.s
+.PHONY : interaction.s
+
+# target to generate assembly for a file
+interaction.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/interaction.cpp.s
+.PHONY : interaction.cpp.s
+
+interpolation.o: interpolation.cpp.o
+.PHONY : interpolation.o
+
+# target to build an object file
+interpolation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/interpolation.cpp.o
+.PHONY : interpolation.cpp.o
+
+interpolation.i: interpolation.cpp.i
+.PHONY : interpolation.i
+
+# target to preprocess a source file
+interpolation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/interpolation.cpp.i
+.PHONY : interpolation.cpp.i
+
+interpolation.s: interpolation.cpp.s
+.PHONY : interpolation.s
+
+# target to generate assembly for a file
+interpolation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/interpolation.cpp.s
+.PHONY : interpolation.cpp.s
+
+light.o: light.cpp.o
+.PHONY : light.o
+
+# target to build an object file
+light.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/light.cpp.o
+.PHONY : light.cpp.o
+
+light.i: light.cpp.i
+.PHONY : light.i
+
+# target to preprocess a source file
+light.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/light.cpp.i
+.PHONY : light.cpp.i
+
+light.s: light.cpp.s
+.PHONY : light.s
+
+# target to generate assembly for a file
+light.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/light.cpp.s
+.PHONY : light.cpp.s
+
+lights/point.o: lights/point.cpp.o
+.PHONY : lights/point.o
+
+# target to build an object file
+lights/point.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/lights/point.cpp.o
+.PHONY : lights/point.cpp.o
+
+lights/point.i: lights/point.cpp.i
+.PHONY : lights/point.i
+
+# target to preprocess a source file
+lights/point.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/lights/point.cpp.i
+.PHONY : lights/point.cpp.i
+
+lights/point.s: lights/point.cpp.s
+.PHONY : lights/point.s
+
+# target to generate assembly for a file
+lights/point.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/lights/point.cpp.s
+.PHONY : lights/point.cpp.s
+
+lowdiscrepancy.o: lowdiscrepancy.cpp.o
+.PHONY : lowdiscrepancy.o
+
+# target to build an object file
+lowdiscrepancy.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/lowdiscrepancy.cpp.o
+.PHONY : lowdiscrepancy.cpp.o
+
+lowdiscrepancy.i: lowdiscrepancy.cpp.i
+.PHONY : lowdiscrepancy.i
+
+# target to preprocess a source file
+lowdiscrepancy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/lowdiscrepancy.cpp.i
+.PHONY : lowdiscrepancy.cpp.i
+
+lowdiscrepancy.s: lowdiscrepancy.cpp.s
+.PHONY : lowdiscrepancy.s
+
+# target to generate assembly for a file
+lowdiscrepancy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/lowdiscrepancy.cpp.s
+.PHONY : lowdiscrepancy.cpp.s
+
 main.o: main.cc.o
 .PHONY : main.o
 
@@ -153,6 +681,582 @@ main.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/main.cc.s
 .PHONY : main.cc.s
 
+material.o: material.cpp.o
+.PHONY : material.o
+
+# target to build an object file
+material.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/material.cpp.o
+.PHONY : material.cpp.o
+
+material.i: material.cpp.i
+.PHONY : material.i
+
+# target to preprocess a source file
+material.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/material.cpp.i
+.PHONY : material.cpp.i
+
+material.s: material.cpp.s
+.PHONY : material.s
+
+# target to generate assembly for a file
+material.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/material.cpp.s
+.PHONY : material.cpp.s
+
+materials/matte.o: materials/matte.cpp.o
+.PHONY : materials/matte.o
+
+# target to build an object file
+materials/matte.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/materials/matte.cpp.o
+.PHONY : materials/matte.cpp.o
+
+materials/matte.i: materials/matte.cpp.i
+.PHONY : materials/matte.i
+
+# target to preprocess a source file
+materials/matte.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/materials/matte.cpp.i
+.PHONY : materials/matte.cpp.i
+
+materials/matte.s: materials/matte.cpp.s
+.PHONY : materials/matte.s
+
+# target to generate assembly for a file
+materials/matte.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/materials/matte.cpp.s
+.PHONY : materials/matte.cpp.s
+
+memory.o: memory.cpp.o
+.PHONY : memory.o
+
+# target to build an object file
+memory.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/memory.cpp.o
+.PHONY : memory.cpp.o
+
+memory.i: memory.cpp.i
+.PHONY : memory.i
+
+# target to preprocess a source file
+memory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/memory.cpp.i
+.PHONY : memory.cpp.i
+
+memory.s: memory.cpp.s
+.PHONY : memory.s
+
+# target to generate assembly for a file
+memory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/memory.cpp.s
+.PHONY : memory.cpp.s
+
+microfacet.o: microfacet.cpp.o
+.PHONY : microfacet.o
+
+# target to build an object file
+microfacet.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/microfacet.cpp.o
+.PHONY : microfacet.cpp.o
+
+microfacet.i: microfacet.cpp.i
+.PHONY : microfacet.i
+
+# target to preprocess a source file
+microfacet.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/microfacet.cpp.i
+.PHONY : microfacet.cpp.i
+
+microfacet.s: microfacet.cpp.s
+.PHONY : microfacet.s
+
+# target to generate assembly for a file
+microfacet.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/microfacet.cpp.s
+.PHONY : microfacet.cpp.s
+
+parallel.o: parallel.cpp.o
+.PHONY : parallel.o
+
+# target to build an object file
+parallel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/parallel.cpp.o
+.PHONY : parallel.cpp.o
+
+parallel.i: parallel.cpp.i
+.PHONY : parallel.i
+
+# target to preprocess a source file
+parallel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/parallel.cpp.i
+.PHONY : parallel.cpp.i
+
+parallel.s: parallel.cpp.s
+.PHONY : parallel.s
+
+# target to generate assembly for a file
+parallel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/parallel.cpp.s
+.PHONY : parallel.cpp.s
+
+paramset.o: paramset.cpp.o
+.PHONY : paramset.o
+
+# target to build an object file
+paramset.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/paramset.cpp.o
+.PHONY : paramset.cpp.o
+
+paramset.i: paramset.cpp.i
+.PHONY : paramset.i
+
+# target to preprocess a source file
+paramset.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/paramset.cpp.i
+.PHONY : paramset.cpp.i
+
+paramset.s: paramset.cpp.s
+.PHONY : paramset.s
+
+# target to generate assembly for a file
+paramset.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/paramset.cpp.s
+.PHONY : paramset.cpp.s
+
+primitive.o: primitive.cpp.o
+.PHONY : primitive.o
+
+# target to build an object file
+primitive.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/primitive.cpp.o
+.PHONY : primitive.cpp.o
+
+primitive.i: primitive.cpp.i
+.PHONY : primitive.i
+
+# target to preprocess a source file
+primitive.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/primitive.cpp.i
+.PHONY : primitive.cpp.i
+
+primitive.s: primitive.cpp.s
+.PHONY : primitive.s
+
+# target to generate assembly for a file
+primitive.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/primitive.cpp.s
+.PHONY : primitive.cpp.s
+
+progressreporter.o: progressreporter.cpp.o
+.PHONY : progressreporter.o
+
+# target to build an object file
+progressreporter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/progressreporter.cpp.o
+.PHONY : progressreporter.cpp.o
+
+progressreporter.i: progressreporter.cpp.i
+.PHONY : progressreporter.i
+
+# target to preprocess a source file
+progressreporter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/progressreporter.cpp.i
+.PHONY : progressreporter.cpp.i
+
+progressreporter.s: progressreporter.cpp.s
+.PHONY : progressreporter.s
+
+# target to generate assembly for a file
+progressreporter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/progressreporter.cpp.s
+.PHONY : progressreporter.cpp.s
+
+quaternion.o: quaternion.cpp.o
+.PHONY : quaternion.o
+
+# target to build an object file
+quaternion.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/quaternion.cpp.o
+.PHONY : quaternion.cpp.o
+
+quaternion.i: quaternion.cpp.i
+.PHONY : quaternion.i
+
+# target to preprocess a source file
+quaternion.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/quaternion.cpp.i
+.PHONY : quaternion.cpp.i
+
+quaternion.s: quaternion.cpp.s
+.PHONY : quaternion.s
+
+# target to generate assembly for a file
+quaternion.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/quaternion.cpp.s
+.PHONY : quaternion.cpp.s
+
+reflection.o: reflection.cpp.o
+.PHONY : reflection.o
+
+# target to build an object file
+reflection.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/reflection.cpp.o
+.PHONY : reflection.cpp.o
+
+reflection.i: reflection.cpp.i
+.PHONY : reflection.i
+
+# target to preprocess a source file
+reflection.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/reflection.cpp.i
+.PHONY : reflection.cpp.i
+
+reflection.s: reflection.cpp.s
+.PHONY : reflection.s
+
+# target to generate assembly for a file
+reflection.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/reflection.cpp.s
+.PHONY : reflection.cpp.s
+
+sampler.o: sampler.cpp.o
+.PHONY : sampler.o
+
+# target to build an object file
+sampler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/sampler.cpp.o
+.PHONY : sampler.cpp.o
+
+sampler.i: sampler.cpp.i
+.PHONY : sampler.i
+
+# target to preprocess a source file
+sampler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/sampler.cpp.i
+.PHONY : sampler.cpp.i
+
+sampler.s: sampler.cpp.s
+.PHONY : sampler.s
+
+# target to generate assembly for a file
+sampler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/sampler.cpp.s
+.PHONY : sampler.cpp.s
+
+samplers/random.o: samplers/random.cpp.o
+.PHONY : samplers/random.o
+
+# target to build an object file
+samplers/random.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/samplers/random.cpp.o
+.PHONY : samplers/random.cpp.o
+
+samplers/random.i: samplers/random.cpp.i
+.PHONY : samplers/random.i
+
+# target to preprocess a source file
+samplers/random.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/samplers/random.cpp.i
+.PHONY : samplers/random.cpp.i
+
+samplers/random.s: samplers/random.cpp.s
+.PHONY : samplers/random.s
+
+# target to generate assembly for a file
+samplers/random.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/samplers/random.cpp.s
+.PHONY : samplers/random.cpp.s
+
+sampling.o: sampling.cpp.o
+.PHONY : sampling.o
+
+# target to build an object file
+sampling.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/sampling.cpp.o
+.PHONY : sampling.cpp.o
+
+sampling.i: sampling.cpp.i
+.PHONY : sampling.i
+
+# target to preprocess a source file
+sampling.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/sampling.cpp.i
+.PHONY : sampling.cpp.i
+
+sampling.s: sampling.cpp.s
+.PHONY : sampling.s
+
+# target to generate assembly for a file
+sampling.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/sampling.cpp.s
+.PHONY : sampling.cpp.s
+
+scene.o: scene.cpp.o
+.PHONY : scene.o
+
+# target to build an object file
+scene.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/scene.cpp.o
+.PHONY : scene.cpp.o
+
+scene.i: scene.cpp.i
+.PHONY : scene.i
+
+# target to preprocess a source file
+scene.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/scene.cpp.i
+.PHONY : scene.cpp.i
+
+scene.s: scene.cpp.s
+.PHONY : scene.s
+
+# target to generate assembly for a file
+scene.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/scene.cpp.s
+.PHONY : scene.cpp.s
+
+shape.o: shape.cpp.o
+.PHONY : shape.o
+
+# target to build an object file
+shape.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/shape.cpp.o
+.PHONY : shape.cpp.o
+
+shape.i: shape.cpp.i
+.PHONY : shape.i
+
+# target to preprocess a source file
+shape.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/shape.cpp.i
+.PHONY : shape.cpp.i
+
+shape.s: shape.cpp.s
+.PHONY : shape.s
+
+# target to generate assembly for a file
+shape.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/shape.cpp.s
+.PHONY : shape.cpp.s
+
+shapes/plymesh.o: shapes/plymesh.cpp.o
+.PHONY : shapes/plymesh.o
+
+# target to build an object file
+shapes/plymesh.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/shapes/plymesh.cpp.o
+.PHONY : shapes/plymesh.cpp.o
+
+shapes/plymesh.i: shapes/plymesh.cpp.i
+.PHONY : shapes/plymesh.i
+
+# target to preprocess a source file
+shapes/plymesh.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/shapes/plymesh.cpp.i
+.PHONY : shapes/plymesh.cpp.i
+
+shapes/plymesh.s: shapes/plymesh.cpp.s
+.PHONY : shapes/plymesh.s
+
+# target to generate assembly for a file
+shapes/plymesh.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/shapes/plymesh.cpp.s
+.PHONY : shapes/plymesh.cpp.s
+
+shapes/sphere.o: shapes/sphere.cpp.o
+.PHONY : shapes/sphere.o
+
+# target to build an object file
+shapes/sphere.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/shapes/sphere.cpp.o
+.PHONY : shapes/sphere.cpp.o
+
+shapes/sphere.i: shapes/sphere.cpp.i
+.PHONY : shapes/sphere.i
+
+# target to preprocess a source file
+shapes/sphere.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/shapes/sphere.cpp.i
+.PHONY : shapes/sphere.cpp.i
+
+shapes/sphere.s: shapes/sphere.cpp.s
+.PHONY : shapes/sphere.s
+
+# target to generate assembly for a file
+shapes/sphere.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/shapes/sphere.cpp.s
+.PHONY : shapes/sphere.cpp.s
+
+shapes/triangle.o: shapes/triangle.cpp.o
+.PHONY : shapes/triangle.o
+
+# target to build an object file
+shapes/triangle.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/shapes/triangle.cpp.o
+.PHONY : shapes/triangle.cpp.o
+
+shapes/triangle.i: shapes/triangle.cpp.i
+.PHONY : shapes/triangle.i
+
+# target to preprocess a source file
+shapes/triangle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/shapes/triangle.cpp.i
+.PHONY : shapes/triangle.cpp.i
+
+shapes/triangle.s: shapes/triangle.cpp.s
+.PHONY : shapes/triangle.s
+
+# target to generate assembly for a file
+shapes/triangle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/shapes/triangle.cpp.s
+.PHONY : shapes/triangle.cpp.s
+
+sobolmatrices.o: sobolmatrices.cpp.o
+.PHONY : sobolmatrices.o
+
+# target to build an object file
+sobolmatrices.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/sobolmatrices.cpp.o
+.PHONY : sobolmatrices.cpp.o
+
+sobolmatrices.i: sobolmatrices.cpp.i
+.PHONY : sobolmatrices.i
+
+# target to preprocess a source file
+sobolmatrices.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/sobolmatrices.cpp.i
+.PHONY : sobolmatrices.cpp.i
+
+sobolmatrices.s: sobolmatrices.cpp.s
+.PHONY : sobolmatrices.s
+
+# target to generate assembly for a file
+sobolmatrices.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/sobolmatrices.cpp.s
+.PHONY : sobolmatrices.cpp.s
+
+spectrum.o: spectrum.cpp.o
+.PHONY : spectrum.o
+
+# target to build an object file
+spectrum.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/spectrum.cpp.o
+.PHONY : spectrum.cpp.o
+
+spectrum.i: spectrum.cpp.i
+.PHONY : spectrum.i
+
+# target to preprocess a source file
+spectrum.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/spectrum.cpp.i
+.PHONY : spectrum.cpp.i
+
+spectrum.s: spectrum.cpp.s
+.PHONY : spectrum.s
+
+# target to generate assembly for a file
+spectrum.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/spectrum.cpp.s
+.PHONY : spectrum.cpp.s
+
+stats.o: stats.cpp.o
+.PHONY : stats.o
+
+# target to build an object file
+stats.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/stats.cpp.o
+.PHONY : stats.cpp.o
+
+stats.i: stats.cpp.i
+.PHONY : stats.i
+
+# target to preprocess a source file
+stats.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/stats.cpp.i
+.PHONY : stats.cpp.i
+
+stats.s: stats.cpp.s
+.PHONY : stats.s
+
+# target to generate assembly for a file
+stats.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/stats.cpp.s
+.PHONY : stats.cpp.s
+
+texture.o: texture.cpp.o
+.PHONY : texture.o
+
+# target to build an object file
+texture.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/texture.cpp.o
+.PHONY : texture.cpp.o
+
+texture.i: texture.cpp.i
+.PHONY : texture.i
+
+# target to preprocess a source file
+texture.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/texture.cpp.i
+.PHONY : texture.cpp.i
+
+texture.s: texture.cpp.s
+.PHONY : texture.s
+
+# target to generate assembly for a file
+texture.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/texture.cpp.s
+.PHONY : texture.cpp.s
+
+textures/constant.o: textures/constant.cpp.o
+.PHONY : textures/constant.o
+
+# target to build an object file
+textures/constant.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/textures/constant.cpp.o
+.PHONY : textures/constant.cpp.o
+
+textures/constant.i: textures/constant.cpp.i
+.PHONY : textures/constant.i
+
+# target to preprocess a source file
+textures/constant.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/textures/constant.cpp.i
+.PHONY : textures/constant.cpp.i
+
+textures/constant.s: textures/constant.cpp.s
+.PHONY : textures/constant.s
+
+# target to generate assembly for a file
+textures/constant.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/textures/constant.cpp.s
+.PHONY : textures/constant.cpp.s
+
+transform.o: transform.cpp.o
+.PHONY : transform.o
+
+# target to build an object file
+transform.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/transform.cpp.o
+.PHONY : transform.cpp.o
+
+transform.i: transform.cpp.i
+.PHONY : transform.i
+
+# target to preprocess a source file
+transform.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/transform.cpp.i
+.PHONY : transform.cpp.i
+
+transform.s: transform.cpp.s
+.PHONY : transform.s
+
+# target to generate assembly for a file
+transform.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/transform.cpp.s
+.PHONY : transform.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,9 +1266,147 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... RayTracing"
+	@echo "... bvh.o"
+	@echo "... bvh.i"
+	@echo "... bvh.s"
+	@echo "... camera.o"
+	@echo "... camera.i"
+	@echo "... camera.s"
+	@echo "... cameras/perspective.o"
+	@echo "... cameras/perspective.i"
+	@echo "... cameras/perspective.s"
+	@echo "... efloat.o"
+	@echo "... efloat.i"
+	@echo "... efloat.s"
+	@echo "... error.o"
+	@echo "... error.i"
+	@echo "... error.s"
+	@echo "... ext/lodepng.o"
+	@echo "... ext/lodepng.i"
+	@echo "... ext/lodepng.s"
+	@echo "... ext/rply.o"
+	@echo "... ext/rply.i"
+	@echo "... ext/rply.s"
+	@echo "... ext/targa.o"
+	@echo "... ext/targa.i"
+	@echo "... ext/targa.s"
+	@echo "... fileutil.o"
+	@echo "... fileutil.i"
+	@echo "... fileutil.s"
+	@echo "... film.o"
+	@echo "... film.i"
+	@echo "... film.s"
+	@echo "... filter.o"
+	@echo "... filter.i"
+	@echo "... filter.s"
+	@echo "... filters/box.o"
+	@echo "... filters/box.i"
+	@echo "... filters/box.s"
+	@echo "... floatfile.o"
+	@echo "... floatfile.i"
+	@echo "... floatfile.s"
+	@echo "... geometry.o"
+	@echo "... geometry.i"
+	@echo "... geometry.s"
+	@echo "... imageio.o"
+	@echo "... imageio.i"
+	@echo "... imageio.s"
+	@echo "... integrator.o"
+	@echo "... integrator.i"
+	@echo "... integrator.s"
+	@echo "... integrators/directlighting.o"
+	@echo "... integrators/directlighting.i"
+	@echo "... integrators/directlighting.s"
+	@echo "... interaction.o"
+	@echo "... interaction.i"
+	@echo "... interaction.s"
+	@echo "... interpolation.o"
+	@echo "... interpolation.i"
+	@echo "... interpolation.s"
+	@echo "... light.o"
+	@echo "... light.i"
+	@echo "... light.s"
+	@echo "... lights/point.o"
+	@echo "... lights/point.i"
+	@echo "... lights/point.s"
+	@echo "... lowdiscrepancy.o"
+	@echo "... lowdiscrepancy.i"
+	@echo "... lowdiscrepancy.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... material.o"
+	@echo "... material.i"
+	@echo "... material.s"
+	@echo "... materials/matte.o"
+	@echo "... materials/matte.i"
+	@echo "... materials/matte.s"
+	@echo "... memory.o"
+	@echo "... memory.i"
+	@echo "... memory.s"
+	@echo "... microfacet.o"
+	@echo "... microfacet.i"
+	@echo "... microfacet.s"
+	@echo "... parallel.o"
+	@echo "... parallel.i"
+	@echo "... parallel.s"
+	@echo "... paramset.o"
+	@echo "... paramset.i"
+	@echo "... paramset.s"
+	@echo "... primitive.o"
+	@echo "... primitive.i"
+	@echo "... primitive.s"
+	@echo "... progressreporter.o"
+	@echo "... progressreporter.i"
+	@echo "... progressreporter.s"
+	@echo "... quaternion.o"
+	@echo "... quaternion.i"
+	@echo "... quaternion.s"
+	@echo "... reflection.o"
+	@echo "... reflection.i"
+	@echo "... reflection.s"
+	@echo "... sampler.o"
+	@echo "... sampler.i"
+	@echo "... sampler.s"
+	@echo "... samplers/random.o"
+	@echo "... samplers/random.i"
+	@echo "... samplers/random.s"
+	@echo "... sampling.o"
+	@echo "... sampling.i"
+	@echo "... sampling.s"
+	@echo "... scene.o"
+	@echo "... scene.i"
+	@echo "... scene.s"
+	@echo "... shape.o"
+	@echo "... shape.i"
+	@echo "... shape.s"
+	@echo "... shapes/plymesh.o"
+	@echo "... shapes/plymesh.i"
+	@echo "... shapes/plymesh.s"
+	@echo "... shapes/sphere.o"
+	@echo "... shapes/sphere.i"
+	@echo "... shapes/sphere.s"
+	@echo "... shapes/triangle.o"
+	@echo "... shapes/triangle.i"
+	@echo "... shapes/triangle.s"
+	@echo "... sobolmatrices.o"
+	@echo "... sobolmatrices.i"
+	@echo "... sobolmatrices.s"
+	@echo "... spectrum.o"
+	@echo "... spectrum.i"
+	@echo "... spectrum.s"
+	@echo "... stats.o"
+	@echo "... stats.i"
+	@echo "... stats.s"
+	@echo "... texture.o"
+	@echo "... texture.i"
+	@echo "... texture.s"
+	@echo "... textures/constant.o"
+	@echo "... textures/constant.i"
+	@echo "... textures/constant.s"
+	@echo "... transform.o"
+	@echo "... transform.i"
+	@echo "... transform.s"
 .PHONY : help
 
 

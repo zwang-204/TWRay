@@ -1,7 +1,7 @@
 // core/film.cpp*
 #include "film.h"
 #include "paramset.h"
-// #include "imageio.h"
+#include "imageio.h"
 #include "stats.h"
 
 namespace pbrt {
@@ -174,7 +174,7 @@ void Film::WriteImage(float splatScale) {
     // Write RGB image
     LOG(INFO) << "Writing image " << filename << " with bounds " <<
         croppedPixelBounds;
-    // pbrt::WriteImage(filename, &rgb[0], croppedPixelBounds, fullResolution);
+    pbrt::WriteImage(filename, &rgb[0], croppedPixelBounds, fullResolution);
 }
 
 Film *CreateFilm(const ParamSet &params, std::unique_ptr<Filter> filter) {

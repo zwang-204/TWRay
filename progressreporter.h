@@ -16,7 +16,7 @@ class ProgressReporter {
     ProgressReporter(int64_t totalWork, const std::string &title);
     ~ProgressReporter();
     void Update(int64_t num = 1) {
-        if (num == 0 || PbrtOptions.quiet) return;
+        // if (num == 0 || PbrtOptions.quiet) return;
         workDone += num;
     }
     float ElapsedMS() const {

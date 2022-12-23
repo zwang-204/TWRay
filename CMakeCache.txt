@@ -213,6 +213,12 @@ RayTracing_BINARY_DIR:STATIC=/Users/Security/TA/C++Tutorial/RayTracing/Scripts
 //Value Computed by CMake
 RayTracing_SOURCE_DIR:STATIC=/Users/Security/TA/C++Tutorial/RayTracing/Scripts
 
+//Value Computed by CMake
+main_BINARY_DIR:STATIC=/Users/Security/TA/C++Tutorial/RayTracing/Scripts
+
+//Value Computed by CMake
+main_SOURCE_DIR:STATIC=/Users/Security/TA/C++Tutorial/RayTracing/Scripts
+
 
 ########################
 # INTERNAL cache entries

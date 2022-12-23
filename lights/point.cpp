@@ -1,17 +1,20 @@
 // lights/point.cpp*
-#include "lights/point.h"
-#include "paramset.h"
-#include "sampling.h"
-#include "stats.h"
+#include "point.h"
+#include "../paramset.h"
+#include "../sampling.h"
+#include "../stats.h"
 
 namespace pbrt {
 
 // PointLight Method Definitions
 Spectrum PointLight::Sample_Li(const Interaction &ref, const Point2f &u,
-                               Vector3f *wi, float *pdf) const {
+                               Vector3f *wi, float *pdf,
+                               VisibilityTester *vis) const {
     ProfilePhase _(Prof::LightSample);
     *wi = Normalize(pLight - ref.p);
     *pdf = 1.f;
+    *vis =
+        VisibilityTester(ref, Interaction(pLight, ref.time));
     return I / DistanceSquared(pLight, ref.p);
 }
 

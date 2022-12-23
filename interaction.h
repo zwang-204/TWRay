@@ -6,6 +6,7 @@
 #include "geometry.h"
 #include "transform.h"
 #include "material.h"
+#include "spectrum.h"
 #include "memory.h"
 
 namespace pbrt {
@@ -83,8 +84,8 @@ class SurfaceInteraction : public Interaction {
         Normal3f dndu, dndv;
     } shading;
     const Primitive *primitive = nullptr;
-    //BSDF *bsdf = nullptr;
-    //BSSRDF *bssrdf = nullptr;
+    BSDF *bsdf = nullptr;
+    // BSSRDF *bssrdf = nullptr;
     mutable Vector3f dpdx, dpdy;
     mutable float dudx = 0, dvdx = 0, dudy = 0, dvdy = 0;
 

@@ -91,6 +91,7 @@
         "strstream": "cpp",
         "valarray": "cpp",
         "variant": "cpp",
-        "cfenv": "cpp"
+        "cfenv": "cpp",
+        "filesystem": "cpp"
     }
 }

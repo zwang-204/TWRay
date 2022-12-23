@@ -1,8 +1,11 @@
 // core/interaction.cpp*
+#include "spectrum.h"
 #include "interaction.h"
 #include "transform.h"
 #include "primitive.h"
 #include "shape.h"
+#include "light.h"
+
 namespace pbrt {
 
 // SurfaceInteraction Method Definitions
@@ -108,6 +111,11 @@ void SurfaceInteraction::ComputeDifferentials(
         dudy = dvdy = 0;
         dpdx = dpdy = Vector3f(0, 0, 0);
     }
+}
+
+Spectrum SurfaceInteraction::Le(const Vector3f &w) const {
+    const AreaLight *area = primitive->GetAreaLight();
+    return area ? area->L(*this, w) : Spectrum(0.f);
 }
 
 }  // namespace pbrt
