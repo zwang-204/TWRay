@@ -20,6 +20,7 @@
 
 #include "materials/matte.h"
 #include "integrators/directlighting.h"
+#include "integrators/path.h"
 #include "scene.h"
 #include "filters/box.h"
 
@@ -198,31 +199,9 @@ int main(){
     auto sampler = CreateRandomSampler(empty);
 
     // Integrator
-    auto integrator = CreateDirectLightingIntegrator(empty, std::shared_ptr<Sampler>(sampler), camera);
+    auto integrator = CreatePathIntegrator(empty, std::shared_ptr<Sampler>(sampler), camera);
 
     // // Render
 
     integrator->Render(scene);
-
-    // std::cout<<"P3/n"<< image_width << ' ' << image_height << "\n255\n";
-    
-    // for(int j = image_height-1; j>=0; j--){
-    //     std::cerr << "\rScanlines remaining: "<< j <<' '<<std::flush;
-    //     for(int i = 0; i<image_width; i++){
-    //         Spectrum pixel_color(0.0);
-    //         for (int s = 0; s < samples_per_pixel; ++s){
-    //             // auto u = (i + pbrt::random_float()) / (image_width - 1);
-    //             // auto v = (j + pbrt::random_float()) / (image_height - 1);
-    //             CameraSample cs;
-    //             cs.pFilm = Point2f(i, j) + Point2f(pbrt::random_float(), pbrt::random_float());
-    //             cs.time = pbrt::random_float();
-    //             cs.pLens = Point2f(pbrt::random_float(),pbrt::random_float());
-    //             Ray r;
-    //             cam->GenerateRay(cs, &r);
-    //             pixel_color += ray_color(r, background, scene, max_depth);
-    //         }
-    //         write_color(std::cout, pixel_color, samples_per_pixel);
-    //     }
-    // }
-    // std::cerr<<"\nDone.\n";
 }

@@ -752,9 +752,9 @@ class Bounds3 {
             return 2;
     }
     Point3<T> Lerp(const Point3f &t) const {
-        return Point3<T>(Lerp(t.x, pMin.x, pMax.x),
-                         Lerp(t.y, pMin.y, pMax.y),
-                         Lerp(t.z, pMin.z, pMax.z));
+        return Point3<T>(pbrt::Lerp(t.x, pMin.x, pMax.x),
+                         pbrt::Lerp(t.y, pMin.y, pMax.y),
+                         pbrt::Lerp(t.z, pMin.z, pMax.z));
     }
     Vector3<T> Offset(const Point3<T> &p) const {
         Vector3<T> o = p - pMin;

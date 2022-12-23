@@ -37,6 +37,7 @@ add_library(pbrt STATIC
   interpolation.cpp
   integrator.cpp
   integrators/directlighting.cpp
+  integrators/path.cpp
   fileutil.cpp
   film.cpp
   filter.cpp
@@ -44,6 +45,7 @@ add_library(pbrt STATIC
   floatfile.cpp
   geometry.cpp
   light.cpp
+  lightdistrib.cpp
   lights/diffuse.cpp
   lights/point.cpp
   lowdiscrepancy.cpp
