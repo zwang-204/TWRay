@@ -16,6 +16,8 @@
 #include "samplers/random.h"
 #include "shapes/sphere.h"
 #include "shapes/plymesh.h"
+#include "shapes/disk.h"
+
 #include "materials/matte.h"
 #include "integrators/directlighting.h"
 #include "scene.h"
@@ -55,7 +57,7 @@ std::vector<std::shared_ptr<Primitive>> add_stanford_bunny(Vector3f pos, float c
     Transform *ObjectToWorld = new Transform;
     Transform *WorldToObject = new Transform;
 
-    *ObjectToWorld = Translate(pos)  * RotateY(180) * Scale(1000, 1000, 1000);
+    *ObjectToWorld = Translate(pos) * RotateX(90) * Scale(1000, 1000, 1000);
     *WorldToObject = Inverse(*ObjectToWorld);
 
     Material *mat = CreateMatteMaterial(texParams);
@@ -95,6 +97,26 @@ std::shared_ptr<Shape> sphere_shape(Vector3f pos, float radius) {
     return sphere;
 }
 
+std::shared_ptr<Primitive> basic_disk(Vector3f pos, float radius){
+    ParamSet diskParams;
+    Transform *disk2World = new Transform;
+    Transform *world2disk = new Transform;
+    auto r = std::make_unique<float[]>(1);
+    r[0] = radius;
+    diskParams.AddFloat("radius", std::move(r), 1);
+    *disk2World = Translate(pos);
+    *world2disk = Inverse(*disk2World);
+    auto disk = CreateDiskShape(disk2World, world2disk, false, diskParams);
+    auto floatTextures1 = std::make_shared<FloatTextureMap>();
+    auto spectrumTextures1 = std::make_shared<SpectrumTextureMap>();
+    TextureParams texParams(diskParams, diskParams, 
+        *floatTextures1, *spectrumTextures1);
+    Material *mat = CreateMatteMaterial(texParams);
+    std::shared_ptr<AreaLight> area; 
+
+    return std::make_shared<GeometricPrimitive>(disk, std::shared_ptr<Material>(mat), area);
+}
+
 int main(){
 
     ParallelInit();
@@ -109,25 +131,29 @@ int main(){
 
     // World
     // hittable_list world = cornell_box();
-    std::vector<std::shared_ptr<Primitive>> objects = stanford_bunny(Vector3f(0, -150, -0));
+    std::vector<std::shared_ptr<Primitive>> objects = stanford_bunny(Vector3f(0, 70, -30));
     std::vector<std::shared_ptr<Light>> lights;
+
+    // Disk
+    auto disk = basic_disk(Vector3f(0, 0, 0), 10000.0);
+    objects.push_back(disk);
 
     // Point light
     ParamSet lightParams;
     Transform light2World;
-    light2World = Translate(Vector3f(0, 50, -100));
+    light2World = Translate(Vector3f(0, 40, 1700));
     std::unique_ptr<float[]> intensity(new float[3]);
-    for (int j = 0; j < 3; ++j) intensity[j] = 10000.0;
+    for (int j = 0; j < 3; ++j) intensity[j] = 100000.0;
     lightParams.AddRGBSpectrum("I", std::move(intensity), 3);
     auto pointLight = CreatePointLight(light2World, lightParams);
-    lights.push_back(pointLight);
+    //lights.push_back(pointLight);
 
     // Area light
     ParamSet areaLightParams;
     std::unique_ptr<float[]> Le(new float[3]);
-    for (int j = 0; j < 3; ++j) Le[j] = 100000.0;
-    lightParams.AddRGBSpectrum("L", std::move(Le), 3);
-    auto areaLightShape = sphere_shape(Vector3f(0, 50, -20), 20);
+    for (int j = 0; j < 3; ++j) Le[j] = 20.0;
+    areaLightParams.AddRGBSpectrum("L", std::move(Le), 3);
+    auto areaLightShape = sphere_shape(Vector3f(0, -10, 170), 10);
     auto areaLight = CreateDiffuseAreaLight(light2World, areaLightParams, areaLightShape);
     lights.push_back(areaLight);
     auto floatTextures1 = std::make_shared<FloatTextureMap>();
@@ -148,7 +174,10 @@ int main(){
 
     ParamSet emptyParam;
     Transform *camToWorld = new Transform;
-    *camToWorld = Translate(Vector3f(0, 0, -200));
+    Point3f origin(0, -100, 10);
+    Point3f lookAt(0, 0, 0);
+    Vector3f up(0, 0, 1);
+    *camToWorld = Translate(Vector3f(origin)) * LookAt(origin, lookAt, up);
 
     AnimatedTransform animatedCam2World(camToWorld, 0, camToWorld, 1.0);
     std::unique_ptr<Filter> boxFilter = std::unique_ptr<Filter>(CreateBoxFilter(emptyParam));

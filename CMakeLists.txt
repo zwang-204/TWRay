@@ -63,6 +63,7 @@ add_library(pbrt STATIC
   scene.cpp
   shape.cpp
   shapes/sphere.cpp
+  shapes/disk.cpp
   shapes/plymesh.cpp
   shapes/triangle.cpp
   sobolmatrices.cpp
