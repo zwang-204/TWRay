@@ -55,6 +55,7 @@ add_library(pbrt STATIC
   materials/matte.cpp
   materials/glass.cpp
   materials/disney.cpp
+  materials/subsurface.cpp
   medium.cpp
   memory.cpp
   microfacet.cpp

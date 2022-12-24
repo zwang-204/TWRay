@@ -23,6 +23,7 @@
 #include "materials/matte.h"
 #include "materials/glass.h"
 #include "materials/disney.h"
+#include "materials/subsurface.h"
 #include "integrators/directlighting.h"
 #include "integrators/path.h"
 #include "scene.h"
@@ -93,6 +94,25 @@ std::shared_ptr<Material> add_disney_mat(Vector3f color, float metallic){
     TextureParams texParams(matParams, matParams, 
         *floatTextures1, *spectrumTextures1);
     Material *mat = CreateDisneyMaterial(texParams);
+    return std::shared_ptr<Material>(mat);
+}
+
+std::shared_ptr<Material> add_subsurface_mat(Vector3f color, std::string name){
+    ParamSet matParams;
+    auto floatTextures1 = std::make_shared<FloatTextureMap>();
+    auto spectrumTextures1 = std::make_shared<SpectrumTextureMap>();
+
+    std::unique_ptr<float[]> col(new float[3]);
+    for (int j = 0; j < 3; ++j) col[j] = color[j];
+    matParams.AddRGBSpectrum("Kr", std::move(col), 3);
+
+    std::unique_ptr<std::string[]> n(new std::string[1]);
+    n[0] = name;
+    matParams.AddString("name", std::move(n), 1);
+
+    TextureParams texParams(matParams, matParams, 
+        *floatTextures1, *spectrumTextures1);
+    Material *mat = CreateSubsurfaceMaterial(texParams);
     return std::shared_ptr<Material>(mat);
 }
 
@@ -248,12 +268,12 @@ std::vector<std::shared_ptr<Primitive>> add_stanford_bunny(Vector3f pos, float c
     Transform *WorldToObject = new Transform;
 
     //*ObjectToWorld = Translate(pos) * RotateX(90) * Scale(1000, 1000, 1000);
-    *ObjectToWorld = Translate(pos) * RotateY(180) * Scale(3000, 3000, 3000);
+    *ObjectToWorld = Translate(pos) * RotateY(180) * Scale(2000, 2000, 2000);
     *WorldToObject = Inverse(*ObjectToWorld);
 
     std::vector<std::shared_ptr<Shape>> shapes = CreatePLYMesh(ObjectToWorld, WorldToObject, false, paramSet, floatTextures);
     std::shared_ptr<AreaLight> area; 
-    auto mat = add_disney_mat(Vector3f(1.0,1.0,1.0), 1);
+    auto mat = add_subsurface_mat(Vector3f(1.0, 1.0, 1.0), "Skimmilk");
 
     for (auto s : shapes) {
         prims.push_back(
@@ -321,7 +341,7 @@ int main(){
 
     // Stanford bunny
     float color[3] = {1.0, 1.0, 1.0};
-    objects += add_stanford_bunny(Vector3f(265,-100,295), color);
+    objects += add_stanford_bunny(Vector3f(265,-70,295), color);
 
     // Planes
     add_cornell_box(objects, lights);
@@ -345,19 +365,19 @@ int main(){
     Point3f lookAt(278, 278, 0);
     Vector3f up(0, 1, 0);
     float fov = 40.0;
-    auto camera = add_camera(origin, lookAt, up, fov, 500, 500);
+    auto camera = add_camera(origin, lookAt, up, fov, 1000, 1000);
     
     // Sampler
     ParamSet sampParams;
     auto samplePerPixel = std::make_unique<int[]>(1);
-    samplePerPixel[0] = 20;
+    samplePerPixel[0] = 100;
     sampParams.AddInt("pixelsamples", std::move(samplePerPixel), 1);
     auto sampler = CreateRandomSampler(sampParams);
 
     // Integrator
     ParamSet integParams;
     auto maxDepth = std::make_unique<int[]>(1);
-    maxDepth[0] = 5;
+    maxDepth[0] = 8;
     integParams.AddInt("maxdepth", std::move(maxDepth), 1);
     auto integrator = CreatePathIntegrator(integParams, std::shared_ptr<Sampler>(sampler), camera);
 
