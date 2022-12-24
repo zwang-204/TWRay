@@ -325,6 +325,23 @@ inline float Erf(float x) {
     return sign * y;
 }
 
+template <typename T>
+std::vector<T> operator+(std::vector<T> const &x, std::vector<T> const &y)
+{
+    std::vector<T> vec;
+    vec.reserve(x.size() + y.size());
+    vec.insert(vec.end(), x.begin(), x.end());
+    vec.insert(vec.end(), y.begin(), y.end());
+    return vec;
+}
+ 
+template <typename T>
+std::vector<T> &operator+=(std::vector<T> &x, const std::vector<T> &y)
+{
+    x.reserve(x.size() + y.size());
+    x.insert(x.end(), y.begin(), y.end());
+    return x;
+}
 
 }
 

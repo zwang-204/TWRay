@@ -70,6 +70,7 @@ add_library(pbrt STATIC
   shapes/disk.cpp
   shapes/plymesh.cpp
   shapes/triangle.cpp
+  shapes/heightfield.cpp
   sobolmatrices.cpp
   spectrum.cpp
   stats.cpp
