@@ -24,6 +24,7 @@ link_directories(
 )
 
 add_library(pbrt STATIC
+  bssrdf.cpp
   bvh.cpp
   camera.cpp
   cameras/perspective.cpp
@@ -52,6 +53,8 @@ add_library(pbrt STATIC
   lowdiscrepancy.cpp
   material.cpp
   materials/matte.cpp
+  materials/glass.cpp
+  materials/disney.cpp
   medium.cpp
   memory.cpp
   microfacet.cpp

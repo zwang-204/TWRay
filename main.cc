@@ -90,10 +90,6 @@ std::shared_ptr<Material> add_disney_mat(Vector3f color, float metallic){
     met[0] = metallic;
     matParams.AddFloat("metallic", std::move(met), 1);
 
-    std::unique_ptr<float[]> met(new float[1]);
-    met[0] = metallic;
-    matParams.AddFloat("metallic", std::move(met), 1);
-
     TextureParams texParams(matParams, matParams, 
         *floatTextures1, *spectrumTextures1);
     Material *mat = CreateDisneyMaterial(texParams);
