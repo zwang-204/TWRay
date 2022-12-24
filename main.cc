@@ -21,6 +21,8 @@
 #include "shapes/heightfield.h"
 
 #include "materials/matte.h"
+#include "materials/glass.h"
+#include "materials/disney.h"
 #include "integrators/directlighting.h"
 #include "integrators/path.h"
 #include "scene.h"
@@ -39,6 +41,64 @@ using FloatTextureMap = std::map<std::string, std::shared_ptr<Texture<float>>>;
 using SpectrumTextureMap = std::map<std::string, std::shared_ptr<Texture<Spectrum>>>;
 std::shared_ptr<SpectrumTextureMap> spectrumTextures;
 bool spectrumTexturesShared = false;
+
+std::shared_ptr<Material> add_glass_mat(){
+    ParamSet matParams;
+    auto floatTextures1 = std::make_shared<FloatTextureMap>();
+    auto spectrumTextures1 = std::make_shared<SpectrumTextureMap>();
+    
+    auto roughness = std::make_unique<float[]>(1);
+    roughness[0] = 0.0;
+    matParams.AddFloat("uroughness", std::move(roughness), 1);
+    matParams.AddFloat("vroughness", std::move(roughness), 1);
+
+    auto eta = std::make_unique<float[]>(1);
+    eta[0] = 1.5;
+    matParams.AddFloat("eta", std::move(eta), 1);
+
+    TextureParams texParams(matParams, matParams, 
+        *floatTextures1, *spectrumTextures1);
+    Material *mat = CreateGlassMaterial(texParams);
+    return std::shared_ptr<Material>(mat);
+}
+
+std::shared_ptr<Material> add_matte_mat(Vector3f color){
+    ParamSet matParams;
+    auto floatTextures1 = std::make_shared<FloatTextureMap>();
+    auto spectrumTextures1 = std::make_shared<SpectrumTextureMap>();
+
+    std::unique_ptr<float[]> col(new float[3]);
+    for (int j = 0; j < 3; ++j) col[j] = color[j];
+    matParams.AddRGBSpectrum("Kd", std::move(col), 3);
+
+    TextureParams texParams(matParams, matParams, 
+        *floatTextures1, *spectrumTextures1);
+    Material *mat = CreateMatteMaterial(texParams);
+    return std::shared_ptr<Material>(mat);
+}
+
+std::shared_ptr<Material> add_disney_mat(Vector3f color, float metallic){
+    ParamSet matParams;
+    auto floatTextures1 = std::make_shared<FloatTextureMap>();
+    auto spectrumTextures1 = std::make_shared<SpectrumTextureMap>();
+
+    std::unique_ptr<float[]> col(new float[3]);
+    for (int j = 0; j < 3; ++j) col[j] = color[j];
+    matParams.AddRGBSpectrum("color", std::move(col), 3);
+
+    std::unique_ptr<float[]> met(new float[1]);
+    met[0] = metallic;
+    matParams.AddFloat("metallic", std::move(met), 1);
+
+    std::unique_ptr<float[]> met(new float[1]);
+    met[0] = metallic;
+    matParams.AddFloat("metallic", std::move(met), 1);
+
+    TextureParams texParams(matParams, matParams, 
+        *floatTextures1, *spectrumTextures1);
+    Material *mat = CreateDisneyMaterial(texParams);
+    return std::shared_ptr<Material>(mat);
+}
 
 std::shared_ptr<Shape> sphere_shape(Vector3f pos, float radius) {
     ParamSet sphereParams;
@@ -63,14 +123,10 @@ std::shared_ptr<Primitive> basic_disk(Vector3f pos, float radius){
     *disk2World = Translate(pos);
     *world2disk = Inverse(*disk2World);
     auto disk = CreateDiskShape(disk2World, world2disk, false, diskParams);
-    auto floatTextures1 = std::make_shared<FloatTextureMap>();
-    auto spectrumTextures1 = std::make_shared<SpectrumTextureMap>();
-    TextureParams texParams(diskParams, diskParams, 
-        *floatTextures1, *spectrumTextures1);
-    Material *mat = CreateMatteMaterial(texParams);
+    std::shared_ptr<Material> mat = add_matte_mat(Vector3f(1.0,1.0,1.0));
     std::shared_ptr<AreaLight> area; 
 
-    return std::make_shared<GeometricPrimitive>(disk, std::shared_ptr<Material>(mat), area);
+    return std::make_shared<GeometricPrimitive>(disk, mat, area);
 }
 
 std::vector<std::shared_ptr<Shape>> add_plane_shape(Vector3f pos, Vector3f rot, 
@@ -100,20 +156,11 @@ std::vector<std::shared_ptr<Primitive>> add_plane_prim(Vector3f pos, Vector3f ro
                                                         std::shared_ptr<AreaLight> area=nullptr){
     std::vector<std::shared_ptr<Primitive>> prims;
     std::vector<std::shared_ptr<Shape>> plane = add_plane_shape(pos, rot, scale);
-    auto floatTextures1 = std::make_shared<FloatTextureMap>();
-    auto spectrumTextures1 = std::make_shared<SpectrumTextureMap>();
-    ParamSet geomParams;
-    ParamSet matParams;
-    std::unique_ptr<float[]> col(new float[3]);
-    for (int j = 0; j < 3; ++j) col[j] = color[j];
-    matParams.AddRGBSpectrum("Kd", std::move(col), 3);
-    TextureParams texParams(geomParams, matParams, 
-        *floatTextures1, *spectrumTextures1);
     
-    Material *mat = CreateMatteMaterial(texParams);
+    std::shared_ptr<Material> mat = add_matte_mat(color);
     for (auto s : plane) {
         prims.push_back(
-            std::make_shared<GeometricPrimitive>(s, std::shared_ptr<Material>(mat), area));
+            std::make_shared<GeometricPrimitive>(s, mat, area));
     }
     return prims;
 }
@@ -150,6 +197,10 @@ std::shared_ptr<AreaLight> add_area_light(std::shared_ptr<Shape> shape, Vector3f
     std::unique_ptr<float[]> Le(new float[3]);
     for (int j = 0; j < 3; ++j) Le[j] = intensity[j];
     areaLightParams.AddRGBSpectrum("L", std::move(Le), 3);
+
+    auto nSamples = std::make_unique<int[]>(1);
+    nSamples[0] = 1;
+    areaLightParams.AddInt("samples", std::move(nSamples), 1);
     auto areaLight = CreateDiffuseAreaLight(light2World, NULL, areaLightParams, shape);
     return areaLight;
 }
@@ -190,7 +241,7 @@ std::vector<std::shared_ptr<Primitive>> add_stanford_bunny(Vector3f pos, float c
     std::vector<std::shared_ptr<Primitive>> prims;
 
     auto filename = std::make_unique<std::string[]>(1);
-    filename[0] = std::string("/Users/Security/TA/C++Tutorial/RayTracing/Scripts/ply/bunny.ply");
+    filename[0] = std::string("/Users/Security/TA/C++Tutorial/RayTracing/Scripts/ply/bunny3.ply");
     paramSet.AddString("filename", std::move(filename), 1);
 
     std::map<std::string, std::shared_ptr<Texture<float>>> *floatTextures;
@@ -201,29 +252,19 @@ std::vector<std::shared_ptr<Primitive>> add_stanford_bunny(Vector3f pos, float c
     Transform *WorldToObject = new Transform;
 
     //*ObjectToWorld = Translate(pos) * RotateX(90) * Scale(1000, 1000, 1000);
-    *ObjectToWorld = Translate(pos) * Scale(1000, 1000, 1000);
+    *ObjectToWorld = Translate(pos) * RotateY(180) * Scale(3000, 3000, 3000);
     *WorldToObject = Inverse(*ObjectToWorld);
 
-    Material *mat = CreateMatteMaterial(texParams);
     std::vector<std::shared_ptr<Shape>> shapes = CreatePLYMesh(ObjectToWorld, WorldToObject, false, paramSet, floatTextures);
     std::shared_ptr<AreaLight> area; 
+    auto mat = add_disney_mat(Vector3f(1.0,1.0,1.0), 1);
 
     for (auto s : shapes) {
         prims.push_back(
-            std::make_shared<GeometricPrimitive>(s, std::shared_ptr<Material>(mat), area));
+            std::make_shared<GeometricPrimitive>(s, mat, area));
     }
 
     return prims;
-}
-
-std::vector<std::shared_ptr<Primitive>> stanford_bunny(Vector3f pos) {
-
-    std::shared_ptr<Primitive> accel;
-    ParamSet paramSet;
-    float color[3] = {1.0, 0.0, 0.0};
-    auto bunny = add_stanford_bunny(pos, color);
-    //objects.push_back(sphere1);
-    return bunny;
 }
 
 void add_cornell_box(std::vector<std::shared_ptr<Primitive>> &objects,
@@ -260,12 +301,13 @@ void add_cornell_box(std::vector<std::shared_ptr<Primitive>> &objects,
     Vector3f lightPos(213, 554, 227);
     Vector3f lightRot(90,0,0);
     Vector3f lightScale(130, 105, 1);
-    Vector3f lightIntensity(20.0, 20.0, 20.0);
+    Vector3f lightIntensity(10.0, 10.0, 10.0);
     auto areaShape = add_plane_shape(lightPos, lightRot, lightScale);
     for(auto s : areaShape){
         auto areaLight = add_area_light(s, lightPos, lightIntensity);
+        std::shared_ptr<Material> mat;
         lights.push_back(areaLight);
-        objects.push_back(std::make_shared<GeometricPrimitive>(s, nullptr, areaLight));
+        objects.push_back(std::make_shared<GeometricPrimitive>(s, mat, areaLight));
     }
 
     objects += down + up + back + left + right;
@@ -277,19 +319,13 @@ int main(){
     ParallelInit();
     InitProfiler();
 
-    // Image
-    auto aspect_ratio = 1.0;
-    int image_width = 500;
-    int image_height = static_cast<int>(image_width / aspect_ratio);
-    int samples_per_pixel = 30;
-    const int max_depth = 5;
-
     // World
     std::vector<std::shared_ptr<Primitive>> objects;
     std::vector<std::shared_ptr<Light>> lights;
 
     // Stanford bunny
-    objects += stanford_bunny(Vector3f(265,-25,295));
+    float color[3] = {1.0, 1.0, 1.0};
+    objects += add_stanford_bunny(Vector3f(265,-100,295), color);
 
     // Planes
     add_cornell_box(objects, lights);
@@ -299,7 +335,7 @@ int main(){
     //lights.push_back(pointLight);
 
     // Directional light
-    shared_ptr<Light> dirLight = add_distant_light(Point3f(0, -1, 0), 10);
+    // shared_ptr<Light> dirLight = add_distant_light(Point3f(0, -1, 0), 10);
     //lights.push_back(dirLight);
 
     // Create BVH
@@ -313,12 +349,12 @@ int main(){
     Point3f lookAt(278, 278, 0);
     Vector3f up(0, 1, 0);
     float fov = 40.0;
-    auto camera = add_camera(origin, lookAt, up, fov, 1000, 1000);
+    auto camera = add_camera(origin, lookAt, up, fov, 500, 500);
     
     // Sampler
     ParamSet sampParams;
     auto samplePerPixel = std::make_unique<int[]>(1);
-    samplePerPixel[0] = 40;
+    samplePerPixel[0] = 20;
     sampParams.AddInt("pixelsamples", std::move(samplePerPixel), 1);
     auto sampler = CreateRandomSampler(sampParams);
 
@@ -329,7 +365,6 @@ int main(){
     integParams.AddInt("maxdepth", std::move(maxDepth), 1);
     auto integrator = CreatePathIntegrator(integParams, std::shared_ptr<Sampler>(sampler), camera);
 
-    // // Render
-
+    // Render
     integrator->Render(scene);
 }
