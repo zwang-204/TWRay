@@ -1,6 +1,6 @@
+// core/primitive.cpp*
 #include "primitive.h"
 #include "light.h"
-#include "memory.h"
 #include "interaction.h"
 #include "stats.h"
 
@@ -18,7 +18,7 @@ const AreaLight *Aggregate::GetAreaLight() const {
 }
 
 const Material *Aggregate::GetMaterial() const {
-    std::cerr <<
+    LOG(FATAL) <<
         "Aggregate::GetMaterial() method"
         "called; should have gone to GeometricPrimitive";
     return nullptr;
@@ -28,9 +28,16 @@ void Aggregate::ComputeScatteringFunctions(SurfaceInteraction *isect,
                                            MemoryArena &arena,
                                            TransportMode mode,
                                            bool allowMultipleLobes) const {
-    std::cerr <<
+    LOG(FATAL) <<
         "Aggregate::ComputeScatteringFunctions() method"
         "called; should have gone to GeometricPrimitive";
+}
+
+// TransformedPrimitive Method Definitions
+TransformedPrimitive::TransformedPrimitive(std::shared_ptr<Primitive> &primitive,
+                                           const AnimatedTransform &PrimitiveToWorld)
+    : primitive(primitive), PrimitiveToWorld(PrimitiveToWorld) {
+    primitiveMemory += sizeof(*this);
 }
 
 bool TransformedPrimitive::Intersect(const Ray &r,
@@ -42,8 +49,8 @@ bool TransformedPrimitive::Intersect(const Ray &r,
     if (!primitive->Intersect(ray, isect)) return false;
     r.tMax = ray.tMax;
     // Transform instance's intersection data to world space
-    // if (!InterpolatedPrimToWorld.IsIdentity())
-    //    *isect = InterpolatedPrimToWorld(*isect);
+    if (!InterpolatedPrimToWorld.IsIdentity())
+        *isect = InterpolatedPrimToWorld(*isect);
     CHECK_GE(Dot(isect->n, isect->shading.n), 0);
     return true;
 }
@@ -58,10 +65,12 @@ bool TransformedPrimitive::IntersectP(const Ray &r) const {
 // GeometricPrimitive Method Definitions
 GeometricPrimitive::GeometricPrimitive(const std::shared_ptr<Shape> &shape,
                                        const std::shared_ptr<Material> &material,
-                                       const std::shared_ptr<AreaLight> &areaLight)
+                                       const std::shared_ptr<AreaLight> &areaLight,
+                                       const MediumInterface &mediumInterface)
     : shape(shape),
     material(material),
-    areaLight(areaLight){
+    areaLight(areaLight),
+    mediumInterface(mediumInterface) {
     primitiveMemory += sizeof(*this);
 }
 
@@ -78,6 +87,12 @@ bool GeometricPrimitive::Intersect(const Ray &r,
     r.tMax = tHit;
     isect->primitive = this;
     CHECK_GE(Dot(isect->n, isect->shading.n), 0.);
+    // Initialize _SurfaceInteraction::mediumInterface_ after _Shape_
+    // intersection
+    if (mediumInterface.IsMediumTransition())
+        isect->mediumInterface = mediumInterface;
+    else
+        isect->mediumInterface = MediumInterface(r.medium);
     return true;
 }
 
@@ -92,6 +107,7 @@ const Material *GeometricPrimitive::GetMaterial() const {
 void GeometricPrimitive::ComputeScatteringFunctions(
     SurfaceInteraction *isect, MemoryArena &arena, TransportMode mode,
     bool allowMultipleLobes) const {
+    ProfilePhase p(Prof::ComputeScatteringFuncs);
     if (material)
         material->ComputeScatteringFunctions(isect, arena, mode,
                                              allowMultipleLobes);

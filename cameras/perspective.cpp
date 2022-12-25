@@ -6,7 +6,6 @@
 #include "../light.h"
 #include "../stats.h"
 
-
 namespace pbrt {
 
 // PerspectiveCamera Method Definitions

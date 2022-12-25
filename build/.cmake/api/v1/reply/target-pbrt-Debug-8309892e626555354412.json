@@ -139,7 +139,12 @@
 				53,
 				54,
 				55,
-				56
+				56,
+				57,
+				58,
+				59,
+				60,
+				61
 			]
 		}
 	],
@@ -213,7 +218,12 @@
 				53,
 				54,
 				55,
-				56
+				56,
+				57,
+				58,
+				59,
+				60,
+				61
 			]
 		}
 	],
@@ -312,6 +322,18 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
+			"path" : "integrators/volpath.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "integrators/bdpt.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
 			"path" : "fileutil.cpp",
 			"sourceGroupIndex" : 0
 		},
@@ -378,6 +400,12 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
+			"path" : "lights/spot.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
 			"path" : "lowdiscrepancy.cpp",
 			"sourceGroupIndex" : 0
 		},
@@ -409,6 +437,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "materials/subsurface.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "media/homogeneous.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -481,6 +515,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "samplers/random.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "samplers/zerotwosequence.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

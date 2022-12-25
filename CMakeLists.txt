@@ -39,6 +39,8 @@ add_library(pbrt STATIC
   integrator.cpp
   integrators/directlighting.cpp
   integrators/path.cpp
+  integrators/volpath.cpp
+  integrators/bdpt.cpp
   fileutil.cpp
   film.cpp
   filter.cpp
@@ -50,12 +52,14 @@ add_library(pbrt STATIC
   lights/diffuse.cpp
   lights/distant.cpp
   lights/point.cpp
+  lights/spot.cpp
   lowdiscrepancy.cpp
   material.cpp
   materials/matte.cpp
   materials/glass.cpp
   materials/disney.cpp
   materials/subsurface.cpp
+  media/homogeneous.cpp
   medium.cpp
   memory.cpp
   microfacet.cpp
@@ -68,6 +72,7 @@ add_library(pbrt STATIC
   sampling.cpp
   sampler.cpp
   samplers/random.cpp
+  samplers/zerotwosequence.cpp
   scene.cpp
   shape.cpp
   shapes/sphere.cpp

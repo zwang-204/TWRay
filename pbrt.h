@@ -139,19 +139,13 @@ struct Options {
 extern Options PbrtOptions;
 class TextureParams;
 
+static constexpr float MaxFloat = std::numeric_limits<float>::max();
+
 inline float Log2(float x) {
     const float invLog2 = 1.442695040888963387004650940071;
     return std::log(x) * invLog2;
 }
 
-template <typename T>
-inline bool isNaN(const T x) {
-    return std::isnan(x);
-}
-template <>
-inline bool isNaN(const int x) {
-    return false;
-}
 template<typename T, typename U>
 inline bool isUnequal(const T x, const U y){
     return x!=y;
@@ -323,6 +317,34 @@ inline float Erf(float x) {
         (((((a5 * t + a4) * t) + a3) * t + a2) * t + a1) * t * std::exp(-x * x);
 
     return sign * y;
+}
+
+inline int Log2Int(int64_t v) { return Log2Int((uint64_t)v); }
+
+template <typename T>
+inline constexpr bool IsPowerOf2(T v) {
+    return v && !(v & (v - 1));
+}
+
+inline int32_t RoundUpPow2(int32_t v) {
+    v--;
+    v |= v >> 1;
+    v |= v >> 2;
+    v |= v >> 4;
+    v |= v >> 8;
+    v |= v >> 16;
+    return v + 1;
+}
+
+inline int64_t RoundUpPow2(int64_t v) {
+    v--;
+    v |= v >> 1;
+    v |= v >> 2;
+    v |= v >> 4;
+    v |= v >> 8;
+    v |= v >> 16;
+    v |= v >> 32;
+    return v + 1;
 }
 
 template <typename T>

@@ -5,6 +5,7 @@
 #include "pbrt.h"
 #include "shape.h"
 #include "material.h"
+#include "medium.h"
 #include "transform.h"
 
 namespace pbrt {
@@ -15,7 +16,7 @@ class Primitive {
     // Primitive Interface
     virtual ~Primitive();
     virtual Bounds3f WorldBound() const = 0;
-    virtual bool Intersect(const Ray &r, SurfaceInteraction *isect) const = 0;
+    virtual bool Intersect(const Ray &r, SurfaceInteraction *) const = 0;
     virtual bool IntersectP(const Ray &r) const = 0;
     virtual const AreaLight *GetAreaLight() const = 0;
     virtual const Material *GetMaterial() const = 0;
@@ -29,18 +30,17 @@ class Primitive {
 class GeometricPrimitive : public Primitive {
   public:
     // GeometricPrimitive Public Methods
-    // virtual ~GeometricPrimitive(); wzt
     virtual Bounds3f WorldBound() const;
     virtual bool Intersect(const Ray &r, SurfaceInteraction *isect) const;
     virtual bool IntersectP(const Ray &r) const;
     GeometricPrimitive(const std::shared_ptr<Shape> &shape,
                        const std::shared_ptr<Material> &material,
-                       const std::shared_ptr<AreaLight> &areaLight);
-    const Material *GetMaterial() const;
+                       const std::shared_ptr<AreaLight> &areaLight,
+                       const MediumInterface &mediumInterface);
     const AreaLight *GetAreaLight() const;
+    const Material *GetMaterial() const;
     void ComputeScatteringFunctions(SurfaceInteraction *isect,
-                                    MemoryArena &arena, 
-                                    TransportMode mode,
+                                    MemoryArena &arena, TransportMode mode,
                                     bool allowMultipleLobes) const;
 
   private:
@@ -48,6 +48,7 @@ class GeometricPrimitive : public Primitive {
     std::shared_ptr<Shape> shape;
     std::shared_ptr<Material> material;
     std::shared_ptr<AreaLight> areaLight;
+    MediumInterface mediumInterface;
 };
 
 // TransformedPrimitive Declarations

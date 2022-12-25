@@ -65,7 +65,7 @@ Matrix4x4 Inverse(const Matrix4x4 &m) {
                             icol = k;
                         }
                     } else if (ipiv[k] > 1)
-                        std::cerr << "Singular matrix in MatrixInvert" << std::endl;
+                        Error("Singular matrix in MatrixInvert");
                 }
             }
         }
@@ -76,7 +76,7 @@ Matrix4x4 Inverse(const Matrix4x4 &m) {
         }
         indxr[i] = irow;
         indxc[i] = icol;
-        if (minv[icol][icol] == 0.f)  std::cerr << ("Singular matrix in MatrixInvert") << std::endl;
+        if (minv[icol][icol] == 0.f) Error("Singular matrix in MatrixInvert");
 
         // Set $m[icol][icol]$ to one by scaling row _icol_ appropriately
         float pivinv = 1. / minv[icol][icol];
@@ -178,10 +178,11 @@ Transform LookAt(const Point3f &pos, const Point3f &look, const Vector3f &up) {
     // Initialize first three columns of viewing matrix
     Vector3f dir = Normalize(look - pos);
     if (Cross(Normalize(up), dir).Length() == 0) {
-        std::cerr << 
-            "WZT \"up\" vector (%f, %f, %f) and viewing direction (%f, %f, %f) "
+        Error(
+            "\"up\" vector (%f, %f, %f) and viewing direction (%f, %f, %f) "
             "passed to LookAt are pointing in the same direction.  Using "
-            "the identity transformation." << std::endl;
+            "the identity transformation.",
+            up.x, up.y, up.z, dir.x, dir.y, dir.z);
         return Transform();
     }
     Vector3f right = Normalize(Cross(Normalize(up), dir));
@@ -235,6 +236,7 @@ SurfaceInteraction Transform::operator()(const SurfaceInteraction &si) const {
     ret.n = Normalize(t(si.n));
     ret.wo = Normalize(t(si.wo));
     ret.time = si.time;
+    ret.mediumInterface = si.mediumInterface;
     ret.uv = si.uv;
     ret.shape = si.shape;
     ret.dpdu = t(si.dpdu);
@@ -252,6 +254,8 @@ SurfaceInteraction Transform::operator()(const SurfaceInteraction &si) const {
     ret.dvdy = si.dvdy;
     ret.dpdx = t(si.dpdx);
     ret.dpdy = t(si.dpdy);
+    ret.bsdf = si.bsdf;
+    ret.bssrdf = si.bssrdf;
     ret.primitive = si.primitive;
     //    ret.n = Faceforward(ret.n, ret.shading.n);
     ret.shading.n = Faceforward(ret.shading.n, ret.n);

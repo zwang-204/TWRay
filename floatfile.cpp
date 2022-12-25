@@ -7,8 +7,7 @@ namespace pbrt {
 bool ReadFloatFile(const char *filename, std::vector<float> *values) {
     FILE *f = fopen(filename, "r");
     if (!f) {
-        // Error("Unable to open file \"%s\"", filename);
-        std::cerr << "Unable to open file WZT" << std::endl;
+        Error("Unable to open file \"%s\"", filename);
         return false;
     }
 
