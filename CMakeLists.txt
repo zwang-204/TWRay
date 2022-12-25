@@ -86,6 +86,7 @@ add_library(pbrt STATIC
   texture.cpp
   textures/constant.cpp
   transform.cpp
+  twray.cpp
 )
 
 SET(ALL_PBRT_LIBS
