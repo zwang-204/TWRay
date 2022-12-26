@@ -1,0 +1,4 @@
+/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build/CMakeFiles/rebuild_cache.dir
+/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build/CMakeFiles/edit_cache.dir
+/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build/CMakeFiles/RayTracing.dir
+/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build/CMakeFiles/pbrt.dir
