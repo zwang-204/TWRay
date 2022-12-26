@@ -1,8 +1,8 @@
 // lights/point.cpp*
-#include "point.h"
-#include "../paramset.h"
-#include "../sampling.h"
-#include "../stats.h"
+#include "lights/point.h"
+#include "paramset.h"
+#include "sampling.h"
+#include "stats.h"
 
 namespace pbrt {
 

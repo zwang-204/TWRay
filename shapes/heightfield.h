@@ -2,7 +2,7 @@
 #define SHAPES_HEIGHTFIELD_H
 
 // shapes/heightfield.h*
-#include "../shape.h"
+#include "shape.h"
 
 namespace pbrt {
 

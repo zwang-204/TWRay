@@ -2,10 +2,10 @@
 #define PBRT_LIGHTS_DISTANT_H
 
 // lights/distant.h*
-#include "../pbrt.h"
-#include "../light.h"
-#include "../shape.h"
-#include "../scene.h"
+#include "pbrt.h"
+#include "light.h"
+#include "shape.h"
+#include "scene.h"
 
 namespace pbrt {
 

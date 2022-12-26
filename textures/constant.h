@@ -2,9 +2,9 @@
 #define TEXTURES_CONSTANT_H
 
 // textures/constant.h*
-#include "../pbrt.h"
-#include "../texture.h"
-#include "../paramset.h"
+#include "pbrt.h"
+#include "texture.h"
+#include "paramset.h"
 
 namespace pbrt {
 

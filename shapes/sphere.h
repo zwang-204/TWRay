@@ -1,10 +1,11 @@
 #ifndef SHAPES_SPHERE_H
 #define SHAPES_SPHERE_H
 
-#include "../shape.h"
-#include "../geometry.h"
-#include "../paramset.h"
-#include "../sampling.h"
+// shapes/sphere.h
+#include "shape.h"
+#include "geometry.h"
+#include "paramset.h"
+#include "sampling.h"
 
 namespace pbrt {
 

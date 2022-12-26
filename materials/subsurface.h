@@ -2,10 +2,10 @@
 #define MATERIALS_SUBSURFACE_H
 
 // materials/subsurface.h*
-#include "../pbrt.h"
-#include "../material.h"
-#include "../reflection.h"
-#include "../bssrdf.h"
+#include "pbrt.h"
+#include "material.h"
+#include "reflection.h"
+#include "bssrdf.h"
 
 namespace pbrt {
 

@@ -1,8 +1,9 @@
-#include "sphere.h"
-#include "../sampling.h"
-#include "../paramset.h"
-#include "../efloat.h"
-#include "../stats.h"
+// shapes/sphere.cpp
+#include "shapes/sphere.h"
+#include "sampling.h"
+#include "paramset.h"
+#include "efloat.h"
+#include "stats.h"
 
 namespace pbrt {
 

@@ -1,8 +1,8 @@
 // lights/distant.cpp*
-#include "distant.h"
-#include "../paramset.h"
-#include "../sampling.h"
-#include "../stats.h"
+#include "lights/distant.h"
+#include "paramset.h"
+#include "sampling.h"
+#include "stats.h"
 
 namespace pbrt {
 

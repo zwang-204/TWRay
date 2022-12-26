@@ -1,11 +1,11 @@
 // shapes/triangle.cpp*
-#include "triangle.h"
-#include "../texture.h"
-#include "../textures/constant.h"
-#include "../paramset.h"
-#include "../sampling.h"
-#include "../efloat.h"
-#include "../ext/rply.h"
+#include "shapes/triangle.h"
+#include "texture.h"
+#include "textures/constant.h"
+#include "paramset.h"
+#include "sampling.h"
+#include "efloat.h"
+#include "ext/rply.h"
 #include <array>
 
 namespace pbrt {

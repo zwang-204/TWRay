@@ -2,9 +2,9 @@
 #define INTEGRATORS_VOLPATH_H
 
 // integrators/volpath.h*
-#include "../pbrt.h"
-#include "../integrator.h"
-#include "../lightdistrib.h"
+#include "pbrt.h"
+#include "integrator.h"
+#include "lightdistrib.h"
 
 namespace pbrt {
 

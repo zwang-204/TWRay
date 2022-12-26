@@ -1,11 +1,11 @@
 // materials/subsurface.cpp*
-#include "subsurface.h"
-#include "../textures/constant.h"
-#include "../spectrum.h"
-#include "../texture.h"
-#include "../interpolation.h"
-#include "../paramset.h"
-#include "../interaction.h"
+#include "materials/subsurface.h"
+#include "textures/constant.h"
+#include "spectrum.h"
+#include "texture.h"
+#include "interpolation.h"
+#include "paramset.h"
+#include "interaction.h"
 
 namespace pbrt {
 

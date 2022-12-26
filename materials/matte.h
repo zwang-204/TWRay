@@ -2,8 +2,8 @@
 #define MATTE_H
 
 // materials/matte.h*
-#include "../pbrt.h"
-#include "../material.h"
+#include "pbrt.h"
+#include "material.h"
 
 namespace pbrt {
 

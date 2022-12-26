@@ -1,5 +1,5 @@
-#include "box.h"
-#include "../paramset.h"
+#include "filters/box.h"
+#include "paramset.h"
 
 namespace pbrt {
 

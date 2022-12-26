@@ -1,9 +1,9 @@
 // lights/diffuse.cpp*
-#include "diffuse.h"
-#include "../paramset.h"
-#include "../sampling.h"
-#include "../shapes/triangle.h"
-#include "../stats.h"
+#include "lights/diffuse.h"
+#include "paramset.h"
+#include "sampling.h"
+#include "shapes/triangle.h"
+#include "stats.h"
 
 namespace pbrt {
 

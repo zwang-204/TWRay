@@ -2,8 +2,8 @@
 #define MATERIALS_DISNEY_H
 
 // materials/disney.h*
-#include "../material.h"
-#include "../pbrt.h"
+#include "material.h"
+#include "pbrt.h"
 
 namespace pbrt {
 

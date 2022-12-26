@@ -1,8 +1,8 @@
 // samplers/random.cpp*
-#include "random.h"
-#include "../paramset.h"
-#include "../sampling.h"
-#include "../stats.h"
+#include "samplers/random.h"
+#include "paramset.h"
+#include "sampling.h"
+#include "stats.h"
 
 namespace pbrt {
 

@@ -1,10 +1,10 @@
 // materials/glass.cpp*
-#include "glass.h"
-#include "../spectrum.h"
-#include "../reflection.h"
-#include "../paramset.h"
-#include "../texture.h"
-#include "../interaction.h"
+#include "materials/glass.h"
+#include "spectrum.h"
+#include "reflection.h"
+#include "paramset.h"
+#include "texture.h"
+#include "interaction.h"
 
 namespace pbrt {
 

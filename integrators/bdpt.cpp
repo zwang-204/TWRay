@@ -1,13 +1,13 @@
 // integrators/bdpt.cpp*
-#include "bdpt.h"
-#include "../film.h"
-#include "../filters/box.h"
-#include "../integrator.h"
-#include "../lightdistrib.h"
-#include "../paramset.h"
-#include "../progressreporter.h"
-#include "../sampler.h"
-#include "../stats.h"
+#include "integrators/bdpt.h"
+#include "film.h"
+#include "filters/box.h"
+#include "integrator.h"
+#include "lightdistrib.h"
+#include "paramset.h"
+#include "progressreporter.h"
+#include "sampler.h"
+#include "stats.h"
 
 namespace pbrt {
 

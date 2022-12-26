@@ -1,8 +1,8 @@
 // samplers/zerotwosequence.cpp*
-#include "zerotwosequence.h"
-#include "../lowdiscrepancy.h"
-#include "../paramset.h"
-#include "../stats.h"
+#include "samplers/zerotwosequence.h"
+#include "lowdiscrepancy.h"
+#include "paramset.h"
+#include "stats.h"
 
 namespace pbrt {
 

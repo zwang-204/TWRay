@@ -2,8 +2,8 @@
 #define TRIANGLE_H
 
 // shapes/triangle.h*
-#include "../shape.h"
-#include "../stats.h"
+#include "shape.h"
+#include "stats.h"
 #include <map>
 
 namespace pbrt {

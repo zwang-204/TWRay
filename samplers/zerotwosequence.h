@@ -2,7 +2,7 @@
 #define SAMPLERS_ZEROTWOSEQUENCE_H
 
 // samplers/zerotwosequence.h*
-#include "../sampler.h"
+#include "sampler.h"
 
 namespace pbrt {
 

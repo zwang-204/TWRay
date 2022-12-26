@@ -2,7 +2,7 @@
 #define MEDIA_HOMOGENEOUS_H
 
 // media/homogeneous.h*
-#include "../medium.h"
+#include "medium.h"
 
 namespace pbrt {
 

@@ -2,7 +2,7 @@
 #define SHAPES_DISK_H
 
 // shapes/disk.h*
-#include "../shape.h"
+#include "shape.h"
 
 namespace pbrt {
 

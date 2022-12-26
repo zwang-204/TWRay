@@ -2,9 +2,9 @@
 #define INTEGRATORS_DIRECTLIGHTING_H
 
 // integrators/directlighting.h*
-#include "../pbrt.h"
-#include "../integrator.h"
-#include "../scene.h"
+#include "pbrt.h"
+#include "integrator.h"
+#include "scene.h"
 
 namespace pbrt {
 

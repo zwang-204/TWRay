@@ -2,9 +2,9 @@
 #define LIGHTS_DIFFUSE_H
 
 // lights/diffuse.h*
-#include "../pbrt.h"
-#include "../light.h"
-#include "../primitive.h"
+#include "pbrt.h"
+#include "light.h"
+#include "primitive.h"
 
 namespace pbrt {
 

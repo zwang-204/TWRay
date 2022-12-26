@@ -2,8 +2,8 @@
 #define SAMPLERS_RANDOM_H
 
 // samplers/random.h*
-#include "../sampler.h"
-#include "../rng.h"
+#include "sampler.h"
+#include "rng.h"
 
 namespace pbrt {
 

@@ -2,9 +2,9 @@
 #define LIGHTS_SPOT_H
 
 // lights/spot.h*
-#include "../pbrt.h"
-#include "../light.h"
-#include "../shape.h"
+#include "pbrt.h"
+#include "light.h"
+#include "shape.h"
 
 namespace pbrt {
 

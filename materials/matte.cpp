@@ -1,10 +1,10 @@
 // materials/matte.cpp*
-#include "matte.h"
-#include "../paramset.h"
-#include "../reflection.h"
-#include "../interaction.h"
-#include "../texture.h"
-#include "../interaction.h"
+#include "materials/matte.h"
+#include "paramset.h"
+#include "reflection.h"
+#include "interaction.h"
+#include "texture.h"
+#include "interaction.h"
 
 namespace pbrt {
 

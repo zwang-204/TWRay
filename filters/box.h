@@ -2,7 +2,7 @@
 #define PBRT_FILTERS_BOX_H
 
 // filters/box.h*
-#include "../filter.h"
+#include "filter.h"
 
 namespace pbrt {
 

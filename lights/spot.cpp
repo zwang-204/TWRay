@@ -1,9 +1,9 @@
 // lights/spot.cpp*
-#include "spot.h"
-#include "../paramset.h"
-#include "../sampling.h"
-#include "../reflection.h"
-#include "../stats.h"
+#include "lights/spot.h"
+#include "paramset.h"
+#include "sampling.h"
+#include "reflection.h"
+#include "stats.h"
 
 namespace pbrt {
 

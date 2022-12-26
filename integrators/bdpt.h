@@ -3,14 +3,14 @@
 
 // integrators/bdpt.h*
 #include <unordered_map>
-#include "../camera.h"
-#include "../integrator.h"
-#include "../interaction.h"
-#include "../light.h"
-#include "../pbrt.h"
-#include "../reflection.h"
-#include "../sampling.h"
-#include "../scene.h"
+#include "camera.h"
+#include "integrator.h"
+#include "interaction.h"
+#include "light.h"
+#include "pbrt.h"
+#include "reflection.h"
+#include "sampling.h"
+#include "scene.h"
 
 namespace pbrt {
 

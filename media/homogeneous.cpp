@@ -1,9 +1,9 @@
 // media/homogeneous.cpp*
-#include "homogeneous.h"
-#include "../sampler.h"
-#include "../interaction.h"
-#include "../paramset.h"
-#include "../stats.h"
+#include "media/homogeneous.h"
+#include "sampler.h"
+#include "interaction.h"
+#include "paramset.h"
+#include "stats.h"
 
 namespace pbrt {
 

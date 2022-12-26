@@ -1,10 +1,10 @@
 // integrators/directlighting.cpp*
-#include "directlighting.h"
-#include "../interaction.h"
-#include "../paramset.h"
-#include "../camera.h"
-#include "../film.h"
-#include "../stats.h"
+#include "integrators/directlighting.h"
+#include "interaction.h"
+#include "paramset.h"
+#include "camera.h"
+#include "film.h"
+#include "stats.h"
 
 namespace pbrt {
 

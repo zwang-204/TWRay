@@ -1,13 +1,13 @@
 // materials/disney.cpp*
-#include "disney.h"
-#include "../bssrdf.h"
-#include "../interaction.h"
-#include "../paramset.h"
-#include "../reflection.h"
-#include "../stats.h"
-#include "../stringprint.h"
-#include "../texture.h"
-#include "../rng.h"
+#include "materials/disney.h"
+#include "bssrdf.h"
+#include "interaction.h"
+#include "paramset.h"
+#include "reflection.h"
+#include "stats.h"
+#include "stringprint.h"
+#include "texture.h"
+#include "rng.h"
 
 namespace pbrt {
 

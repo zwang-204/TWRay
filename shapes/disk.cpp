@@ -1,8 +1,8 @@
 // shapes/disk.cpp*
-#include "disk.h"
-#include "../paramset.h"
-#include "../sampling.h"
-#include "../stats.h"
+#include "shapes/disk.h"
+#include "paramset.h"
+#include "sampling.h"
+#include "stats.h"
 
 namespace pbrt {
 

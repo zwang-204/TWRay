@@ -1,12 +1,12 @@
 // integrators/volpath.cpp*
-#include "volpath.h"
-#include "../bssrdf.h"
-#include "../camera.h"
-#include "../film.h"
-#include "../interaction.h"
-#include "../paramset.h"
-#include "../scene.h"
-#include "../stats.h"
+#include "integrators/volpath.h"
+#include "bssrdf.h"
+#include "camera.h"
+#include "film.h"
+#include "interaction.h"
+#include "paramset.h"
+#include "scene.h"
+#include "stats.h"
 
 namespace pbrt {
 

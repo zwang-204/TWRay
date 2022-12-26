@@ -2,10 +2,10 @@
 #define LIGHTS_POINT_H
 
 // lights/point.h*
-#include "../pbrt.h"
-#include "../light.h"
-#include "../shape.h"
-#include "../paramset.h"
+#include "pbrt.h"
+#include "light.h"
+#include "shape.h"
+#include "paramset.h"
 
 namespace pbrt {
 

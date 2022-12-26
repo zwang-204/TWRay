@@ -2,9 +2,9 @@
 #define PBRT_CAMERAS_PERSPECTIVE_H
 
 // cameras/perspective.h*
-#include "../pbrt.h"
-#include "../camera.h"
-#include "../film.h"
+#include "pbrt.h"
+#include "camera.h"
+#include "film.h"
 
 namespace pbrt {
 
