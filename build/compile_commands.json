@@ -1,0 +1,332 @@
+[
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -DGFLAGS_IS_A_DLL=0 -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core -isystem /usr/local/include  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/RayTracing.dir/src/core/main.cc.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/main.cc",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/main.cc"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/bssrdf.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/bssrdf.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/bssrdf.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/bvh.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/bvh.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/bvh.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/camera.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/camera.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/camera.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/efloat.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/efloat.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/efloat.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/error.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/error.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/error.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/imageio.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/imageio.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/imageio.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/interaction.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/interaction.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/interaction.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/interpolation.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/interpolation.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/interpolation.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/integrator.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/integrator.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/integrator.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/fileutil.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/fileutil.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/fileutil.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/film.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/film.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/film.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/filter.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/filter.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/filter.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/floatfile.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/floatfile.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/floatfile.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/geometry.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/geometry.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/geometry.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/light.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/light.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/light.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/lightdistrib.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/lightdistrib.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/lightdistrib.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/lowdiscrepancy.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/lowdiscrepancy.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/lowdiscrepancy.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/material.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/material.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/material.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/medium.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/medium.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/medium.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/memory.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/memory.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/memory.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/microfacet.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/microfacet.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/microfacet.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/parallel.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/parallel.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/parallel.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/paramset.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/paramset.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/paramset.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/primitive.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/primitive.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/primitive.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/progressreporter.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/progressreporter.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/progressreporter.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/quaternion.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/quaternion.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/quaternion.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/reflection.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/reflection.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/reflection.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/sampling.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/sampling.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/sampling.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/sampler.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/sampler.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/sampler.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/scene.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/scene.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/scene.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/shape.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/shape.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/shape.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/sobolmatrices.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/sobolmatrices.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/sobolmatrices.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/spectrum.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/spectrum.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/spectrum.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/stats.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/stats.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/stats.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/texture.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/texture.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/texture.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/transform.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/transform.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/transform.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/core/twray.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/twray.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/core/twray.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/cameras/perspective.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/cameras/perspective.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/cameras/perspective.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/ext/rply.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/ext/rply.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/ext/rply.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/ext/lodepng.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/ext/lodepng.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/ext/lodepng.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/ext/targa.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/ext/targa.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/ext/targa.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/integrators/directlighting.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/integrators/directlighting.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/integrators/directlighting.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/integrators/path.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/integrators/path.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/integrators/path.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/integrators/volpath.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/integrators/volpath.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/integrators/volpath.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/integrators/bdpt.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/integrators/bdpt.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/integrators/bdpt.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/filters/box.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/filters/box.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/filters/box.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/lights/diffuse.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/lights/diffuse.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/lights/diffuse.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/lights/distant.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/lights/distant.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/lights/distant.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/lights/point.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/lights/point.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/lights/point.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/lights/spot.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/lights/spot.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/lights/spot.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/lights/infinite.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/lights/infinite.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/lights/infinite.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/materials/matte.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/materials/matte.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/materials/matte.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/materials/glass.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/materials/glass.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/materials/glass.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/materials/disney.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/materials/disney.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/materials/disney.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/materials/subsurface.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/materials/subsurface.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/materials/subsurface.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/media/homogeneous.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/media/homogeneous.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/media/homogeneous.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/samplers/random.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/samplers/random.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/samplers/random.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/samplers/zerotwosequence.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/samplers/zerotwosequence.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/samplers/zerotwosequence.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/shapes/sphere.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/shapes/sphere.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/shapes/sphere.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/shapes/disk.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/shapes/disk.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/shapes/disk.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/shapes/plymesh.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/shapes/plymesh.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/shapes/plymesh.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/shapes/triangle.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/shapes/triangle.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/shapes/triangle.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/shapes/heightfield.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/shapes/heightfield.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/shapes/heightfield.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/textures/constant.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/textures/constant.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/textures/constant.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/textures/checkerboard.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/textures/checkerboard.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/textures/checkerboard.cpp"
+}
+]
