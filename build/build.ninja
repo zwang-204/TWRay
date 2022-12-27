@@ -74,8 +74,6 @@ build CMakeFiles/RayTracing.dir/src/core/main.cc.o: CXX_COMPILER__RayTracing_Deb
   INCLUDES = -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core -isystem /usr/local/include
   OBJECT_DIR = CMakeFiles/RayTracing.dir
   OBJECT_FILE_DIR = CMakeFiles/RayTracing.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/RayTracing.dir/
-  TARGET_PDB = RayTracing.pdb
 
 
 # =============================================================================
@@ -92,9 +90,8 @@ build RayTracing: CXX_EXECUTABLE_LINKER__RayTracing_Debug CMakeFiles/RayTracing.
   OBJECT_DIR = CMakeFiles/RayTracing.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/RayTracing.dir/
   TARGET_FILE = RayTracing
-  TARGET_PDB = RayTracing.pdb
+  TARGET_PDB = RayTracing.dbg
 
 # =============================================================================
 # Object build statements for STATIC_LIBRARY target pbrt
@@ -111,8 +108,6 @@ build CMakeFiles/pbrt.dir/src/core/bssrdf.cpp.o: CXX_COMPILER__pbrt_Debug ../src
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/bvh.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/bvh.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/bvh.cpp.o.d
@@ -120,8 +115,6 @@ build CMakeFiles/pbrt.dir/src/core/bvh.cpp.o: CXX_COMPILER__pbrt_Debug ../src/co
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/camera.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/camera.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/camera.cpp.o.d
@@ -129,8 +122,6 @@ build CMakeFiles/pbrt.dir/src/core/camera.cpp.o: CXX_COMPILER__pbrt_Debug ../src
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/efloat.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/efloat.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/efloat.cpp.o.d
@@ -138,8 +129,6 @@ build CMakeFiles/pbrt.dir/src/core/efloat.cpp.o: CXX_COMPILER__pbrt_Debug ../src
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/error.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/error.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/error.cpp.o.d
@@ -147,8 +136,6 @@ build CMakeFiles/pbrt.dir/src/core/error.cpp.o: CXX_COMPILER__pbrt_Debug ../src/
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/imageio.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/imageio.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/imageio.cpp.o.d
@@ -156,8 +143,6 @@ build CMakeFiles/pbrt.dir/src/core/imageio.cpp.o: CXX_COMPILER__pbrt_Debug ../sr
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/interaction.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/interaction.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/interaction.cpp.o.d
@@ -165,8 +150,6 @@ build CMakeFiles/pbrt.dir/src/core/interaction.cpp.o: CXX_COMPILER__pbrt_Debug .
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/interpolation.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/interpolation.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/interpolation.cpp.o.d
@@ -174,8 +157,6 @@ build CMakeFiles/pbrt.dir/src/core/interpolation.cpp.o: CXX_COMPILER__pbrt_Debug
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/integrator.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/integrator.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/integrator.cpp.o.d
@@ -183,8 +164,6 @@ build CMakeFiles/pbrt.dir/src/core/integrator.cpp.o: CXX_COMPILER__pbrt_Debug ..
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/fileutil.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/fileutil.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/fileutil.cpp.o.d
@@ -192,8 +171,6 @@ build CMakeFiles/pbrt.dir/src/core/fileutil.cpp.o: CXX_COMPILER__pbrt_Debug ../s
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/film.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/film.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/film.cpp.o.d
@@ -201,8 +178,6 @@ build CMakeFiles/pbrt.dir/src/core/film.cpp.o: CXX_COMPILER__pbrt_Debug ../src/c
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/filter.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/filter.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/filter.cpp.o.d
@@ -210,8 +185,6 @@ build CMakeFiles/pbrt.dir/src/core/filter.cpp.o: CXX_COMPILER__pbrt_Debug ../src
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/floatfile.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/floatfile.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/floatfile.cpp.o.d
@@ -219,8 +192,6 @@ build CMakeFiles/pbrt.dir/src/core/floatfile.cpp.o: CXX_COMPILER__pbrt_Debug ../
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/geometry.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/geometry.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/geometry.cpp.o.d
@@ -228,8 +199,6 @@ build CMakeFiles/pbrt.dir/src/core/geometry.cpp.o: CXX_COMPILER__pbrt_Debug ../s
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/light.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/light.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/light.cpp.o.d
@@ -237,8 +206,6 @@ build CMakeFiles/pbrt.dir/src/core/light.cpp.o: CXX_COMPILER__pbrt_Debug ../src/
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/lightdistrib.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/lightdistrib.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/lightdistrib.cpp.o.d
@@ -246,8 +213,6 @@ build CMakeFiles/pbrt.dir/src/core/lightdistrib.cpp.o: CXX_COMPILER__pbrt_Debug 
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/lowdiscrepancy.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/lowdiscrepancy.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/lowdiscrepancy.cpp.o.d
@@ -255,8 +220,6 @@ build CMakeFiles/pbrt.dir/src/core/lowdiscrepancy.cpp.o: CXX_COMPILER__pbrt_Debu
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/material.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/material.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/material.cpp.o.d
@@ -264,8 +227,6 @@ build CMakeFiles/pbrt.dir/src/core/material.cpp.o: CXX_COMPILER__pbrt_Debug ../s
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/medium.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/medium.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/medium.cpp.o.d
@@ -273,8 +234,6 @@ build CMakeFiles/pbrt.dir/src/core/medium.cpp.o: CXX_COMPILER__pbrt_Debug ../src
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/memory.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/memory.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/memory.cpp.o.d
@@ -282,8 +241,6 @@ build CMakeFiles/pbrt.dir/src/core/memory.cpp.o: CXX_COMPILER__pbrt_Debug ../src
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/microfacet.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/microfacet.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/microfacet.cpp.o.d
@@ -291,8 +248,6 @@ build CMakeFiles/pbrt.dir/src/core/microfacet.cpp.o: CXX_COMPILER__pbrt_Debug ..
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/parallel.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/parallel.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/parallel.cpp.o.d
@@ -300,8 +255,6 @@ build CMakeFiles/pbrt.dir/src/core/parallel.cpp.o: CXX_COMPILER__pbrt_Debug ../s
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/paramset.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/paramset.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/paramset.cpp.o.d
@@ -309,8 +262,6 @@ build CMakeFiles/pbrt.dir/src/core/paramset.cpp.o: CXX_COMPILER__pbrt_Debug ../s
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/primitive.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/primitive.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/primitive.cpp.o.d
@@ -318,8 +269,6 @@ build CMakeFiles/pbrt.dir/src/core/primitive.cpp.o: CXX_COMPILER__pbrt_Debug ../
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/progressreporter.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/progressreporter.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/progressreporter.cpp.o.d
@@ -327,8 +276,6 @@ build CMakeFiles/pbrt.dir/src/core/progressreporter.cpp.o: CXX_COMPILER__pbrt_De
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/quaternion.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/quaternion.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/quaternion.cpp.o.d
@@ -336,8 +283,6 @@ build CMakeFiles/pbrt.dir/src/core/quaternion.cpp.o: CXX_COMPILER__pbrt_Debug ..
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/reflection.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/reflection.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/reflection.cpp.o.d
@@ -345,8 +290,6 @@ build CMakeFiles/pbrt.dir/src/core/reflection.cpp.o: CXX_COMPILER__pbrt_Debug ..
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/sampling.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/sampling.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/sampling.cpp.o.d
@@ -354,8 +297,6 @@ build CMakeFiles/pbrt.dir/src/core/sampling.cpp.o: CXX_COMPILER__pbrt_Debug ../s
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/sampler.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/sampler.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/sampler.cpp.o.d
@@ -363,8 +304,6 @@ build CMakeFiles/pbrt.dir/src/core/sampler.cpp.o: CXX_COMPILER__pbrt_Debug ../sr
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/scene.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/scene.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/scene.cpp.o.d
@@ -372,8 +311,6 @@ build CMakeFiles/pbrt.dir/src/core/scene.cpp.o: CXX_COMPILER__pbrt_Debug ../src/
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/shape.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/shape.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/shape.cpp.o.d
@@ -381,8 +318,6 @@ build CMakeFiles/pbrt.dir/src/core/shape.cpp.o: CXX_COMPILER__pbrt_Debug ../src/
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/sobolmatrices.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/sobolmatrices.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/sobolmatrices.cpp.o.d
@@ -390,8 +325,6 @@ build CMakeFiles/pbrt.dir/src/core/sobolmatrices.cpp.o: CXX_COMPILER__pbrt_Debug
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/spectrum.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/spectrum.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/spectrum.cpp.o.d
@@ -399,8 +332,6 @@ build CMakeFiles/pbrt.dir/src/core/spectrum.cpp.o: CXX_COMPILER__pbrt_Debug ../s
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/stats.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/stats.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/stats.cpp.o.d
@@ -408,8 +339,6 @@ build CMakeFiles/pbrt.dir/src/core/stats.cpp.o: CXX_COMPILER__pbrt_Debug ../src/
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/texture.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/texture.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/texture.cpp.o.d
@@ -417,8 +346,6 @@ build CMakeFiles/pbrt.dir/src/core/texture.cpp.o: CXX_COMPILER__pbrt_Debug ../sr
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/transform.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/transform.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/transform.cpp.o.d
@@ -426,8 +353,6 @@ build CMakeFiles/pbrt.dir/src/core/transform.cpp.o: CXX_COMPILER__pbrt_Debug ../
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/core/twray.cpp.o: CXX_COMPILER__pbrt_Debug ../src/core/twray.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/core/twray.cpp.o.d
@@ -435,8 +360,6 @@ build CMakeFiles/pbrt.dir/src/core/twray.cpp.o: CXX_COMPILER__pbrt_Debug ../src/
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/cameras/perspective.cpp.o: CXX_COMPILER__pbrt_Debug ../src/cameras/perspective.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/cameras/perspective.cpp.o.d
@@ -444,8 +367,6 @@ build CMakeFiles/pbrt.dir/src/cameras/perspective.cpp.o: CXX_COMPILER__pbrt_Debu
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/cameras
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/ext/rply.cpp.o: CXX_COMPILER__pbrt_Debug ../src/ext/rply.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/ext/rply.cpp.o.d
@@ -453,8 +374,6 @@ build CMakeFiles/pbrt.dir/src/ext/rply.cpp.o: CXX_COMPILER__pbrt_Debug ../src/ex
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/ext
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/ext/lodepng.cpp.o: CXX_COMPILER__pbrt_Debug ../src/ext/lodepng.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/ext/lodepng.cpp.o.d
@@ -462,8 +381,6 @@ build CMakeFiles/pbrt.dir/src/ext/lodepng.cpp.o: CXX_COMPILER__pbrt_Debug ../src
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/ext
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/ext/targa.cpp.o: CXX_COMPILER__pbrt_Debug ../src/ext/targa.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/ext/targa.cpp.o.d
@@ -471,8 +388,6 @@ build CMakeFiles/pbrt.dir/src/ext/targa.cpp.o: CXX_COMPILER__pbrt_Debug ../src/e
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/ext
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/integrators/directlighting.cpp.o: CXX_COMPILER__pbrt_Debug ../src/integrators/directlighting.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/integrators/directlighting.cpp.o.d
@@ -480,8 +395,6 @@ build CMakeFiles/pbrt.dir/src/integrators/directlighting.cpp.o: CXX_COMPILER__pb
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/integrators
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/integrators/path.cpp.o: CXX_COMPILER__pbrt_Debug ../src/integrators/path.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/integrators/path.cpp.o.d
@@ -489,8 +402,6 @@ build CMakeFiles/pbrt.dir/src/integrators/path.cpp.o: CXX_COMPILER__pbrt_Debug .
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/integrators
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/integrators/volpath.cpp.o: CXX_COMPILER__pbrt_Debug ../src/integrators/volpath.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/integrators/volpath.cpp.o.d
@@ -498,8 +409,6 @@ build CMakeFiles/pbrt.dir/src/integrators/volpath.cpp.o: CXX_COMPILER__pbrt_Debu
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/integrators
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/integrators/bdpt.cpp.o: CXX_COMPILER__pbrt_Debug ../src/integrators/bdpt.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/integrators/bdpt.cpp.o.d
@@ -507,8 +416,6 @@ build CMakeFiles/pbrt.dir/src/integrators/bdpt.cpp.o: CXX_COMPILER__pbrt_Debug .
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/integrators
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/filters/box.cpp.o: CXX_COMPILER__pbrt_Debug ../src/filters/box.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/filters/box.cpp.o.d
@@ -516,8 +423,6 @@ build CMakeFiles/pbrt.dir/src/filters/box.cpp.o: CXX_COMPILER__pbrt_Debug ../src
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/filters
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/lights/diffuse.cpp.o: CXX_COMPILER__pbrt_Debug ../src/lights/diffuse.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/lights/diffuse.cpp.o.d
@@ -525,8 +430,6 @@ build CMakeFiles/pbrt.dir/src/lights/diffuse.cpp.o: CXX_COMPILER__pbrt_Debug ../
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/lights
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/lights/distant.cpp.o: CXX_COMPILER__pbrt_Debug ../src/lights/distant.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/lights/distant.cpp.o.d
@@ -534,8 +437,6 @@ build CMakeFiles/pbrt.dir/src/lights/distant.cpp.o: CXX_COMPILER__pbrt_Debug ../
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/lights
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/lights/point.cpp.o: CXX_COMPILER__pbrt_Debug ../src/lights/point.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/lights/point.cpp.o.d
@@ -543,8 +444,6 @@ build CMakeFiles/pbrt.dir/src/lights/point.cpp.o: CXX_COMPILER__pbrt_Debug ../sr
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/lights
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/lights/spot.cpp.o: CXX_COMPILER__pbrt_Debug ../src/lights/spot.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/lights/spot.cpp.o.d
@@ -552,8 +451,6 @@ build CMakeFiles/pbrt.dir/src/lights/spot.cpp.o: CXX_COMPILER__pbrt_Debug ../src
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/lights
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/lights/infinite.cpp.o: CXX_COMPILER__pbrt_Debug ../src/lights/infinite.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/lights/infinite.cpp.o.d
@@ -561,8 +458,6 @@ build CMakeFiles/pbrt.dir/src/lights/infinite.cpp.o: CXX_COMPILER__pbrt_Debug ..
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/lights
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/materials/matte.cpp.o: CXX_COMPILER__pbrt_Debug ../src/materials/matte.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/materials/matte.cpp.o.d
@@ -570,8 +465,6 @@ build CMakeFiles/pbrt.dir/src/materials/matte.cpp.o: CXX_COMPILER__pbrt_Debug ..
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/materials
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/materials/glass.cpp.o: CXX_COMPILER__pbrt_Debug ../src/materials/glass.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/materials/glass.cpp.o.d
@@ -579,8 +472,6 @@ build CMakeFiles/pbrt.dir/src/materials/glass.cpp.o: CXX_COMPILER__pbrt_Debug ..
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/materials
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/materials/disney.cpp.o: CXX_COMPILER__pbrt_Debug ../src/materials/disney.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/materials/disney.cpp.o.d
@@ -588,8 +479,6 @@ build CMakeFiles/pbrt.dir/src/materials/disney.cpp.o: CXX_COMPILER__pbrt_Debug .
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/materials
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/materials/subsurface.cpp.o: CXX_COMPILER__pbrt_Debug ../src/materials/subsurface.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/materials/subsurface.cpp.o.d
@@ -597,8 +486,6 @@ build CMakeFiles/pbrt.dir/src/materials/subsurface.cpp.o: CXX_COMPILER__pbrt_Deb
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/materials
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/media/homogeneous.cpp.o: CXX_COMPILER__pbrt_Debug ../src/media/homogeneous.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/media/homogeneous.cpp.o.d
@@ -606,8 +493,6 @@ build CMakeFiles/pbrt.dir/src/media/homogeneous.cpp.o: CXX_COMPILER__pbrt_Debug 
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/media
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/samplers/random.cpp.o: CXX_COMPILER__pbrt_Debug ../src/samplers/random.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/samplers/random.cpp.o.d
@@ -615,8 +500,6 @@ build CMakeFiles/pbrt.dir/src/samplers/random.cpp.o: CXX_COMPILER__pbrt_Debug ..
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/samplers
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/samplers/zerotwosequence.cpp.o: CXX_COMPILER__pbrt_Debug ../src/samplers/zerotwosequence.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/samplers/zerotwosequence.cpp.o.d
@@ -624,8 +507,6 @@ build CMakeFiles/pbrt.dir/src/samplers/zerotwosequence.cpp.o: CXX_COMPILER__pbrt
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/samplers
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/shapes/sphere.cpp.o: CXX_COMPILER__pbrt_Debug ../src/shapes/sphere.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/shapes/sphere.cpp.o.d
@@ -633,8 +514,6 @@ build CMakeFiles/pbrt.dir/src/shapes/sphere.cpp.o: CXX_COMPILER__pbrt_Debug ../s
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/shapes
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/shapes/disk.cpp.o: CXX_COMPILER__pbrt_Debug ../src/shapes/disk.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/shapes/disk.cpp.o.d
@@ -642,8 +521,6 @@ build CMakeFiles/pbrt.dir/src/shapes/disk.cpp.o: CXX_COMPILER__pbrt_Debug ../src
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/shapes
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/shapes/plymesh.cpp.o: CXX_COMPILER__pbrt_Debug ../src/shapes/plymesh.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/shapes/plymesh.cpp.o.d
@@ -651,8 +528,6 @@ build CMakeFiles/pbrt.dir/src/shapes/plymesh.cpp.o: CXX_COMPILER__pbrt_Debug ../
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/shapes
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/shapes/triangle.cpp.o: CXX_COMPILER__pbrt_Debug ../src/shapes/triangle.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/shapes/triangle.cpp.o.d
@@ -660,8 +535,6 @@ build CMakeFiles/pbrt.dir/src/shapes/triangle.cpp.o: CXX_COMPILER__pbrt_Debug ..
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/shapes
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/shapes/heightfield.cpp.o: CXX_COMPILER__pbrt_Debug ../src/shapes/heightfield.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/shapes/heightfield.cpp.o.d
@@ -669,8 +542,6 @@ build CMakeFiles/pbrt.dir/src/shapes/heightfield.cpp.o: CXX_COMPILER__pbrt_Debug
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/shapes
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/textures/constant.cpp.o: CXX_COMPILER__pbrt_Debug ../src/textures/constant.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/textures/constant.cpp.o.d
@@ -678,8 +549,6 @@ build CMakeFiles/pbrt.dir/src/textures/constant.cpp.o: CXX_COMPILER__pbrt_Debug 
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/textures
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 build CMakeFiles/pbrt.dir/src/textures/checkerboard.cpp.o: CXX_COMPILER__pbrt_Debug ../src/textures/checkerboard.cpp || cmake_object_order_depends_target_pbrt
   DEP_FILE = CMakeFiles/pbrt.dir/src/textures/checkerboard.cpp.o.d
@@ -687,8 +556,6 @@ build CMakeFiles/pbrt.dir/src/textures/checkerboard.cpp.o: CXX_COMPILER__pbrt_De
   INCLUDES = -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core
   OBJECT_DIR = CMakeFiles/pbrt.dir
   OBJECT_FILE_DIR = CMakeFiles/pbrt.dir/src/textures
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
-  TARGET_PDB = libpbrt.pdb
 
 
 # =============================================================================
@@ -704,9 +571,8 @@ build libpbrt.a: CXX_STATIC_LIBRARY_LINKER__pbrt_Debug CMakeFiles/pbrt.dir/src/c
   OBJECT_DIR = CMakeFiles/pbrt.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/pbrt.dir/pbrt.pdb
   TARGET_FILE = libpbrt.a
-  TARGET_PDB = libpbrt.pdb
+  TARGET_PDB = pbrt.a.dbg
 
 # =============================================================================
 # Target aliases.
@@ -730,14 +596,14 @@ build all: phony RayTracing libpbrt.a
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeCXXCompiler.cmake.in /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeCXXCompilerABI.cpp /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeCXXInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeCommonLanguageInclude.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeCompilerIdDetection.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeDetermineCXXCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeDetermineCompileFeatures.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeDetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeDetermineCompilerABI.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeDetermineCompilerId.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeDetermineSystem.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeFindBinUtils.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeFindDependencyMacro.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeGenericSystem.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeInitializeConfigs.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeLanguageInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeNinjaFindMake.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeParseImplicitIncludeInfo.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeParseImplicitLinkInfo.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeParseLibraryArchitecture.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeSystem.cmake.in /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeSystemSpecificInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeTestCXXCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeTestCompilerCommon.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/ADSP-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/ARMCC-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/ARMClang-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/AppleClang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/AppleClang-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/Borland-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/Clang-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/Clang.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/Cray-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/GHS-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/GNU.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/IAR-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/Intel-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/MSVC-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/NVHPC-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/PGI-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/PathScale-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/SCO-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/TI-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/Watcom-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Internal/FeatureTesting.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Platform/Apple-Clang.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Platform/Darwin-Determine-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Platform/Darwin-Initialize.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Platform/Darwin.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Platform/UnixPaths.cmake /usr/local/lib/cmake/gflags/gflags-config-version.cmake /usr/local/lib/cmake/gflags/gflags-config.cmake /usr/local/lib/cmake/gflags/gflags-nonamespace-targets-release.cmake /usr/local/lib/cmake/gflags/gflags-nonamespace-targets.cmake /usr/local/lib/cmake/glog/glog-config-version.cmake /usr/local/lib/cmake/glog/glog-config.cmake /usr/local/lib/cmake/glog/glog-modules.cmake /usr/local/lib/cmake/glog/glog-targets-noconfig.cmake /usr/local/lib/cmake/glog/glog-targets.cmake CMakeCache.txt CMakeFiles/3.20.0-rc2/CMakeCXXCompiler.cmake CMakeFiles/3.20.0-rc2/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeCXXInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeCommonLanguageInclude.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeFindDependencyMacro.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeGenericSystem.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeInitializeConfigs.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeLanguageInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeSystemSpecificInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/AppleClang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/Clang.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/GNU.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Platform/Apple-Clang.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Platform/Darwin-Initialize.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Platform/Darwin.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Platform/UnixPaths.cmake /usr/local/lib/cmake/gflags/gflags-config-version.cmake /usr/local/lib/cmake/gflags/gflags-config.cmake /usr/local/lib/cmake/gflags/gflags-nonamespace-targets-release.cmake /usr/local/lib/cmake/gflags/gflags-nonamespace-targets.cmake /usr/local/lib/cmake/glog/glog-config-version.cmake /usr/local/lib/cmake/glog/glog-config.cmake /usr/local/lib/cmake/glog/glog-modules.cmake /usr/local/lib/cmake/glog/glog-targets-noconfig.cmake /usr/local/lib/cmake/glog/glog-targets.cmake CMakeCache.txt CMakeFiles/3.20.0-rc2/CMakeCXXCompiler.cmake CMakeFiles/3.20.0-rc2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeCXXCompiler.cmake.in /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeCXXCompilerABI.cpp /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeCXXInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeCommonLanguageInclude.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeCompilerIdDetection.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeDetermineCXXCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeDetermineCompileFeatures.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeDetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeDetermineCompilerABI.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeDetermineCompilerId.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeDetermineSystem.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeFindBinUtils.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeFindDependencyMacro.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeGenericSystem.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeInitializeConfigs.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeLanguageInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeNinjaFindMake.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeParseImplicitIncludeInfo.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeParseImplicitLinkInfo.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeParseLibraryArchitecture.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeSystem.cmake.in /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeSystemSpecificInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeTestCXXCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeTestCompilerCommon.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/ADSP-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/ARMCC-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/ARMClang-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/AppleClang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/AppleClang-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/Borland-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/Clang-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/Clang.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/Cray-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/GHS-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/GNU.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/IAR-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/Intel-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/MSVC-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/NVHPC-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/PGI-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/PathScale-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/SCO-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/TI-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/Watcom-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Internal/FeatureTesting.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Platform/Apple-Clang.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Platform/Darwin-Determine-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Platform/Darwin-Initialize.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Platform/Darwin.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Platform/UnixPaths.cmake /usr/local/lib/cmake/gflags/gflags-config-version.cmake /usr/local/lib/cmake/gflags/gflags-config.cmake /usr/local/lib/cmake/gflags/gflags-nonamespace-targets-release.cmake /usr/local/lib/cmake/gflags/gflags-nonamespace-targets.cmake /usr/local/lib/cmake/glog/glog-config-version.cmake /usr/local/lib/cmake/glog/glog-config.cmake /usr/local/lib/cmake/glog/glog-modules.cmake /usr/local/lib/cmake/glog/glog-targets-noconfig.cmake /usr/local/lib/cmake/glog/glog-targets.cmake CMakeCache.txt CMakeFiles/3.20.0-rc2/CMakeCXXCompiler.cmake CMakeFiles/3.20.0-rc2/CMakeSystem.cmake: phony
+build ../CMakeLists.txt /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeCXXInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeCommonLanguageInclude.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeFindDependencyMacro.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeGenericSystem.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeInitializeConfigs.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeLanguageInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeSystemSpecificInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/AppleClang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/Clang.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Compiler/GNU.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Platform/Apple-Clang.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Platform/Darwin-Initialize.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Platform/Darwin.cmake /Applications/CMake.app/Contents/share/cmake-3.20/Modules/Platform/UnixPaths.cmake /usr/local/lib/cmake/gflags/gflags-config-version.cmake /usr/local/lib/cmake/gflags/gflags-config.cmake /usr/local/lib/cmake/gflags/gflags-nonamespace-targets-release.cmake /usr/local/lib/cmake/gflags/gflags-nonamespace-targets.cmake /usr/local/lib/cmake/glog/glog-config-version.cmake /usr/local/lib/cmake/glog/glog-config.cmake /usr/local/lib/cmake/glog/glog-modules.cmake /usr/local/lib/cmake/glog/glog-targets-noconfig.cmake /usr/local/lib/cmake/glog/glog-targets.cmake CMakeCache.txt CMakeFiles/3.20.0-rc2/CMakeCXXCompiler.cmake CMakeFiles/3.20.0-rc2/CMakeSystem.cmake: phony
 
 
 #############################################
