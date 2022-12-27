@@ -76,6 +76,7 @@ add_library(pbrt STATIC
   src/lights/distant.cpp
   src/lights/point.cpp
   src/lights/spot.cpp
+  src/lights/infinite.cpp
   src/materials/matte.cpp
   src/materials/glass.cpp
   src/materials/disney.cpp
@@ -89,6 +90,7 @@ add_library(pbrt STATIC
   src/shapes/triangle.cpp
   src/shapes/heightfield.cpp
   src/textures/constant.cpp
+  src/textures/checkerboard.cpp
 )
 
 FILE ( GLOB PBRT_SOURCE
