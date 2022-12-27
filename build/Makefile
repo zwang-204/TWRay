@@ -142,78 +142,6 @@ pbrt/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/build
 .PHONY : pbrt/fast
 
-src/bssrdf.o: src/bssrdf.cpp.o
-.PHONY : src/bssrdf.o
-
-# target to build an object file
-src/bssrdf.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/bssrdf.cpp.o
-.PHONY : src/bssrdf.cpp.o
-
-src/bssrdf.i: src/bssrdf.cpp.i
-.PHONY : src/bssrdf.i
-
-# target to preprocess a source file
-src/bssrdf.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/bssrdf.cpp.i
-.PHONY : src/bssrdf.cpp.i
-
-src/bssrdf.s: src/bssrdf.cpp.s
-.PHONY : src/bssrdf.s
-
-# target to generate assembly for a file
-src/bssrdf.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/bssrdf.cpp.s
-.PHONY : src/bssrdf.cpp.s
-
-src/bvh.o: src/bvh.cpp.o
-.PHONY : src/bvh.o
-
-# target to build an object file
-src/bvh.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/bvh.cpp.o
-.PHONY : src/bvh.cpp.o
-
-src/bvh.i: src/bvh.cpp.i
-.PHONY : src/bvh.i
-
-# target to preprocess a source file
-src/bvh.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/bvh.cpp.i
-.PHONY : src/bvh.cpp.i
-
-src/bvh.s: src/bvh.cpp.s
-.PHONY : src/bvh.s
-
-# target to generate assembly for a file
-src/bvh.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/bvh.cpp.s
-.PHONY : src/bvh.cpp.s
-
-src/camera.o: src/camera.cpp.o
-.PHONY : src/camera.o
-
-# target to build an object file
-src/camera.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/camera.cpp.o
-.PHONY : src/camera.cpp.o
-
-src/camera.i: src/camera.cpp.i
-.PHONY : src/camera.i
-
-# target to preprocess a source file
-src/camera.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/camera.cpp.i
-.PHONY : src/camera.cpp.i
-
-src/camera.s: src/camera.cpp.s
-.PHONY : src/camera.s
-
-# target to generate assembly for a file
-src/camera.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/camera.cpp.s
-.PHONY : src/camera.cpp.s
-
 src/cameras/perspective.o: src/cameras/perspective.cpp.o
 .PHONY : src/cameras/perspective.o
 
@@ -238,53 +166,917 @@ src/cameras/perspective.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/cameras/perspective.cpp.s
 .PHONY : src/cameras/perspective.cpp.s
 
-src/efloat.o: src/efloat.cpp.o
-.PHONY : src/efloat.o
+src/core/bssrdf.o: src/core/bssrdf.cpp.o
+.PHONY : src/core/bssrdf.o
 
 # target to build an object file
-src/efloat.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/efloat.cpp.o
-.PHONY : src/efloat.cpp.o
+src/core/bssrdf.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/bssrdf.cpp.o
+.PHONY : src/core/bssrdf.cpp.o
 
-src/efloat.i: src/efloat.cpp.i
-.PHONY : src/efloat.i
+src/core/bssrdf.i: src/core/bssrdf.cpp.i
+.PHONY : src/core/bssrdf.i
 
 # target to preprocess a source file
-src/efloat.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/efloat.cpp.i
-.PHONY : src/efloat.cpp.i
+src/core/bssrdf.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/bssrdf.cpp.i
+.PHONY : src/core/bssrdf.cpp.i
 
-src/efloat.s: src/efloat.cpp.s
-.PHONY : src/efloat.s
+src/core/bssrdf.s: src/core/bssrdf.cpp.s
+.PHONY : src/core/bssrdf.s
 
 # target to generate assembly for a file
-src/efloat.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/efloat.cpp.s
-.PHONY : src/efloat.cpp.s
+src/core/bssrdf.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/bssrdf.cpp.s
+.PHONY : src/core/bssrdf.cpp.s
 
-src/error.o: src/error.cpp.o
-.PHONY : src/error.o
+src/core/bvh.o: src/core/bvh.cpp.o
+.PHONY : src/core/bvh.o
 
 # target to build an object file
-src/error.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/error.cpp.o
-.PHONY : src/error.cpp.o
+src/core/bvh.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/bvh.cpp.o
+.PHONY : src/core/bvh.cpp.o
 
-src/error.i: src/error.cpp.i
-.PHONY : src/error.i
+src/core/bvh.i: src/core/bvh.cpp.i
+.PHONY : src/core/bvh.i
 
 # target to preprocess a source file
-src/error.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/error.cpp.i
-.PHONY : src/error.cpp.i
+src/core/bvh.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/bvh.cpp.i
+.PHONY : src/core/bvh.cpp.i
 
-src/error.s: src/error.cpp.s
-.PHONY : src/error.s
+src/core/bvh.s: src/core/bvh.cpp.s
+.PHONY : src/core/bvh.s
 
 # target to generate assembly for a file
-src/error.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/error.cpp.s
-.PHONY : src/error.cpp.s
+src/core/bvh.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/bvh.cpp.s
+.PHONY : src/core/bvh.cpp.s
+
+src/core/camera.o: src/core/camera.cpp.o
+.PHONY : src/core/camera.o
+
+# target to build an object file
+src/core/camera.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/camera.cpp.o
+.PHONY : src/core/camera.cpp.o
+
+src/core/camera.i: src/core/camera.cpp.i
+.PHONY : src/core/camera.i
+
+# target to preprocess a source file
+src/core/camera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/camera.cpp.i
+.PHONY : src/core/camera.cpp.i
+
+src/core/camera.s: src/core/camera.cpp.s
+.PHONY : src/core/camera.s
+
+# target to generate assembly for a file
+src/core/camera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/camera.cpp.s
+.PHONY : src/core/camera.cpp.s
+
+src/core/efloat.o: src/core/efloat.cpp.o
+.PHONY : src/core/efloat.o
+
+# target to build an object file
+src/core/efloat.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/efloat.cpp.o
+.PHONY : src/core/efloat.cpp.o
+
+src/core/efloat.i: src/core/efloat.cpp.i
+.PHONY : src/core/efloat.i
+
+# target to preprocess a source file
+src/core/efloat.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/efloat.cpp.i
+.PHONY : src/core/efloat.cpp.i
+
+src/core/efloat.s: src/core/efloat.cpp.s
+.PHONY : src/core/efloat.s
+
+# target to generate assembly for a file
+src/core/efloat.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/efloat.cpp.s
+.PHONY : src/core/efloat.cpp.s
+
+src/core/error.o: src/core/error.cpp.o
+.PHONY : src/core/error.o
+
+# target to build an object file
+src/core/error.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/error.cpp.o
+.PHONY : src/core/error.cpp.o
+
+src/core/error.i: src/core/error.cpp.i
+.PHONY : src/core/error.i
+
+# target to preprocess a source file
+src/core/error.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/error.cpp.i
+.PHONY : src/core/error.cpp.i
+
+src/core/error.s: src/core/error.cpp.s
+.PHONY : src/core/error.s
+
+# target to generate assembly for a file
+src/core/error.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/error.cpp.s
+.PHONY : src/core/error.cpp.s
+
+src/core/fileutil.o: src/core/fileutil.cpp.o
+.PHONY : src/core/fileutil.o
+
+# target to build an object file
+src/core/fileutil.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/fileutil.cpp.o
+.PHONY : src/core/fileutil.cpp.o
+
+src/core/fileutil.i: src/core/fileutil.cpp.i
+.PHONY : src/core/fileutil.i
+
+# target to preprocess a source file
+src/core/fileutil.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/fileutil.cpp.i
+.PHONY : src/core/fileutil.cpp.i
+
+src/core/fileutil.s: src/core/fileutil.cpp.s
+.PHONY : src/core/fileutil.s
+
+# target to generate assembly for a file
+src/core/fileutil.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/fileutil.cpp.s
+.PHONY : src/core/fileutil.cpp.s
+
+src/core/film.o: src/core/film.cpp.o
+.PHONY : src/core/film.o
+
+# target to build an object file
+src/core/film.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/film.cpp.o
+.PHONY : src/core/film.cpp.o
+
+src/core/film.i: src/core/film.cpp.i
+.PHONY : src/core/film.i
+
+# target to preprocess a source file
+src/core/film.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/film.cpp.i
+.PHONY : src/core/film.cpp.i
+
+src/core/film.s: src/core/film.cpp.s
+.PHONY : src/core/film.s
+
+# target to generate assembly for a file
+src/core/film.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/film.cpp.s
+.PHONY : src/core/film.cpp.s
+
+src/core/filter.o: src/core/filter.cpp.o
+.PHONY : src/core/filter.o
+
+# target to build an object file
+src/core/filter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/filter.cpp.o
+.PHONY : src/core/filter.cpp.o
+
+src/core/filter.i: src/core/filter.cpp.i
+.PHONY : src/core/filter.i
+
+# target to preprocess a source file
+src/core/filter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/filter.cpp.i
+.PHONY : src/core/filter.cpp.i
+
+src/core/filter.s: src/core/filter.cpp.s
+.PHONY : src/core/filter.s
+
+# target to generate assembly for a file
+src/core/filter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/filter.cpp.s
+.PHONY : src/core/filter.cpp.s
+
+src/core/floatfile.o: src/core/floatfile.cpp.o
+.PHONY : src/core/floatfile.o
+
+# target to build an object file
+src/core/floatfile.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/floatfile.cpp.o
+.PHONY : src/core/floatfile.cpp.o
+
+src/core/floatfile.i: src/core/floatfile.cpp.i
+.PHONY : src/core/floatfile.i
+
+# target to preprocess a source file
+src/core/floatfile.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/floatfile.cpp.i
+.PHONY : src/core/floatfile.cpp.i
+
+src/core/floatfile.s: src/core/floatfile.cpp.s
+.PHONY : src/core/floatfile.s
+
+# target to generate assembly for a file
+src/core/floatfile.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/floatfile.cpp.s
+.PHONY : src/core/floatfile.cpp.s
+
+src/core/geometry.o: src/core/geometry.cpp.o
+.PHONY : src/core/geometry.o
+
+# target to build an object file
+src/core/geometry.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/geometry.cpp.o
+.PHONY : src/core/geometry.cpp.o
+
+src/core/geometry.i: src/core/geometry.cpp.i
+.PHONY : src/core/geometry.i
+
+# target to preprocess a source file
+src/core/geometry.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/geometry.cpp.i
+.PHONY : src/core/geometry.cpp.i
+
+src/core/geometry.s: src/core/geometry.cpp.s
+.PHONY : src/core/geometry.s
+
+# target to generate assembly for a file
+src/core/geometry.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/geometry.cpp.s
+.PHONY : src/core/geometry.cpp.s
+
+src/core/imageio.o: src/core/imageio.cpp.o
+.PHONY : src/core/imageio.o
+
+# target to build an object file
+src/core/imageio.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/imageio.cpp.o
+.PHONY : src/core/imageio.cpp.o
+
+src/core/imageio.i: src/core/imageio.cpp.i
+.PHONY : src/core/imageio.i
+
+# target to preprocess a source file
+src/core/imageio.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/imageio.cpp.i
+.PHONY : src/core/imageio.cpp.i
+
+src/core/imageio.s: src/core/imageio.cpp.s
+.PHONY : src/core/imageio.s
+
+# target to generate assembly for a file
+src/core/imageio.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/imageio.cpp.s
+.PHONY : src/core/imageio.cpp.s
+
+src/core/integrator.o: src/core/integrator.cpp.o
+.PHONY : src/core/integrator.o
+
+# target to build an object file
+src/core/integrator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/integrator.cpp.o
+.PHONY : src/core/integrator.cpp.o
+
+src/core/integrator.i: src/core/integrator.cpp.i
+.PHONY : src/core/integrator.i
+
+# target to preprocess a source file
+src/core/integrator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/integrator.cpp.i
+.PHONY : src/core/integrator.cpp.i
+
+src/core/integrator.s: src/core/integrator.cpp.s
+.PHONY : src/core/integrator.s
+
+# target to generate assembly for a file
+src/core/integrator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/integrator.cpp.s
+.PHONY : src/core/integrator.cpp.s
+
+src/core/interaction.o: src/core/interaction.cpp.o
+.PHONY : src/core/interaction.o
+
+# target to build an object file
+src/core/interaction.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/interaction.cpp.o
+.PHONY : src/core/interaction.cpp.o
+
+src/core/interaction.i: src/core/interaction.cpp.i
+.PHONY : src/core/interaction.i
+
+# target to preprocess a source file
+src/core/interaction.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/interaction.cpp.i
+.PHONY : src/core/interaction.cpp.i
+
+src/core/interaction.s: src/core/interaction.cpp.s
+.PHONY : src/core/interaction.s
+
+# target to generate assembly for a file
+src/core/interaction.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/interaction.cpp.s
+.PHONY : src/core/interaction.cpp.s
+
+src/core/interpolation.o: src/core/interpolation.cpp.o
+.PHONY : src/core/interpolation.o
+
+# target to build an object file
+src/core/interpolation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/interpolation.cpp.o
+.PHONY : src/core/interpolation.cpp.o
+
+src/core/interpolation.i: src/core/interpolation.cpp.i
+.PHONY : src/core/interpolation.i
+
+# target to preprocess a source file
+src/core/interpolation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/interpolation.cpp.i
+.PHONY : src/core/interpolation.cpp.i
+
+src/core/interpolation.s: src/core/interpolation.cpp.s
+.PHONY : src/core/interpolation.s
+
+# target to generate assembly for a file
+src/core/interpolation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/interpolation.cpp.s
+.PHONY : src/core/interpolation.cpp.s
+
+src/core/light.o: src/core/light.cpp.o
+.PHONY : src/core/light.o
+
+# target to build an object file
+src/core/light.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/light.cpp.o
+.PHONY : src/core/light.cpp.o
+
+src/core/light.i: src/core/light.cpp.i
+.PHONY : src/core/light.i
+
+# target to preprocess a source file
+src/core/light.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/light.cpp.i
+.PHONY : src/core/light.cpp.i
+
+src/core/light.s: src/core/light.cpp.s
+.PHONY : src/core/light.s
+
+# target to generate assembly for a file
+src/core/light.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/light.cpp.s
+.PHONY : src/core/light.cpp.s
+
+src/core/lightdistrib.o: src/core/lightdistrib.cpp.o
+.PHONY : src/core/lightdistrib.o
+
+# target to build an object file
+src/core/lightdistrib.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/lightdistrib.cpp.o
+.PHONY : src/core/lightdistrib.cpp.o
+
+src/core/lightdistrib.i: src/core/lightdistrib.cpp.i
+.PHONY : src/core/lightdistrib.i
+
+# target to preprocess a source file
+src/core/lightdistrib.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/lightdistrib.cpp.i
+.PHONY : src/core/lightdistrib.cpp.i
+
+src/core/lightdistrib.s: src/core/lightdistrib.cpp.s
+.PHONY : src/core/lightdistrib.s
+
+# target to generate assembly for a file
+src/core/lightdistrib.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/lightdistrib.cpp.s
+.PHONY : src/core/lightdistrib.cpp.s
+
+src/core/lowdiscrepancy.o: src/core/lowdiscrepancy.cpp.o
+.PHONY : src/core/lowdiscrepancy.o
+
+# target to build an object file
+src/core/lowdiscrepancy.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/lowdiscrepancy.cpp.o
+.PHONY : src/core/lowdiscrepancy.cpp.o
+
+src/core/lowdiscrepancy.i: src/core/lowdiscrepancy.cpp.i
+.PHONY : src/core/lowdiscrepancy.i
+
+# target to preprocess a source file
+src/core/lowdiscrepancy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/lowdiscrepancy.cpp.i
+.PHONY : src/core/lowdiscrepancy.cpp.i
+
+src/core/lowdiscrepancy.s: src/core/lowdiscrepancy.cpp.s
+.PHONY : src/core/lowdiscrepancy.s
+
+# target to generate assembly for a file
+src/core/lowdiscrepancy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/lowdiscrepancy.cpp.s
+.PHONY : src/core/lowdiscrepancy.cpp.s
+
+src/core/main.o: src/core/main.cc.o
+.PHONY : src/core/main.o
+
+# target to build an object file
+src/core/main.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/src/core/main.cc.o
+.PHONY : src/core/main.cc.o
+
+src/core/main.i: src/core/main.cc.i
+.PHONY : src/core/main.i
+
+# target to preprocess a source file
+src/core/main.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/src/core/main.cc.i
+.PHONY : src/core/main.cc.i
+
+src/core/main.s: src/core/main.cc.s
+.PHONY : src/core/main.s
+
+# target to generate assembly for a file
+src/core/main.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/src/core/main.cc.s
+.PHONY : src/core/main.cc.s
+
+src/core/material.o: src/core/material.cpp.o
+.PHONY : src/core/material.o
+
+# target to build an object file
+src/core/material.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/material.cpp.o
+.PHONY : src/core/material.cpp.o
+
+src/core/material.i: src/core/material.cpp.i
+.PHONY : src/core/material.i
+
+# target to preprocess a source file
+src/core/material.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/material.cpp.i
+.PHONY : src/core/material.cpp.i
+
+src/core/material.s: src/core/material.cpp.s
+.PHONY : src/core/material.s
+
+# target to generate assembly for a file
+src/core/material.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/material.cpp.s
+.PHONY : src/core/material.cpp.s
+
+src/core/medium.o: src/core/medium.cpp.o
+.PHONY : src/core/medium.o
+
+# target to build an object file
+src/core/medium.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/medium.cpp.o
+.PHONY : src/core/medium.cpp.o
+
+src/core/medium.i: src/core/medium.cpp.i
+.PHONY : src/core/medium.i
+
+# target to preprocess a source file
+src/core/medium.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/medium.cpp.i
+.PHONY : src/core/medium.cpp.i
+
+src/core/medium.s: src/core/medium.cpp.s
+.PHONY : src/core/medium.s
+
+# target to generate assembly for a file
+src/core/medium.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/medium.cpp.s
+.PHONY : src/core/medium.cpp.s
+
+src/core/memory.o: src/core/memory.cpp.o
+.PHONY : src/core/memory.o
+
+# target to build an object file
+src/core/memory.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/memory.cpp.o
+.PHONY : src/core/memory.cpp.o
+
+src/core/memory.i: src/core/memory.cpp.i
+.PHONY : src/core/memory.i
+
+# target to preprocess a source file
+src/core/memory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/memory.cpp.i
+.PHONY : src/core/memory.cpp.i
+
+src/core/memory.s: src/core/memory.cpp.s
+.PHONY : src/core/memory.s
+
+# target to generate assembly for a file
+src/core/memory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/memory.cpp.s
+.PHONY : src/core/memory.cpp.s
+
+src/core/microfacet.o: src/core/microfacet.cpp.o
+.PHONY : src/core/microfacet.o
+
+# target to build an object file
+src/core/microfacet.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/microfacet.cpp.o
+.PHONY : src/core/microfacet.cpp.o
+
+src/core/microfacet.i: src/core/microfacet.cpp.i
+.PHONY : src/core/microfacet.i
+
+# target to preprocess a source file
+src/core/microfacet.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/microfacet.cpp.i
+.PHONY : src/core/microfacet.cpp.i
+
+src/core/microfacet.s: src/core/microfacet.cpp.s
+.PHONY : src/core/microfacet.s
+
+# target to generate assembly for a file
+src/core/microfacet.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/microfacet.cpp.s
+.PHONY : src/core/microfacet.cpp.s
+
+src/core/parallel.o: src/core/parallel.cpp.o
+.PHONY : src/core/parallel.o
+
+# target to build an object file
+src/core/parallel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/parallel.cpp.o
+.PHONY : src/core/parallel.cpp.o
+
+src/core/parallel.i: src/core/parallel.cpp.i
+.PHONY : src/core/parallel.i
+
+# target to preprocess a source file
+src/core/parallel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/parallel.cpp.i
+.PHONY : src/core/parallel.cpp.i
+
+src/core/parallel.s: src/core/parallel.cpp.s
+.PHONY : src/core/parallel.s
+
+# target to generate assembly for a file
+src/core/parallel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/parallel.cpp.s
+.PHONY : src/core/parallel.cpp.s
+
+src/core/paramset.o: src/core/paramset.cpp.o
+.PHONY : src/core/paramset.o
+
+# target to build an object file
+src/core/paramset.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/paramset.cpp.o
+.PHONY : src/core/paramset.cpp.o
+
+src/core/paramset.i: src/core/paramset.cpp.i
+.PHONY : src/core/paramset.i
+
+# target to preprocess a source file
+src/core/paramset.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/paramset.cpp.i
+.PHONY : src/core/paramset.cpp.i
+
+src/core/paramset.s: src/core/paramset.cpp.s
+.PHONY : src/core/paramset.s
+
+# target to generate assembly for a file
+src/core/paramset.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/paramset.cpp.s
+.PHONY : src/core/paramset.cpp.s
+
+src/core/primitive.o: src/core/primitive.cpp.o
+.PHONY : src/core/primitive.o
+
+# target to build an object file
+src/core/primitive.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/primitive.cpp.o
+.PHONY : src/core/primitive.cpp.o
+
+src/core/primitive.i: src/core/primitive.cpp.i
+.PHONY : src/core/primitive.i
+
+# target to preprocess a source file
+src/core/primitive.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/primitive.cpp.i
+.PHONY : src/core/primitive.cpp.i
+
+src/core/primitive.s: src/core/primitive.cpp.s
+.PHONY : src/core/primitive.s
+
+# target to generate assembly for a file
+src/core/primitive.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/primitive.cpp.s
+.PHONY : src/core/primitive.cpp.s
+
+src/core/progressreporter.o: src/core/progressreporter.cpp.o
+.PHONY : src/core/progressreporter.o
+
+# target to build an object file
+src/core/progressreporter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/progressreporter.cpp.o
+.PHONY : src/core/progressreporter.cpp.o
+
+src/core/progressreporter.i: src/core/progressreporter.cpp.i
+.PHONY : src/core/progressreporter.i
+
+# target to preprocess a source file
+src/core/progressreporter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/progressreporter.cpp.i
+.PHONY : src/core/progressreporter.cpp.i
+
+src/core/progressreporter.s: src/core/progressreporter.cpp.s
+.PHONY : src/core/progressreporter.s
+
+# target to generate assembly for a file
+src/core/progressreporter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/progressreporter.cpp.s
+.PHONY : src/core/progressreporter.cpp.s
+
+src/core/quaternion.o: src/core/quaternion.cpp.o
+.PHONY : src/core/quaternion.o
+
+# target to build an object file
+src/core/quaternion.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/quaternion.cpp.o
+.PHONY : src/core/quaternion.cpp.o
+
+src/core/quaternion.i: src/core/quaternion.cpp.i
+.PHONY : src/core/quaternion.i
+
+# target to preprocess a source file
+src/core/quaternion.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/quaternion.cpp.i
+.PHONY : src/core/quaternion.cpp.i
+
+src/core/quaternion.s: src/core/quaternion.cpp.s
+.PHONY : src/core/quaternion.s
+
+# target to generate assembly for a file
+src/core/quaternion.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/quaternion.cpp.s
+.PHONY : src/core/quaternion.cpp.s
+
+src/core/reflection.o: src/core/reflection.cpp.o
+.PHONY : src/core/reflection.o
+
+# target to build an object file
+src/core/reflection.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/reflection.cpp.o
+.PHONY : src/core/reflection.cpp.o
+
+src/core/reflection.i: src/core/reflection.cpp.i
+.PHONY : src/core/reflection.i
+
+# target to preprocess a source file
+src/core/reflection.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/reflection.cpp.i
+.PHONY : src/core/reflection.cpp.i
+
+src/core/reflection.s: src/core/reflection.cpp.s
+.PHONY : src/core/reflection.s
+
+# target to generate assembly for a file
+src/core/reflection.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/reflection.cpp.s
+.PHONY : src/core/reflection.cpp.s
+
+src/core/sampler.o: src/core/sampler.cpp.o
+.PHONY : src/core/sampler.o
+
+# target to build an object file
+src/core/sampler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/sampler.cpp.o
+.PHONY : src/core/sampler.cpp.o
+
+src/core/sampler.i: src/core/sampler.cpp.i
+.PHONY : src/core/sampler.i
+
+# target to preprocess a source file
+src/core/sampler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/sampler.cpp.i
+.PHONY : src/core/sampler.cpp.i
+
+src/core/sampler.s: src/core/sampler.cpp.s
+.PHONY : src/core/sampler.s
+
+# target to generate assembly for a file
+src/core/sampler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/sampler.cpp.s
+.PHONY : src/core/sampler.cpp.s
+
+src/core/sampling.o: src/core/sampling.cpp.o
+.PHONY : src/core/sampling.o
+
+# target to build an object file
+src/core/sampling.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/sampling.cpp.o
+.PHONY : src/core/sampling.cpp.o
+
+src/core/sampling.i: src/core/sampling.cpp.i
+.PHONY : src/core/sampling.i
+
+# target to preprocess a source file
+src/core/sampling.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/sampling.cpp.i
+.PHONY : src/core/sampling.cpp.i
+
+src/core/sampling.s: src/core/sampling.cpp.s
+.PHONY : src/core/sampling.s
+
+# target to generate assembly for a file
+src/core/sampling.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/sampling.cpp.s
+.PHONY : src/core/sampling.cpp.s
+
+src/core/scene.o: src/core/scene.cpp.o
+.PHONY : src/core/scene.o
+
+# target to build an object file
+src/core/scene.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/scene.cpp.o
+.PHONY : src/core/scene.cpp.o
+
+src/core/scene.i: src/core/scene.cpp.i
+.PHONY : src/core/scene.i
+
+# target to preprocess a source file
+src/core/scene.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/scene.cpp.i
+.PHONY : src/core/scene.cpp.i
+
+src/core/scene.s: src/core/scene.cpp.s
+.PHONY : src/core/scene.s
+
+# target to generate assembly for a file
+src/core/scene.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/scene.cpp.s
+.PHONY : src/core/scene.cpp.s
+
+src/core/shape.o: src/core/shape.cpp.o
+.PHONY : src/core/shape.o
+
+# target to build an object file
+src/core/shape.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/shape.cpp.o
+.PHONY : src/core/shape.cpp.o
+
+src/core/shape.i: src/core/shape.cpp.i
+.PHONY : src/core/shape.i
+
+# target to preprocess a source file
+src/core/shape.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/shape.cpp.i
+.PHONY : src/core/shape.cpp.i
+
+src/core/shape.s: src/core/shape.cpp.s
+.PHONY : src/core/shape.s
+
+# target to generate assembly for a file
+src/core/shape.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/shape.cpp.s
+.PHONY : src/core/shape.cpp.s
+
+src/core/sobolmatrices.o: src/core/sobolmatrices.cpp.o
+.PHONY : src/core/sobolmatrices.o
+
+# target to build an object file
+src/core/sobolmatrices.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/sobolmatrices.cpp.o
+.PHONY : src/core/sobolmatrices.cpp.o
+
+src/core/sobolmatrices.i: src/core/sobolmatrices.cpp.i
+.PHONY : src/core/sobolmatrices.i
+
+# target to preprocess a source file
+src/core/sobolmatrices.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/sobolmatrices.cpp.i
+.PHONY : src/core/sobolmatrices.cpp.i
+
+src/core/sobolmatrices.s: src/core/sobolmatrices.cpp.s
+.PHONY : src/core/sobolmatrices.s
+
+# target to generate assembly for a file
+src/core/sobolmatrices.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/sobolmatrices.cpp.s
+.PHONY : src/core/sobolmatrices.cpp.s
+
+src/core/spectrum.o: src/core/spectrum.cpp.o
+.PHONY : src/core/spectrum.o
+
+# target to build an object file
+src/core/spectrum.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/spectrum.cpp.o
+.PHONY : src/core/spectrum.cpp.o
+
+src/core/spectrum.i: src/core/spectrum.cpp.i
+.PHONY : src/core/spectrum.i
+
+# target to preprocess a source file
+src/core/spectrum.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/spectrum.cpp.i
+.PHONY : src/core/spectrum.cpp.i
+
+src/core/spectrum.s: src/core/spectrum.cpp.s
+.PHONY : src/core/spectrum.s
+
+# target to generate assembly for a file
+src/core/spectrum.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/spectrum.cpp.s
+.PHONY : src/core/spectrum.cpp.s
+
+src/core/stats.o: src/core/stats.cpp.o
+.PHONY : src/core/stats.o
+
+# target to build an object file
+src/core/stats.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/stats.cpp.o
+.PHONY : src/core/stats.cpp.o
+
+src/core/stats.i: src/core/stats.cpp.i
+.PHONY : src/core/stats.i
+
+# target to preprocess a source file
+src/core/stats.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/stats.cpp.i
+.PHONY : src/core/stats.cpp.i
+
+src/core/stats.s: src/core/stats.cpp.s
+.PHONY : src/core/stats.s
+
+# target to generate assembly for a file
+src/core/stats.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/stats.cpp.s
+.PHONY : src/core/stats.cpp.s
+
+src/core/texture.o: src/core/texture.cpp.o
+.PHONY : src/core/texture.o
+
+# target to build an object file
+src/core/texture.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/texture.cpp.o
+.PHONY : src/core/texture.cpp.o
+
+src/core/texture.i: src/core/texture.cpp.i
+.PHONY : src/core/texture.i
+
+# target to preprocess a source file
+src/core/texture.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/texture.cpp.i
+.PHONY : src/core/texture.cpp.i
+
+src/core/texture.s: src/core/texture.cpp.s
+.PHONY : src/core/texture.s
+
+# target to generate assembly for a file
+src/core/texture.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/texture.cpp.s
+.PHONY : src/core/texture.cpp.s
+
+src/core/transform.o: src/core/transform.cpp.o
+.PHONY : src/core/transform.o
+
+# target to build an object file
+src/core/transform.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/transform.cpp.o
+.PHONY : src/core/transform.cpp.o
+
+src/core/transform.i: src/core/transform.cpp.i
+.PHONY : src/core/transform.i
+
+# target to preprocess a source file
+src/core/transform.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/transform.cpp.i
+.PHONY : src/core/transform.cpp.i
+
+src/core/transform.s: src/core/transform.cpp.s
+.PHONY : src/core/transform.s
+
+# target to generate assembly for a file
+src/core/transform.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/transform.cpp.s
+.PHONY : src/core/transform.cpp.s
+
+src/core/twray.o: src/core/twray.cpp.o
+.PHONY : src/core/twray.o
+
+# target to build an object file
+src/core/twray.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/twray.cpp.o
+.PHONY : src/core/twray.cpp.o
+
+src/core/twray.i: src/core/twray.cpp.i
+.PHONY : src/core/twray.i
+
+# target to preprocess a source file
+src/core/twray.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/twray.cpp.i
+.PHONY : src/core/twray.cpp.i
+
+src/core/twray.s: src/core/twray.cpp.s
+.PHONY : src/core/twray.s
+
+# target to generate assembly for a file
+src/core/twray.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/core/twray.cpp.s
+.PHONY : src/core/twray.cpp.s
 
 src/ext/lodepng.o: src/ext/lodepng.cpp.o
 .PHONY : src/ext/lodepng.o
@@ -358,78 +1150,6 @@ src/ext/targa.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/ext/targa.cpp.s
 .PHONY : src/ext/targa.cpp.s
 
-src/fileutil.o: src/fileutil.cpp.o
-.PHONY : src/fileutil.o
-
-# target to build an object file
-src/fileutil.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/fileutil.cpp.o
-.PHONY : src/fileutil.cpp.o
-
-src/fileutil.i: src/fileutil.cpp.i
-.PHONY : src/fileutil.i
-
-# target to preprocess a source file
-src/fileutil.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/fileutil.cpp.i
-.PHONY : src/fileutil.cpp.i
-
-src/fileutil.s: src/fileutil.cpp.s
-.PHONY : src/fileutil.s
-
-# target to generate assembly for a file
-src/fileutil.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/fileutil.cpp.s
-.PHONY : src/fileutil.cpp.s
-
-src/film.o: src/film.cpp.o
-.PHONY : src/film.o
-
-# target to build an object file
-src/film.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/film.cpp.o
-.PHONY : src/film.cpp.o
-
-src/film.i: src/film.cpp.i
-.PHONY : src/film.i
-
-# target to preprocess a source file
-src/film.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/film.cpp.i
-.PHONY : src/film.cpp.i
-
-src/film.s: src/film.cpp.s
-.PHONY : src/film.s
-
-# target to generate assembly for a file
-src/film.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/film.cpp.s
-.PHONY : src/film.cpp.s
-
-src/filter.o: src/filter.cpp.o
-.PHONY : src/filter.o
-
-# target to build an object file
-src/filter.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/filter.cpp.o
-.PHONY : src/filter.cpp.o
-
-src/filter.i: src/filter.cpp.i
-.PHONY : src/filter.i
-
-# target to preprocess a source file
-src/filter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/filter.cpp.i
-.PHONY : src/filter.cpp.i
-
-src/filter.s: src/filter.cpp.s
-.PHONY : src/filter.s
-
-# target to generate assembly for a file
-src/filter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/filter.cpp.s
-.PHONY : src/filter.cpp.s
-
 src/filters/box.o: src/filters/box.cpp.o
 .PHONY : src/filters/box.o
 
@@ -453,102 +1173,6 @@ src/filters/box.s: src/filters/box.cpp.s
 src/filters/box.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/filters/box.cpp.s
 .PHONY : src/filters/box.cpp.s
-
-src/floatfile.o: src/floatfile.cpp.o
-.PHONY : src/floatfile.o
-
-# target to build an object file
-src/floatfile.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/floatfile.cpp.o
-.PHONY : src/floatfile.cpp.o
-
-src/floatfile.i: src/floatfile.cpp.i
-.PHONY : src/floatfile.i
-
-# target to preprocess a source file
-src/floatfile.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/floatfile.cpp.i
-.PHONY : src/floatfile.cpp.i
-
-src/floatfile.s: src/floatfile.cpp.s
-.PHONY : src/floatfile.s
-
-# target to generate assembly for a file
-src/floatfile.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/floatfile.cpp.s
-.PHONY : src/floatfile.cpp.s
-
-src/geometry.o: src/geometry.cpp.o
-.PHONY : src/geometry.o
-
-# target to build an object file
-src/geometry.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/geometry.cpp.o
-.PHONY : src/geometry.cpp.o
-
-src/geometry.i: src/geometry.cpp.i
-.PHONY : src/geometry.i
-
-# target to preprocess a source file
-src/geometry.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/geometry.cpp.i
-.PHONY : src/geometry.cpp.i
-
-src/geometry.s: src/geometry.cpp.s
-.PHONY : src/geometry.s
-
-# target to generate assembly for a file
-src/geometry.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/geometry.cpp.s
-.PHONY : src/geometry.cpp.s
-
-src/imageio.o: src/imageio.cpp.o
-.PHONY : src/imageio.o
-
-# target to build an object file
-src/imageio.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/imageio.cpp.o
-.PHONY : src/imageio.cpp.o
-
-src/imageio.i: src/imageio.cpp.i
-.PHONY : src/imageio.i
-
-# target to preprocess a source file
-src/imageio.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/imageio.cpp.i
-.PHONY : src/imageio.cpp.i
-
-src/imageio.s: src/imageio.cpp.s
-.PHONY : src/imageio.s
-
-# target to generate assembly for a file
-src/imageio.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/imageio.cpp.s
-.PHONY : src/imageio.cpp.s
-
-src/integrator.o: src/integrator.cpp.o
-.PHONY : src/integrator.o
-
-# target to build an object file
-src/integrator.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/integrator.cpp.o
-.PHONY : src/integrator.cpp.o
-
-src/integrator.i: src/integrator.cpp.i
-.PHONY : src/integrator.i
-
-# target to preprocess a source file
-src/integrator.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/integrator.cpp.i
-.PHONY : src/integrator.cpp.i
-
-src/integrator.s: src/integrator.cpp.s
-.PHONY : src/integrator.s
-
-# target to generate assembly for a file
-src/integrator.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/integrator.cpp.s
-.PHONY : src/integrator.cpp.s
 
 src/integrators/bdpt.o: src/integrators/bdpt.cpp.o
 .PHONY : src/integrators/bdpt.o
@@ -646,102 +1270,6 @@ src/integrators/volpath.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/integrators/volpath.cpp.s
 .PHONY : src/integrators/volpath.cpp.s
 
-src/interaction.o: src/interaction.cpp.o
-.PHONY : src/interaction.o
-
-# target to build an object file
-src/interaction.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/interaction.cpp.o
-.PHONY : src/interaction.cpp.o
-
-src/interaction.i: src/interaction.cpp.i
-.PHONY : src/interaction.i
-
-# target to preprocess a source file
-src/interaction.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/interaction.cpp.i
-.PHONY : src/interaction.cpp.i
-
-src/interaction.s: src/interaction.cpp.s
-.PHONY : src/interaction.s
-
-# target to generate assembly for a file
-src/interaction.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/interaction.cpp.s
-.PHONY : src/interaction.cpp.s
-
-src/interpolation.o: src/interpolation.cpp.o
-.PHONY : src/interpolation.o
-
-# target to build an object file
-src/interpolation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/interpolation.cpp.o
-.PHONY : src/interpolation.cpp.o
-
-src/interpolation.i: src/interpolation.cpp.i
-.PHONY : src/interpolation.i
-
-# target to preprocess a source file
-src/interpolation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/interpolation.cpp.i
-.PHONY : src/interpolation.cpp.i
-
-src/interpolation.s: src/interpolation.cpp.s
-.PHONY : src/interpolation.s
-
-# target to generate assembly for a file
-src/interpolation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/interpolation.cpp.s
-.PHONY : src/interpolation.cpp.s
-
-src/light.o: src/light.cpp.o
-.PHONY : src/light.o
-
-# target to build an object file
-src/light.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/light.cpp.o
-.PHONY : src/light.cpp.o
-
-src/light.i: src/light.cpp.i
-.PHONY : src/light.i
-
-# target to preprocess a source file
-src/light.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/light.cpp.i
-.PHONY : src/light.cpp.i
-
-src/light.s: src/light.cpp.s
-.PHONY : src/light.s
-
-# target to generate assembly for a file
-src/light.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/light.cpp.s
-.PHONY : src/light.cpp.s
-
-src/lightdistrib.o: src/lightdistrib.cpp.o
-.PHONY : src/lightdistrib.o
-
-# target to build an object file
-src/lightdistrib.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/lightdistrib.cpp.o
-.PHONY : src/lightdistrib.cpp.o
-
-src/lightdistrib.i: src/lightdistrib.cpp.i
-.PHONY : src/lightdistrib.i
-
-# target to preprocess a source file
-src/lightdistrib.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/lightdistrib.cpp.i
-.PHONY : src/lightdistrib.cpp.i
-
-src/lightdistrib.s: src/lightdistrib.cpp.s
-.PHONY : src/lightdistrib.s
-
-# target to generate assembly for a file
-src/lightdistrib.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/lightdistrib.cpp.s
-.PHONY : src/lightdistrib.cpp.s
-
 src/lights/diffuse.o: src/lights/diffuse.cpp.o
 .PHONY : src/lights/diffuse.o
 
@@ -790,6 +1318,30 @@ src/lights/distant.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/lights/distant.cpp.s
 .PHONY : src/lights/distant.cpp.s
 
+src/lights/infinite.o: src/lights/infinite.cpp.o
+.PHONY : src/lights/infinite.o
+
+# target to build an object file
+src/lights/infinite.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/lights/infinite.cpp.o
+.PHONY : src/lights/infinite.cpp.o
+
+src/lights/infinite.i: src/lights/infinite.cpp.i
+.PHONY : src/lights/infinite.i
+
+# target to preprocess a source file
+src/lights/infinite.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/lights/infinite.cpp.i
+.PHONY : src/lights/infinite.cpp.i
+
+src/lights/infinite.s: src/lights/infinite.cpp.s
+.PHONY : src/lights/infinite.s
+
+# target to generate assembly for a file
+src/lights/infinite.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/lights/infinite.cpp.s
+.PHONY : src/lights/infinite.cpp.s
+
 src/lights/point.o: src/lights/point.cpp.o
 .PHONY : src/lights/point.o
 
@@ -837,78 +1389,6 @@ src/lights/spot.s: src/lights/spot.cpp.s
 src/lights/spot.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/lights/spot.cpp.s
 .PHONY : src/lights/spot.cpp.s
-
-src/lowdiscrepancy.o: src/lowdiscrepancy.cpp.o
-.PHONY : src/lowdiscrepancy.o
-
-# target to build an object file
-src/lowdiscrepancy.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/lowdiscrepancy.cpp.o
-.PHONY : src/lowdiscrepancy.cpp.o
-
-src/lowdiscrepancy.i: src/lowdiscrepancy.cpp.i
-.PHONY : src/lowdiscrepancy.i
-
-# target to preprocess a source file
-src/lowdiscrepancy.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/lowdiscrepancy.cpp.i
-.PHONY : src/lowdiscrepancy.cpp.i
-
-src/lowdiscrepancy.s: src/lowdiscrepancy.cpp.s
-.PHONY : src/lowdiscrepancy.s
-
-# target to generate assembly for a file
-src/lowdiscrepancy.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/lowdiscrepancy.cpp.s
-.PHONY : src/lowdiscrepancy.cpp.s
-
-src/main.o: src/main.cc.o
-.PHONY : src/main.o
-
-# target to build an object file
-src/main.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/src/main.cc.o
-.PHONY : src/main.cc.o
-
-src/main.i: src/main.cc.i
-.PHONY : src/main.i
-
-# target to preprocess a source file
-src/main.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/src/main.cc.i
-.PHONY : src/main.cc.i
-
-src/main.s: src/main.cc.s
-.PHONY : src/main.s
-
-# target to generate assembly for a file
-src/main.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/RayTracing.dir/build.make CMakeFiles/RayTracing.dir/src/main.cc.s
-.PHONY : src/main.cc.s
-
-src/material.o: src/material.cpp.o
-.PHONY : src/material.o
-
-# target to build an object file
-src/material.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/material.cpp.o
-.PHONY : src/material.cpp.o
-
-src/material.i: src/material.cpp.i
-.PHONY : src/material.i
-
-# target to preprocess a source file
-src/material.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/material.cpp.i
-.PHONY : src/material.cpp.i
-
-src/material.s: src/material.cpp.s
-.PHONY : src/material.s
-
-# target to generate assembly for a file
-src/material.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/material.cpp.s
-.PHONY : src/material.cpp.s
 
 src/materials/disney.o: src/materials/disney.cpp.o
 .PHONY : src/materials/disney.o
@@ -1030,246 +1510,6 @@ src/media/homogeneous.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/media/homogeneous.cpp.s
 .PHONY : src/media/homogeneous.cpp.s
 
-src/medium.o: src/medium.cpp.o
-.PHONY : src/medium.o
-
-# target to build an object file
-src/medium.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/medium.cpp.o
-.PHONY : src/medium.cpp.o
-
-src/medium.i: src/medium.cpp.i
-.PHONY : src/medium.i
-
-# target to preprocess a source file
-src/medium.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/medium.cpp.i
-.PHONY : src/medium.cpp.i
-
-src/medium.s: src/medium.cpp.s
-.PHONY : src/medium.s
-
-# target to generate assembly for a file
-src/medium.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/medium.cpp.s
-.PHONY : src/medium.cpp.s
-
-src/memory.o: src/memory.cpp.o
-.PHONY : src/memory.o
-
-# target to build an object file
-src/memory.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/memory.cpp.o
-.PHONY : src/memory.cpp.o
-
-src/memory.i: src/memory.cpp.i
-.PHONY : src/memory.i
-
-# target to preprocess a source file
-src/memory.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/memory.cpp.i
-.PHONY : src/memory.cpp.i
-
-src/memory.s: src/memory.cpp.s
-.PHONY : src/memory.s
-
-# target to generate assembly for a file
-src/memory.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/memory.cpp.s
-.PHONY : src/memory.cpp.s
-
-src/microfacet.o: src/microfacet.cpp.o
-.PHONY : src/microfacet.o
-
-# target to build an object file
-src/microfacet.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/microfacet.cpp.o
-.PHONY : src/microfacet.cpp.o
-
-src/microfacet.i: src/microfacet.cpp.i
-.PHONY : src/microfacet.i
-
-# target to preprocess a source file
-src/microfacet.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/microfacet.cpp.i
-.PHONY : src/microfacet.cpp.i
-
-src/microfacet.s: src/microfacet.cpp.s
-.PHONY : src/microfacet.s
-
-# target to generate assembly for a file
-src/microfacet.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/microfacet.cpp.s
-.PHONY : src/microfacet.cpp.s
-
-src/parallel.o: src/parallel.cpp.o
-.PHONY : src/parallel.o
-
-# target to build an object file
-src/parallel.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/parallel.cpp.o
-.PHONY : src/parallel.cpp.o
-
-src/parallel.i: src/parallel.cpp.i
-.PHONY : src/parallel.i
-
-# target to preprocess a source file
-src/parallel.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/parallel.cpp.i
-.PHONY : src/parallel.cpp.i
-
-src/parallel.s: src/parallel.cpp.s
-.PHONY : src/parallel.s
-
-# target to generate assembly for a file
-src/parallel.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/parallel.cpp.s
-.PHONY : src/parallel.cpp.s
-
-src/paramset.o: src/paramset.cpp.o
-.PHONY : src/paramset.o
-
-# target to build an object file
-src/paramset.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/paramset.cpp.o
-.PHONY : src/paramset.cpp.o
-
-src/paramset.i: src/paramset.cpp.i
-.PHONY : src/paramset.i
-
-# target to preprocess a source file
-src/paramset.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/paramset.cpp.i
-.PHONY : src/paramset.cpp.i
-
-src/paramset.s: src/paramset.cpp.s
-.PHONY : src/paramset.s
-
-# target to generate assembly for a file
-src/paramset.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/paramset.cpp.s
-.PHONY : src/paramset.cpp.s
-
-src/primitive.o: src/primitive.cpp.o
-.PHONY : src/primitive.o
-
-# target to build an object file
-src/primitive.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/primitive.cpp.o
-.PHONY : src/primitive.cpp.o
-
-src/primitive.i: src/primitive.cpp.i
-.PHONY : src/primitive.i
-
-# target to preprocess a source file
-src/primitive.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/primitive.cpp.i
-.PHONY : src/primitive.cpp.i
-
-src/primitive.s: src/primitive.cpp.s
-.PHONY : src/primitive.s
-
-# target to generate assembly for a file
-src/primitive.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/primitive.cpp.s
-.PHONY : src/primitive.cpp.s
-
-src/progressreporter.o: src/progressreporter.cpp.o
-.PHONY : src/progressreporter.o
-
-# target to build an object file
-src/progressreporter.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/progressreporter.cpp.o
-.PHONY : src/progressreporter.cpp.o
-
-src/progressreporter.i: src/progressreporter.cpp.i
-.PHONY : src/progressreporter.i
-
-# target to preprocess a source file
-src/progressreporter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/progressreporter.cpp.i
-.PHONY : src/progressreporter.cpp.i
-
-src/progressreporter.s: src/progressreporter.cpp.s
-.PHONY : src/progressreporter.s
-
-# target to generate assembly for a file
-src/progressreporter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/progressreporter.cpp.s
-.PHONY : src/progressreporter.cpp.s
-
-src/quaternion.o: src/quaternion.cpp.o
-.PHONY : src/quaternion.o
-
-# target to build an object file
-src/quaternion.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/quaternion.cpp.o
-.PHONY : src/quaternion.cpp.o
-
-src/quaternion.i: src/quaternion.cpp.i
-.PHONY : src/quaternion.i
-
-# target to preprocess a source file
-src/quaternion.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/quaternion.cpp.i
-.PHONY : src/quaternion.cpp.i
-
-src/quaternion.s: src/quaternion.cpp.s
-.PHONY : src/quaternion.s
-
-# target to generate assembly for a file
-src/quaternion.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/quaternion.cpp.s
-.PHONY : src/quaternion.cpp.s
-
-src/reflection.o: src/reflection.cpp.o
-.PHONY : src/reflection.o
-
-# target to build an object file
-src/reflection.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/reflection.cpp.o
-.PHONY : src/reflection.cpp.o
-
-src/reflection.i: src/reflection.cpp.i
-.PHONY : src/reflection.i
-
-# target to preprocess a source file
-src/reflection.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/reflection.cpp.i
-.PHONY : src/reflection.cpp.i
-
-src/reflection.s: src/reflection.cpp.s
-.PHONY : src/reflection.s
-
-# target to generate assembly for a file
-src/reflection.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/reflection.cpp.s
-.PHONY : src/reflection.cpp.s
-
-src/sampler.o: src/sampler.cpp.o
-.PHONY : src/sampler.o
-
-# target to build an object file
-src/sampler.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/sampler.cpp.o
-.PHONY : src/sampler.cpp.o
-
-src/sampler.i: src/sampler.cpp.i
-.PHONY : src/sampler.i
-
-# target to preprocess a source file
-src/sampler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/sampler.cpp.i
-.PHONY : src/sampler.cpp.i
-
-src/sampler.s: src/sampler.cpp.s
-.PHONY : src/sampler.s
-
-# target to generate assembly for a file
-src/sampler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/sampler.cpp.s
-.PHONY : src/sampler.cpp.s
-
 src/samplers/random.o: src/samplers/random.cpp.o
 .PHONY : src/samplers/random.o
 
@@ -1317,78 +1557,6 @@ src/samplers/zerotwosequence.s: src/samplers/zerotwosequence.cpp.s
 src/samplers/zerotwosequence.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/samplers/zerotwosequence.cpp.s
 .PHONY : src/samplers/zerotwosequence.cpp.s
-
-src/sampling.o: src/sampling.cpp.o
-.PHONY : src/sampling.o
-
-# target to build an object file
-src/sampling.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/sampling.cpp.o
-.PHONY : src/sampling.cpp.o
-
-src/sampling.i: src/sampling.cpp.i
-.PHONY : src/sampling.i
-
-# target to preprocess a source file
-src/sampling.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/sampling.cpp.i
-.PHONY : src/sampling.cpp.i
-
-src/sampling.s: src/sampling.cpp.s
-.PHONY : src/sampling.s
-
-# target to generate assembly for a file
-src/sampling.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/sampling.cpp.s
-.PHONY : src/sampling.cpp.s
-
-src/scene.o: src/scene.cpp.o
-.PHONY : src/scene.o
-
-# target to build an object file
-src/scene.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/scene.cpp.o
-.PHONY : src/scene.cpp.o
-
-src/scene.i: src/scene.cpp.i
-.PHONY : src/scene.i
-
-# target to preprocess a source file
-src/scene.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/scene.cpp.i
-.PHONY : src/scene.cpp.i
-
-src/scene.s: src/scene.cpp.s
-.PHONY : src/scene.s
-
-# target to generate assembly for a file
-src/scene.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/scene.cpp.s
-.PHONY : src/scene.cpp.s
-
-src/shape.o: src/shape.cpp.o
-.PHONY : src/shape.o
-
-# target to build an object file
-src/shape.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/shape.cpp.o
-.PHONY : src/shape.cpp.o
-
-src/shape.i: src/shape.cpp.i
-.PHONY : src/shape.i
-
-# target to preprocess a source file
-src/shape.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/shape.cpp.i
-.PHONY : src/shape.cpp.i
-
-src/shape.s: src/shape.cpp.s
-.PHONY : src/shape.s
-
-# target to generate assembly for a file
-src/shape.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/shape.cpp.s
-.PHONY : src/shape.cpp.s
 
 src/shapes/disk.o: src/shapes/disk.cpp.o
 .PHONY : src/shapes/disk.o
@@ -1510,101 +1678,29 @@ src/shapes/triangle.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/shapes/triangle.cpp.s
 .PHONY : src/shapes/triangle.cpp.s
 
-src/sobolmatrices.o: src/sobolmatrices.cpp.o
-.PHONY : src/sobolmatrices.o
+src/textures/checkerboard.o: src/textures/checkerboard.cpp.o
+.PHONY : src/textures/checkerboard.o
 
 # target to build an object file
-src/sobolmatrices.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/sobolmatrices.cpp.o
-.PHONY : src/sobolmatrices.cpp.o
+src/textures/checkerboard.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/textures/checkerboard.cpp.o
+.PHONY : src/textures/checkerboard.cpp.o
 
-src/sobolmatrices.i: src/sobolmatrices.cpp.i
-.PHONY : src/sobolmatrices.i
-
-# target to preprocess a source file
-src/sobolmatrices.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/sobolmatrices.cpp.i
-.PHONY : src/sobolmatrices.cpp.i
-
-src/sobolmatrices.s: src/sobolmatrices.cpp.s
-.PHONY : src/sobolmatrices.s
-
-# target to generate assembly for a file
-src/sobolmatrices.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/sobolmatrices.cpp.s
-.PHONY : src/sobolmatrices.cpp.s
-
-src/spectrum.o: src/spectrum.cpp.o
-.PHONY : src/spectrum.o
-
-# target to build an object file
-src/spectrum.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/spectrum.cpp.o
-.PHONY : src/spectrum.cpp.o
-
-src/spectrum.i: src/spectrum.cpp.i
-.PHONY : src/spectrum.i
+src/textures/checkerboard.i: src/textures/checkerboard.cpp.i
+.PHONY : src/textures/checkerboard.i
 
 # target to preprocess a source file
-src/spectrum.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/spectrum.cpp.i
-.PHONY : src/spectrum.cpp.i
+src/textures/checkerboard.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/textures/checkerboard.cpp.i
+.PHONY : src/textures/checkerboard.cpp.i
 
-src/spectrum.s: src/spectrum.cpp.s
-.PHONY : src/spectrum.s
-
-# target to generate assembly for a file
-src/spectrum.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/spectrum.cpp.s
-.PHONY : src/spectrum.cpp.s
-
-src/stats.o: src/stats.cpp.o
-.PHONY : src/stats.o
-
-# target to build an object file
-src/stats.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/stats.cpp.o
-.PHONY : src/stats.cpp.o
-
-src/stats.i: src/stats.cpp.i
-.PHONY : src/stats.i
-
-# target to preprocess a source file
-src/stats.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/stats.cpp.i
-.PHONY : src/stats.cpp.i
-
-src/stats.s: src/stats.cpp.s
-.PHONY : src/stats.s
+src/textures/checkerboard.s: src/textures/checkerboard.cpp.s
+.PHONY : src/textures/checkerboard.s
 
 # target to generate assembly for a file
-src/stats.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/stats.cpp.s
-.PHONY : src/stats.cpp.s
-
-src/texture.o: src/texture.cpp.o
-.PHONY : src/texture.o
-
-# target to build an object file
-src/texture.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/texture.cpp.o
-.PHONY : src/texture.cpp.o
-
-src/texture.i: src/texture.cpp.i
-.PHONY : src/texture.i
-
-# target to preprocess a source file
-src/texture.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/texture.cpp.i
-.PHONY : src/texture.cpp.i
-
-src/texture.s: src/texture.cpp.s
-.PHONY : src/texture.s
-
-# target to generate assembly for a file
-src/texture.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/texture.cpp.s
-.PHONY : src/texture.cpp.s
+src/textures/checkerboard.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/textures/checkerboard.cpp.s
+.PHONY : src/textures/checkerboard.cpp.s
 
 src/textures/constant.o: src/textures/constant.cpp.o
 .PHONY : src/textures/constant.o
@@ -1630,54 +1726,6 @@ src/textures/constant.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/textures/constant.cpp.s
 .PHONY : src/textures/constant.cpp.s
 
-src/transform.o: src/transform.cpp.o
-.PHONY : src/transform.o
-
-# target to build an object file
-src/transform.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/transform.cpp.o
-.PHONY : src/transform.cpp.o
-
-src/transform.i: src/transform.cpp.i
-.PHONY : src/transform.i
-
-# target to preprocess a source file
-src/transform.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/transform.cpp.i
-.PHONY : src/transform.cpp.i
-
-src/transform.s: src/transform.cpp.s
-.PHONY : src/transform.s
-
-# target to generate assembly for a file
-src/transform.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/transform.cpp.s
-.PHONY : src/transform.cpp.s
-
-src/twray.o: src/twray.cpp.o
-.PHONY : src/twray.o
-
-# target to build an object file
-src/twray.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/twray.cpp.o
-.PHONY : src/twray.cpp.o
-
-src/twray.i: src/twray.cpp.i
-.PHONY : src/twray.i
-
-# target to preprocess a source file
-src/twray.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/twray.cpp.i
-.PHONY : src/twray.cpp.i
-
-src/twray.s: src/twray.cpp.s
-.PHONY : src/twray.s
-
-# target to generate assembly for a file
-src/twray.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pbrt.dir/build.make CMakeFiles/pbrt.dir/src/twray.cpp.s
-.PHONY : src/twray.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1688,24 +1736,123 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... RayTracing"
 	@echo "... pbrt"
-	@echo "... src/bssrdf.o"
-	@echo "... src/bssrdf.i"
-	@echo "... src/bssrdf.s"
-	@echo "... src/bvh.o"
-	@echo "... src/bvh.i"
-	@echo "... src/bvh.s"
-	@echo "... src/camera.o"
-	@echo "... src/camera.i"
-	@echo "... src/camera.s"
 	@echo "... src/cameras/perspective.o"
 	@echo "... src/cameras/perspective.i"
 	@echo "... src/cameras/perspective.s"
-	@echo "... src/efloat.o"
-	@echo "... src/efloat.i"
-	@echo "... src/efloat.s"
-	@echo "... src/error.o"
-	@echo "... src/error.i"
-	@echo "... src/error.s"
+	@echo "... src/core/bssrdf.o"
+	@echo "... src/core/bssrdf.i"
+	@echo "... src/core/bssrdf.s"
+	@echo "... src/core/bvh.o"
+	@echo "... src/core/bvh.i"
+	@echo "... src/core/bvh.s"
+	@echo "... src/core/camera.o"
+	@echo "... src/core/camera.i"
+	@echo "... src/core/camera.s"
+	@echo "... src/core/efloat.o"
+	@echo "... src/core/efloat.i"
+	@echo "... src/core/efloat.s"
+	@echo "... src/core/error.o"
+	@echo "... src/core/error.i"
+	@echo "... src/core/error.s"
+	@echo "... src/core/fileutil.o"
+	@echo "... src/core/fileutil.i"
+	@echo "... src/core/fileutil.s"
+	@echo "... src/core/film.o"
+	@echo "... src/core/film.i"
+	@echo "... src/core/film.s"
+	@echo "... src/core/filter.o"
+	@echo "... src/core/filter.i"
+	@echo "... src/core/filter.s"
+	@echo "... src/core/floatfile.o"
+	@echo "... src/core/floatfile.i"
+	@echo "... src/core/floatfile.s"
+	@echo "... src/core/geometry.o"
+	@echo "... src/core/geometry.i"
+	@echo "... src/core/geometry.s"
+	@echo "... src/core/imageio.o"
+	@echo "... src/core/imageio.i"
+	@echo "... src/core/imageio.s"
+	@echo "... src/core/integrator.o"
+	@echo "... src/core/integrator.i"
+	@echo "... src/core/integrator.s"
+	@echo "... src/core/interaction.o"
+	@echo "... src/core/interaction.i"
+	@echo "... src/core/interaction.s"
+	@echo "... src/core/interpolation.o"
+	@echo "... src/core/interpolation.i"
+	@echo "... src/core/interpolation.s"
+	@echo "... src/core/light.o"
+	@echo "... src/core/light.i"
+	@echo "... src/core/light.s"
+	@echo "... src/core/lightdistrib.o"
+	@echo "... src/core/lightdistrib.i"
+	@echo "... src/core/lightdistrib.s"
+	@echo "... src/core/lowdiscrepancy.o"
+	@echo "... src/core/lowdiscrepancy.i"
+	@echo "... src/core/lowdiscrepancy.s"
+	@echo "... src/core/main.o"
+	@echo "... src/core/main.i"
+	@echo "... src/core/main.s"
+	@echo "... src/core/material.o"
+	@echo "... src/core/material.i"
+	@echo "... src/core/material.s"
+	@echo "... src/core/medium.o"
+	@echo "... src/core/medium.i"
+	@echo "... src/core/medium.s"
+	@echo "... src/core/memory.o"
+	@echo "... src/core/memory.i"
+	@echo "... src/core/memory.s"
+	@echo "... src/core/microfacet.o"
+	@echo "... src/core/microfacet.i"
+	@echo "... src/core/microfacet.s"
+	@echo "... src/core/parallel.o"
+	@echo "... src/core/parallel.i"
+	@echo "... src/core/parallel.s"
+	@echo "... src/core/paramset.o"
+	@echo "... src/core/paramset.i"
+	@echo "... src/core/paramset.s"
+	@echo "... src/core/primitive.o"
+	@echo "... src/core/primitive.i"
+	@echo "... src/core/primitive.s"
+	@echo "... src/core/progressreporter.o"
+	@echo "... src/core/progressreporter.i"
+	@echo "... src/core/progressreporter.s"
+	@echo "... src/core/quaternion.o"
+	@echo "... src/core/quaternion.i"
+	@echo "... src/core/quaternion.s"
+	@echo "... src/core/reflection.o"
+	@echo "... src/core/reflection.i"
+	@echo "... src/core/reflection.s"
+	@echo "... src/core/sampler.o"
+	@echo "... src/core/sampler.i"
+	@echo "... src/core/sampler.s"
+	@echo "... src/core/sampling.o"
+	@echo "... src/core/sampling.i"
+	@echo "... src/core/sampling.s"
+	@echo "... src/core/scene.o"
+	@echo "... src/core/scene.i"
+	@echo "... src/core/scene.s"
+	@echo "... src/core/shape.o"
+	@echo "... src/core/shape.i"
+	@echo "... src/core/shape.s"
+	@echo "... src/core/sobolmatrices.o"
+	@echo "... src/core/sobolmatrices.i"
+	@echo "... src/core/sobolmatrices.s"
+	@echo "... src/core/spectrum.o"
+	@echo "... src/core/spectrum.i"
+	@echo "... src/core/spectrum.s"
+	@echo "... src/core/stats.o"
+	@echo "... src/core/stats.i"
+	@echo "... src/core/stats.s"
+	@echo "... src/core/texture.o"
+	@echo "... src/core/texture.i"
+	@echo "... src/core/texture.s"
+	@echo "... src/core/transform.o"
+	@echo "... src/core/transform.i"
+	@echo "... src/core/transform.s"
+	@echo "... src/core/twray.o"
+	@echo "... src/core/twray.i"
+	@echo "... src/core/twray.s"
 	@echo "... src/ext/lodepng.o"
 	@echo "... src/ext/lodepng.i"
 	@echo "... src/ext/lodepng.s"
@@ -1715,30 +1862,9 @@ help:
 	@echo "... src/ext/targa.o"
 	@echo "... src/ext/targa.i"
 	@echo "... src/ext/targa.s"
-	@echo "... src/fileutil.o"
-	@echo "... src/fileutil.i"
-	@echo "... src/fileutil.s"
-	@echo "... src/film.o"
-	@echo "... src/film.i"
-	@echo "... src/film.s"
-	@echo "... src/filter.o"
-	@echo "... src/filter.i"
-	@echo "... src/filter.s"
 	@echo "... src/filters/box.o"
 	@echo "... src/filters/box.i"
 	@echo "... src/filters/box.s"
-	@echo "... src/floatfile.o"
-	@echo "... src/floatfile.i"
-	@echo "... src/floatfile.s"
-	@echo "... src/geometry.o"
-	@echo "... src/geometry.i"
-	@echo "... src/geometry.s"
-	@echo "... src/imageio.o"
-	@echo "... src/imageio.i"
-	@echo "... src/imageio.s"
-	@echo "... src/integrator.o"
-	@echo "... src/integrator.i"
-	@echo "... src/integrator.s"
 	@echo "... src/integrators/bdpt.o"
 	@echo "... src/integrators/bdpt.i"
 	@echo "... src/integrators/bdpt.s"
@@ -1751,39 +1877,21 @@ help:
 	@echo "... src/integrators/volpath.o"
 	@echo "... src/integrators/volpath.i"
 	@echo "... src/integrators/volpath.s"
-	@echo "... src/interaction.o"
-	@echo "... src/interaction.i"
-	@echo "... src/interaction.s"
-	@echo "... src/interpolation.o"
-	@echo "... src/interpolation.i"
-	@echo "... src/interpolation.s"
-	@echo "... src/light.o"
-	@echo "... src/light.i"
-	@echo "... src/light.s"
-	@echo "... src/lightdistrib.o"
-	@echo "... src/lightdistrib.i"
-	@echo "... src/lightdistrib.s"
 	@echo "... src/lights/diffuse.o"
 	@echo "... src/lights/diffuse.i"
 	@echo "... src/lights/diffuse.s"
 	@echo "... src/lights/distant.o"
 	@echo "... src/lights/distant.i"
 	@echo "... src/lights/distant.s"
+	@echo "... src/lights/infinite.o"
+	@echo "... src/lights/infinite.i"
+	@echo "... src/lights/infinite.s"
 	@echo "... src/lights/point.o"
 	@echo "... src/lights/point.i"
 	@echo "... src/lights/point.s"
 	@echo "... src/lights/spot.o"
 	@echo "... src/lights/spot.i"
 	@echo "... src/lights/spot.s"
-	@echo "... src/lowdiscrepancy.o"
-	@echo "... src/lowdiscrepancy.i"
-	@echo "... src/lowdiscrepancy.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
-	@echo "... src/material.o"
-	@echo "... src/material.i"
-	@echo "... src/material.s"
 	@echo "... src/materials/disney.o"
 	@echo "... src/materials/disney.i"
 	@echo "... src/materials/disney.s"
@@ -1799,51 +1907,12 @@ help:
 	@echo "... src/media/homogeneous.o"
 	@echo "... src/media/homogeneous.i"
 	@echo "... src/media/homogeneous.s"
-	@echo "... src/medium.o"
-	@echo "... src/medium.i"
-	@echo "... src/medium.s"
-	@echo "... src/memory.o"
-	@echo "... src/memory.i"
-	@echo "... src/memory.s"
-	@echo "... src/microfacet.o"
-	@echo "... src/microfacet.i"
-	@echo "... src/microfacet.s"
-	@echo "... src/parallel.o"
-	@echo "... src/parallel.i"
-	@echo "... src/parallel.s"
-	@echo "... src/paramset.o"
-	@echo "... src/paramset.i"
-	@echo "... src/paramset.s"
-	@echo "... src/primitive.o"
-	@echo "... src/primitive.i"
-	@echo "... src/primitive.s"
-	@echo "... src/progressreporter.o"
-	@echo "... src/progressreporter.i"
-	@echo "... src/progressreporter.s"
-	@echo "... src/quaternion.o"
-	@echo "... src/quaternion.i"
-	@echo "... src/quaternion.s"
-	@echo "... src/reflection.o"
-	@echo "... src/reflection.i"
-	@echo "... src/reflection.s"
-	@echo "... src/sampler.o"
-	@echo "... src/sampler.i"
-	@echo "... src/sampler.s"
 	@echo "... src/samplers/random.o"
 	@echo "... src/samplers/random.i"
 	@echo "... src/samplers/random.s"
 	@echo "... src/samplers/zerotwosequence.o"
 	@echo "... src/samplers/zerotwosequence.i"
 	@echo "... src/samplers/zerotwosequence.s"
-	@echo "... src/sampling.o"
-	@echo "... src/sampling.i"
-	@echo "... src/sampling.s"
-	@echo "... src/scene.o"
-	@echo "... src/scene.i"
-	@echo "... src/scene.s"
-	@echo "... src/shape.o"
-	@echo "... src/shape.i"
-	@echo "... src/shape.s"
 	@echo "... src/shapes/disk.o"
 	@echo "... src/shapes/disk.i"
 	@echo "... src/shapes/disk.s"
@@ -1859,27 +1928,12 @@ help:
 	@echo "... src/shapes/triangle.o"
 	@echo "... src/shapes/triangle.i"
 	@echo "... src/shapes/triangle.s"
-	@echo "... src/sobolmatrices.o"
-	@echo "... src/sobolmatrices.i"
-	@echo "... src/sobolmatrices.s"
-	@echo "... src/spectrum.o"
-	@echo "... src/spectrum.i"
-	@echo "... src/spectrum.s"
-	@echo "... src/stats.o"
-	@echo "... src/stats.i"
-	@echo "... src/stats.s"
-	@echo "... src/texture.o"
-	@echo "... src/texture.i"
-	@echo "... src/texture.s"
+	@echo "... src/textures/checkerboard.o"
+	@echo "... src/textures/checkerboard.i"
+	@echo "... src/textures/checkerboard.s"
 	@echo "... src/textures/constant.o"
 	@echo "... src/textures/constant.i"
 	@echo "... src/textures/constant.s"
-	@echo "... src/transform.o"
-	@echo "... src/transform.i"
-	@echo "... src/transform.s"
-	@echo "... src/twray.o"
-	@echo "... src/twray.i"
-	@echo "... src/twray.s"
 .PHONY : help
 
 
