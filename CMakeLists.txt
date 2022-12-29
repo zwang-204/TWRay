@@ -71,6 +71,7 @@ add_library(pbrt STATIC
   src/integrators/path.cpp
   src/integrators/volpath.cpp
   src/integrators/bdpt.cpp
+  src/integrators/sppm.cpp
   src/filters/box.cpp
   src/lights/diffuse.cpp
   src/lights/distant.cpp
@@ -84,6 +85,7 @@ add_library(pbrt STATIC
   src/media/homogeneous.cpp
   src/samplers/random.cpp
   src/samplers/zerotwosequence.cpp
+  src/samplers/halton.cpp
   src/shapes/sphere.cpp
   src/shapes/disk.cpp
   src/shapes/plymesh.cpp
