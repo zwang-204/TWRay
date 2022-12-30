@@ -286,6 +286,11 @@
 },
 {
   "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
+  "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/materials/uber.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/materials/uber.cpp",
+  "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/materials/uber.cpp"
+},
+{
+  "directory": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/build",
   "command": "/usr/bin/clang++ -I/usr/local/include -I/usr/local/Cellar/glog/0.5.0/include -I/usr/local/Cellar/openexr/3.1.3/include/OpenEXR -I/usr/local/Cellar/imath/3.1.3/include/Imath -I/usr/local/Cellar/gflags/2.2.2/include -I../src -I../src/core  -fcolor-diagnostics -fansi-escape-codes -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.0.sdk -std=gnu++17 -o CMakeFiles/pbrt.dir/src/media/homogeneous.cpp.o -c /Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/media/homogeneous.cpp",
   "file": "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/src/media/homogeneous.cpp"
 },

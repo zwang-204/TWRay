@@ -29,6 +29,7 @@
 #include "materials/glass.h"
 #include "materials/disney.h"
 #include "materials/subsurface.h"
+#include "materials/uber.h"
 #include "media/homogeneous.h"
 #include "integrators/directlighting.h"
 #include "integrators/path.h"
@@ -54,6 +55,7 @@ std::shared_ptr<Material> add_glass_mat();
 std::shared_ptr<Material> add_matte_mat(Vector3f color);
 std::shared_ptr<Material> add_disney_mat(Vector3f color, float metallic);
 std::shared_ptr<Material> add_subsurface_mat(Vector3f color, std::string name, float scale);
+std::shared_ptr<Material> add_uber_mat(Vector3f Kd, Vector3f Ks, float roughness, float index);
 std::shared_ptr<Shape> add_sphere_shape(Vector3f pos, float radius);
 std::shared_ptr<Primitive> add_basic_disk(Vector3f pos, float radius, MediumInterface mi);
 std::vector<std::shared_ptr<Shape>> add_plane_shape(Vector3f pos, Vector3f rot, 
@@ -74,6 +76,7 @@ std::shared_ptr<const Camera> add_camera(Point3f origin, Point3f lookAt, Vector3
 std::vector<std::shared_ptr<Primitive>> add_stanford_bunny(Vector3f pos, float color[3], MediumInterface mi);
 std::vector<std::shared_ptr<Primitive>> add_stanford_dragon(Vector3f pos, float color[3], MediumInterface mi);                                                                            
 std::vector<std::shared_ptr<Primitive>> add_glass_bottle(Vector3f pos, float color[3], MediumInterface mi);
+std::vector<std::shared_ptr<Primitive>> add_caustics_plane(MediumInterface mi);
 void add_cornell_box(std::vector<std::shared_ptr<Primitive>> &objects,
                     std::vector<std::shared_ptr<Light>> &lights,
                     float intensity,

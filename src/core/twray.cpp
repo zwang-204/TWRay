@@ -134,6 +134,33 @@ std::shared_ptr<Material> add_subsurface_mat(Vector3f color, std::string name, f
     return std::shared_ptr<Material>(mat);
 }
 
+std::shared_ptr<Material> add_uber_mat(Vector3f Kd, Vector3f Ks, float roughness, float index){
+    ParamSet matParams;
+    auto floatTextures1 = std::make_shared<FloatTextureMap>();
+    auto spectrumTextures1 = std::make_shared<SpectrumTextureMap>();
+
+    std::unique_ptr<float[]> kd(new float[3]);
+    for (int j = 0; j < 3; ++j) kd[j] = Kd[j];
+    matParams.AddRGBSpectrum("Kd", std::move(kd), 3);
+
+    std::unique_ptr<float[]> ks(new float[3]);
+    for (int j = 0; j < 3; ++j) ks[j] = Ks[j];
+    matParams.AddRGBSpectrum("Ks", std::move(ks), 3);
+
+    std::unique_ptr<float[]> r(new float[1]);
+    r[0] = roughness;
+    matParams.AddFloat("roughness", std::move(r), 1);
+
+    std::unique_ptr<float[]> in(new float[1]);
+    in[0] = index;
+    matParams.AddFloat("index", std::move(in), 1);
+
+    TextureParams texParams(matParams, matParams, 
+        *floatTextures1, *spectrumTextures1);
+    Material *mat = CreateUberMaterial(texParams);
+    return std::shared_ptr<Material>(mat);
+}
+
 std::shared_ptr<Shape> add_sphere_shape(Vector3f pos, float radius) {
     ParamSet sphereParams;
     Transform *sphere2World = new Transform;
@@ -390,13 +417,45 @@ std::vector<std::shared_ptr<Primitive>> add_glass_bottle(Vector3f pos, float col
     Transform *ObjectToWorld = new Transform;
     Transform *WorldToObject = new Transform;
 
-    *ObjectToWorld = Translate(pos) * RotateX(90) * Scale(0.3, 0.3, 0.3) * Translate(Vector3f(-1, -1, -1)); 
-    // *ObjectToWorld = Translate(pos) * RotateZ(-20) * RotateY(180) * Scale(70, 70, 70);
+    // *ObjectToWorld = Translate(pos) * RotateX(-90) * Scale(0.3, 0.3, 0.3) * Translate(Vector3f(-1, -1, -1)); 
+    *ObjectToWorld = Translate(pos);
     *WorldToObject = Inverse(*ObjectToWorld);
 
     std::vector<std::shared_ptr<Shape>> shapes = CreatePLYMesh(ObjectToWorld, WorldToObject, false, paramSet, floatTextures);
     std::shared_ptr<AreaLight> area; 
     auto mat = add_glass_mat();
+
+    for (auto s : shapes) {
+        prims.push_back(
+            std::make_shared<GeometricPrimitive>(s, mat, area, mi));
+    }
+
+    return prims;
+}
+
+std::vector<std::shared_ptr<Primitive>> add_caustics_plane(MediumInterface mi){
+    ParamSet paramSet;
+
+    std::vector<std::shared_ptr<Primitive>> prims;
+
+    auto filename = std::make_unique<std::string[]>(1);
+    filename[0] = std::string("/Users/Security/TA/C++Tutorial/RayTracing/TWRay/ply/plane.ply");
+    paramSet.AddString("filename", std::move(filename), 1);
+
+    std::map<std::string, std::shared_ptr<Texture<float>>> *floatTextures;
+
+    Spectrum rgbSpec(0.0);
+
+    Transform *ObjectToWorld = new Transform;
+    Transform *WorldToObject = new Transform;
+
+    std::vector<std::shared_ptr<Shape>> shapes = CreatePLYMesh(ObjectToWorld, WorldToObject, false, paramSet, floatTextures);
+    std::shared_ptr<AreaLight> area; 
+    Vector3f kd(0.6399999857, 0.6399999857, 0.6399999857);
+    Vector3f ks(0.1000000015, 0.1000000015, 0.1000000015);
+    float roughness = 0.01;
+    float index = 1.0;
+    auto mat = add_uber_mat(kd, ks, roughness, index);
 
     for (auto s : shapes) {
         prims.push_back(
@@ -489,24 +548,19 @@ void add_caustics_scene(std::vector<std::shared_ptr<Primitive>> &objects,
                     float intensity,
                     MediumInterface mi){
     // add_cornell_box(objects, lights, intensity, mi);
-
-    Vector3f planePos(-1000,-1000,0);
-    Vector3f planeRot(0,0,0);
-    Vector3f planeScale(2000,2000,2000);
-    Vector3f planeColor(0.7, 0.7, 0.7);
-    auto plane = add_plane_prim(planePos, planeRot, planeScale, planeColor, nullptr, mi);
+    auto plane = add_caustics_plane(mi);
     objects += plane;
 
     std::string mapName = "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/textures/envmap.exr";
     auto light = add_infinite_light(mapName, Vector3f(intensity, intensity, intensity), mi);
     lights.push_back(light);
 
-    Vector3f spotPos(-4, 0, 4);
-    Vector3f spotTo(0, 0, 0);
-    auto spotLight = add_spot_light(spotPos, Vector3f(0.001, 0.001, 0.001), spotTo, 10, mi);
+    Vector3f spotPos(0, 5, 9);
+    Vector3f spotTo(-5, 2.75, 0);
+    auto spotLight = add_spot_light(spotPos, Vector3f(0.002, 0.002, 0.002), spotTo, 30, mi);
     lights.push_back(spotLight);
 
-    Vector3f glassPos(1, 1, 0);
+    Vector3f glassPos(0, 0, 0);
     float color[3] = {1.0, 1.0, 1.0};
     objects += add_glass_bottle(glassPos, color, mi);
 }

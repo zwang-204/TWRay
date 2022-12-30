@@ -27,7 +27,7 @@ int main(){
 
     // Cornell box
     // add_cornell_box(objects, lights, 20.0, mi);
-    add_caustics_scene(objects, lights, 3.0, mi);
+    add_caustics_scene(objects, lights, 0.3, mi);
 
     // Create BVH
     ParamSet bvhParams;
@@ -44,35 +44,39 @@ int main(){
     // float fov = 40.0;
 
     // Sample scene camera params
-    Point3f origin(3.69558, -3.46243, 3.25463);
-    Point3f lookAt(3.04072, -2.85176, 2.80939);
-    Vector3f up(-0.317366, 0.312466, 0.895346);
-    float fov = 28.8415038750464;
-    //float fov = 68.8415038750464;
+    // Point3f origin(3.69558, -3.46243, 3.25463);
+    // Point3f lookAt(3.04072, -2.85176, 2.80939);
+    // Vector3f up(-0.317366, 0.312466, 0.895346);
+    // float fov = 28.8415038750464;
     
+    // Caustics scene camera params
+    Point3f origin(-5.5, 7, -5.5);
+    Point3f lookAt(-4.75, 2.25, 0);
+    Vector3f up(0, 1, 0);
+    float fov = 40;
     
-    auto camera = add_camera(origin, lookAt, up, fov, 500, 500, mi);
+    auto camera = add_camera(origin, lookAt, up, fov, 1000, 1000, mi);
     
     // Sampler
     ParamSet sampParams;
     auto samplePerPixel = std::make_unique<int[]>(1);
-    samplePerPixel[0] = 4;
+    samplePerPixel[0] = 8;
     sampParams.AddInt("pixelsamples", std::move(samplePerPixel), 1);
     auto sampler = CreateZeroTwoSequenceSampler(sampParams);
 
     // Integrator
     ParamSet integParams;
     auto maxDepth = std::make_unique<int[]>(1);
-    maxDepth[0] = 10;
+    maxDepth[0] = 5;
     integParams.AddInt("maxdepth", std::move(maxDepth), 1);
 
     auto iterations = std::make_unique<int[]>(1);
-    iterations[0] = 128;
-    integParams.AddInt("iterations", std::move(iterations), 1);
+    iterations[0] = 32;
+    integParams.AddInt("numiterations", std::move(iterations), 1);
 
     auto radius = std::make_unique<float[]>(1);
-    radius[0] = 0.075;
-    integParams.AddInt("radius", std::move(iterations), 1);
+    radius[0] = 0.025;
+    integParams.AddFloat("radius", std::move(radius), 1);
 
     // auto photonsPerIter = std::make_unique<int[]>(1);
     // photonsPerIter[0] = 100;

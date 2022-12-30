@@ -82,6 +82,7 @@ add_library(pbrt STATIC
   src/materials/glass.cpp
   src/materials/disney.cpp
   src/materials/subsurface.cpp
+  src/materials/uber.cpp
   src/media/homogeneous.cpp
   src/samplers/random.cpp
   src/samplers/zerotwosequence.cpp
