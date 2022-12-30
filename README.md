@@ -4,21 +4,21 @@ TWRay is a PBRT-styled raytracer created by Tony (Zitong) Wang. It is built with
 
 ## Features
 
-###Integrators
+### Integrators
 - Path Tracing
 - Bidirectional Path Tracing
 - Volumetric Path Tracing
 - Stochastic Progressive Photon Mapping
 - Direct Lighting
 
-###Light Source
+### Light Source
 - Area light
 - Directional light
 - Environment light
 - Point light
 - Spot light
 
-###Materials
+### Materials
 - Disney material
 - Glass material
 - Matte material
@@ -26,5 +26,5 @@ TWRay is a PBRT-styled raytracer created by Tony (Zitong) Wang. It is built with
 - Uber material
 
 ## Examples
-![Alt text](examples/CB12_24_3.exr?raw=true "Stanford bunny in Cornell box")
-![Alt text](examples/CB12_26.exr?raw=true "Stanford dragon with subsurface material")
+![Alt text](examples/exm1.png?raw=true "Stanford bunny in Cornell box")
+![Alt text](examples/exm2.png?raw=true "Stanford dragon with subsurface material")
