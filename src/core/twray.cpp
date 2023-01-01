@@ -111,7 +111,7 @@ std::shared_ptr<Material> add_disney_mat(Vector3f color, float metallic){
     return std::shared_ptr<Material>(mat);
 }
 
-std::shared_ptr<Material> add_subsurface_mat(Vector3f color, std::string name, float scale){
+std::shared_ptr<Material> add_subsurface_mat(Vector3f color, std::string name, float scale, float roughness){
     ParamSet matParams;
     auto floatTextures1 = std::make_shared<FloatTextureMap>();
     auto spectrumTextures1 = std::make_shared<SpectrumTextureMap>();
@@ -123,6 +123,11 @@ std::shared_ptr<Material> add_subsurface_mat(Vector3f color, std::string name, f
     std::unique_ptr<float[]> s(new float[1]);
     s[0] = scale;
     matParams.AddFloat("scale", std::move(s), 1);
+
+    std::unique_ptr<float[]> rough(new float[1]);
+    rough[0] = roughness;
+    matParams.AddFloat("uroughness", std::move(rough), 1);
+    matParams.AddFloat("vroughness", std::move(rough), 1);
 
     std::unique_ptr<std::string[]> n(new std::string[1]);
     n[0] = name;
@@ -356,10 +361,10 @@ std::vector<std::shared_ptr<Primitive>> add_stanford_bunny(Vector3f pos, float c
     std::vector<std::shared_ptr<Shape>> shapes = CreatePLYMesh(ObjectToWorld, WorldToObject, false, paramSet, floatTextures);
     std::shared_ptr<AreaLight> area; 
     // std::shared_ptr<Material> mat;
-    // auto mat = add_subsurface_mat(Vector3f(1.0, 1.0, 1.0), "Skimmilk");
+    // auto mat = add_subsurface_mat(Vector3f(1.0, 1.0, 1.0), "Apple", 1.0, 0.05);
     auto mat = add_glass_mat();
     // mi.inside = add_medium("", Vector3f(0.06, .06, .06), Vector3f(.2, .2, .2), 0.7, 0.2);
-    mi.inside = add_medium("Orange Powder");
+    mi.inside = add_medium("Apple");
     for (auto s : shapes) {
         prims.push_back(
             std::make_shared<GeometricPrimitive>(s, mat, area, mi));
@@ -374,7 +379,7 @@ std::vector<std::shared_ptr<Primitive>> add_stanford_dragon(Vector3f pos, float 
     std::vector<std::shared_ptr<Primitive>> prims;
 
     auto filename = std::make_unique<std::string[]>(1);
-    filename[0] = std::string("/Users/Security/TA/C++Tutorial/RayTracing/TWRay/ply/dragon_comp.ply");
+    filename[0] = std::string("/Users/Security/TA/C++Tutorial/RayTracing/TWRay/ply/dragon_uncomp.ply");
     paramSet.AddString("filename", std::move(filename), 1);
 
     std::map<std::string, std::shared_ptr<Texture<float>>> *floatTextures;
@@ -390,7 +395,7 @@ std::vector<std::shared_ptr<Primitive>> add_stanford_dragon(Vector3f pos, float 
 
     std::vector<std::shared_ptr<Shape>> shapes = CreatePLYMesh(ObjectToWorld, WorldToObject, false, paramSet, floatTextures);
     std::shared_ptr<AreaLight> area; 
-    auto mat = add_subsurface_mat(Vector3f(1.0, 1.0, 1.0), "Skin1", 50.0);
+    auto mat = add_subsurface_mat(Vector3f(1.0, 1.0, 1.0), "Marble", 50.0, 0.0);
     // auto mat = add_glass_mat();
 
     for (auto s : shapes) {
@@ -519,6 +524,10 @@ void add_cornell_box(std::vector<std::shared_ptr<Primitive>> &objects,
 
     auto light = add_point_light(Vector3f(278, 554, 278), lightIntensity, mi);
     lights.push_back(light);
+
+    std::string mapName = "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/textures/envmap.exr";
+    auto inflight = add_infinite_light(mapName, Vector3f(5, 5, 5), mi);
+    lights.push_back(inflight);
 
     objects += down + up + back + left + right;
 }

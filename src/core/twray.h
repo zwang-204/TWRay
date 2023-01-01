@@ -20,6 +20,7 @@
 #include "lights/infinite.h"
 #include "samplers/random.h"
 #include "samplers/zerotwosequence.h"
+#include "samplers/halton.h"
 #include "shapes/sphere.h"
 #include "shapes/plymesh.h"
 #include "shapes/disk.h"
@@ -54,7 +55,7 @@ Medium* add_medium(std::string name, Vector3f sigma_a,
 std::shared_ptr<Material> add_glass_mat();
 std::shared_ptr<Material> add_matte_mat(Vector3f color);
 std::shared_ptr<Material> add_disney_mat(Vector3f color, float metallic);
-std::shared_ptr<Material> add_subsurface_mat(Vector3f color, std::string name, float scale);
+std::shared_ptr<Material> add_subsurface_mat(Vector3f color, std::string name, float scale, float roughness);
 std::shared_ptr<Material> add_uber_mat(Vector3f Kd, Vector3f Ks, float roughness, float index);
 std::shared_ptr<Shape> add_sphere_shape(Vector3f pos, float radius);
 std::shared_ptr<Primitive> add_basic_disk(Vector3f pos, float radius, MediumInterface mi);
