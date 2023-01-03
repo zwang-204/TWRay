@@ -3,27 +3,38 @@ cmake_minimum_required(VERSION 3.10)
 project(RayTracing CXX)
 
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fcolor-diagnostics -fansi-escape-codes")
+if(CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fcolor-diagnostics -fansi-escape-codes")
+elseif(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+  # GCC-specific flags go here
+endif()
 
-find_package(glog REQUIRED)
+if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Darwin")
+  # macOS-specific commands go here
+  find_package(glog REQUIRED)
 
-include_directories(
-  /usr/local/include/
-  /usr/local/Cellar/glog/0.5.0/include/
-  /usr/local/Cellar/openexr/3.1.3/include/OpenEXR/
-  /usr/local/Cellar/imath/3.1.3/include/Imath/
-  /usr/local/Cellar/gflags/2.2.2/include/
-  src
-  src/core
-)
+  include_directories(
+    /usr/local/include/
+    /usr/local/Cellar/glog/0.5.0/include/
+    /usr/local/Cellar/openexr/3.1.3/include/OpenEXR/
+    /usr/local/Cellar/imath/3.1.3/include/Imath/
+    /usr/local/Cellar/gflags/2.2.2/include/
+    src
+    src/core
+  )
 
-link_directories(
-  /usr/local/lib/
-  /usr/local/Cellar/glog/0.5.0/lib/
-  /usr/local/Cellar/openexr/3.1.3/lib/
-  /usr/local/Cellar/imath/3.1.3/lib/
-  /usr/local/Cellar/gflags/2.2.2/lib/
-)
+  link_directories(
+    /usr/local/lib/
+    /usr/local/Cellar/glog/0.5.0/lib/
+    /usr/local/Cellar/openexr/3.1.3/lib/
+    /usr/local/Cellar/imath/3.1.3/lib/
+    /usr/local/Cellar/gflags/2.2.2/lib/
+  )
+
+elseif(CMAKE_HOST_SYSTEM_NAME STREQUAL "Linux")
+  # Linux-specific commands go here
+  
+endif()
 
 add_library(pbrt STATIC
   src/core/bssrdf.cpp
