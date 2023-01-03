@@ -470,6 +470,38 @@ std::vector<std::shared_ptr<Primitive>> add_caustics_plane(MediumInterface mi){
     return prims;
 }
 
+void add_poly(std::string path, Vector3f pos, std::shared_ptr<Material> material, MediumInterface mi,
+                std::vector<std::shared_ptr<Primitive>> &objects,
+                std::vector<std::shared_ptr<Light>> &lights){
+    ParamSet paramSet;
+
+    std::vector<std::shared_ptr<Primitive>> prims;
+
+    auto filename = std::make_unique<std::string[]>(1);
+    filename[0] = path;
+    paramSet.AddString("filename", std::move(filename), 1);
+
+    std::map<std::string, std::shared_ptr<Texture<float>>> *floatTextures;
+
+    Spectrum rgbSpec(0.0);
+
+    Transform *ObjectToWorld = new Transform;
+    Transform *WorldToObject = new Transform;
+
+    // *ObjectToWorld = Translate(pos) * RotateX(-90) * Scale(0.3, 0.3, 0.3) * Translate(Vector3f(-1, -1, -1)); 
+    *ObjectToWorld = Translate(pos);
+    *WorldToObject = Inverse(*ObjectToWorld);
+
+    std::vector<std::shared_ptr<Shape>> shapes = CreatePLYMesh(ObjectToWorld, WorldToObject, false, paramSet, floatTextures);
+    std::shared_ptr<AreaLight> area; 
+    auto mat = material;
+
+    for (auto s : shapes) {
+        objects.push_back(
+            std::make_shared<GeometricPrimitive>(s, mat, area, mi));
+    }
+}
+
 void add_cornell_box(std::vector<std::shared_ptr<Primitive>> &objects,
                     std::vector<std::shared_ptr<Light>> &lights,
                     float intensity,
@@ -572,6 +604,40 @@ void add_caustics_scene(std::vector<std::shared_ptr<Primitive>> &objects,
     Vector3f glassPos(0, 0, 0);
     float color[3] = {1.0, 1.0, 1.0};
     objects += add_glass_bottle(glassPos, color, mi);
+}
+
+void add_wine_glass_scene(std::vector<std::shared_ptr<Primitive>> &objects,
+                    std::vector<std::shared_ptr<Light>> &lights,
+                    float intensity,
+                    MediumInterface mi){
+
+    std::string mapName = "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/textures/envmap.exr";
+    auto light = add_infinite_light(mapName, Vector3f(intensity, intensity, intensity), mi);
+    lights.push_back(light);
+
+    //add glass
+    Vector3f pos(0,0, 0);
+    auto mat = add_glass_mat();
+    add_poly("/Users/Security/TA/C++Tutorial/RayTracing/TWRay/ply/wineglass/glass.ply", pos, mat,
+            mi, objects, lights);
+    
+    //add liquid
+    auto liqMat =  add_subsurface_mat(Vector3f(1.0, 1.0, 1.0), "Regular Milk", 350.0, 0.0);
+    // auto medium = add_medium("Ketchup");
+    // MediumInterface liquidmi(mi);
+    // liquidmi.inside = medium;
+    add_poly("/Users/Security/TA/C++Tutorial/RayTracing/TWRay/ply/wineglass/liquid.ply", pos, liqMat,
+            mi, objects, lights);
+
+    //add plane
+    Vector3f kd(0.6399999857, 0.6399999857, 0.6399999857);
+    Vector3f ks(0.1000000015, 0.1000000015, 0.1000000015);
+    float roughness = 0.01;
+    float index = 1.0;
+    auto planeMat = add_uber_mat(kd, ks, roughness, index);
+    add_poly("/Users/Security/TA/C++Tutorial/RayTracing/TWRay/ply/wineglass/wineplane.ply", pos, planeMat,
+            mi, objects, lights);
+
 }
 
 

@@ -78,6 +78,9 @@ std::vector<std::shared_ptr<Primitive>> add_stanford_bunny(Vector3f pos, float c
 std::vector<std::shared_ptr<Primitive>> add_stanford_dragon(Vector3f pos, float color[3], MediumInterface mi);                                                                            
 std::vector<std::shared_ptr<Primitive>> add_glass_bottle(Vector3f pos, float color[3], MediumInterface mi);
 std::vector<std::shared_ptr<Primitive>> add_caustics_plane(MediumInterface mi);
+void add_poly(std::string path, Vector3f pos, std::shared_ptr<Material> material, MediumInterface mi,
+                std::vector<std::shared_ptr<Primitive>> &objects,
+                std::vector<std::shared_ptr<Light>> &lights);
 void add_cornell_box(std::vector<std::shared_ptr<Primitive>> &objects,
                     std::vector<std::shared_ptr<Light>> &lights,
                     float intensity,
@@ -89,7 +92,12 @@ void add_sample_scene(std::vector<std::shared_ptr<Primitive>> &objects,
 void add_caustics_scene(std::vector<std::shared_ptr<Primitive>> &objects,
                     std::vector<std::shared_ptr<Light>> &lights,
                     float intensity,
-                    MediumInterface mi);                  
+                    MediumInterface mi);    
+void add_wine_glass_scene(std::vector<std::shared_ptr<Primitive>> &objects,
+                    std::vector<std::shared_ptr<Light>> &lights,
+                    float intensity,
+                    MediumInterface mi);
+              
 }
 
 #endif
