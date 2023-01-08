@@ -9,6 +9,7 @@
 #include <string>
 #include <functional>
 #include <mutex>
+#include <climits>
 
 namespace pbrt {
 

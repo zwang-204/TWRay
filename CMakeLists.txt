@@ -3,11 +3,10 @@ cmake_minimum_required(VERSION 3.10)
 project(RayTracing CXX)
 
 set(CMAKE_CXX_STANDARD 17)
-if(CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fcolor-diagnostics -fansi-escape-codes")
-elseif(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
-  # GCC-specific flags go here
-endif()
+set(CMAKE_C_COMPILER clang)
+set(CMAKE_CXX_COMPILER clang++)
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fcolor-diagnostics -fansi-escape-codes -stdlib=libstdc++ -std=c++17")
 
 if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Darwin")
   # macOS-specific commands go here
@@ -33,7 +32,22 @@ if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Darwin")
 
 elseif(CMAKE_HOST_SYSTEM_NAME STREQUAL "Linux")
   # Linux-specific commands go here
-  
+  find_package(GLOG REQUIRED) 
+  find_package( Threads )
+
+  include_directories(
+    src
+    src/core
+    /usr/include/OpenEXR
+    /usr/local/include/glog/
+    /usr/local/include/gflags/
+  )
+
+  link_directories(
+    /usr/local/lib/
+    /usr/local/lib/cmake/gflags/
+    /usr/local/lib/cmake/glog/
+  )
 endif()
 
 add_library(pbrt STATIC
@@ -121,14 +135,27 @@ FILE ( GLOB PBRT_SOURCE
   src/media/*
 )
 
+if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Darwin")
+  # macOS-specific commands go here
+  set(ALL_PBRT_LIBS
+    pbrt
+    gflags
+    glog
+    openexr
+    Imath
+  )
+elseif(CMAKE_HOST_SYSTEM_NAME STREQUAL "Linux")
+  # Linux-specific commands go here
 
-set(ALL_PBRT_LIBS
-  pbrt
-  gflags
-  glog
-  openexr
-  Imath
-)
+  set(ALL_PBRT_LIBS
+    pthread
+    pbrt
+    glog
+    IlmImf
+    Imath
+    Half
+  )
+endif()
 
 add_executable(RayTracing
   src/core/main.cc

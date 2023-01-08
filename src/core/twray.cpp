@@ -611,14 +611,14 @@ void add_wine_glass_scene(std::vector<std::shared_ptr<Primitive>> &objects,
                     float intensity,
                     MediumInterface mi){
 
-    std::string mapName = "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/textures/envmap.exr";
+    std::string mapName = "textures/envmap.exr";
     auto light = add_infinite_light(mapName, Vector3f(intensity, intensity, intensity), mi);
     lights.push_back(light);
 
     //add glass
     Vector3f pos(0,0, 0);
     auto mat = add_glass_mat();
-    add_poly("/Users/Security/TA/C++Tutorial/RayTracing/TWRay/ply/wineglass/glass.ply", pos, mat,
+    add_poly("ply/wineglass/glass.ply", pos, mat,
             mi, objects, lights);
     
     //add liquid
@@ -626,7 +626,7 @@ void add_wine_glass_scene(std::vector<std::shared_ptr<Primitive>> &objects,
     // auto medium = add_medium("Ketchup");
     // MediumInterface liquidmi(mi);
     // liquidmi.inside = medium;
-    add_poly("/Users/Security/TA/C++Tutorial/RayTracing/TWRay/ply/wineglass/liquid.ply", pos, liqMat,
+    add_poly("ply/wineglass/liquid.ply", pos, liqMat,
             mi, objects, lights);
 
     //add plane
@@ -635,7 +635,7 @@ void add_wine_glass_scene(std::vector<std::shared_ptr<Primitive>> &objects,
     float roughness = 0.01;
     float index = 1.0;
     auto planeMat = add_uber_mat(kd, ks, roughness, index);
-    add_poly("/Users/Security/TA/C++Tutorial/RayTracing/TWRay/ply/wineglass/wineplane.ply", pos, planeMat,
+    add_poly("ply/wineglass/wineplane.ply", pos, planeMat,
             mi, objects, lights);
 
 }

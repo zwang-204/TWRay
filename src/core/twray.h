@@ -39,6 +39,7 @@
 #include "integrators/sppm.h"
 #include "scene.h"
 #include "filters/box.h"
+#include "fileutil.h"
 
 #include "stats.h"
 #include "parallel.h"

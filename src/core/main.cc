@@ -6,6 +6,7 @@ int main(){
 
     ParallelInit();
     InitProfiler();
+    SetSearchDirectory("/home/ririka/TWRay/");
 
     // World
     std::vector<std::shared_ptr<Primitive>> objects;
@@ -67,7 +68,7 @@ int main(){
     // Sampler
     ParamSet sampParams;
     auto samplePerPixel = std::make_unique<int[]>(1);
-    samplePerPixel[0] = 500;
+    samplePerPixel[0] = 2000;
     sampParams.AddInt("pixelsamples", std::move(samplePerPixel), 1);
     auto sampler = CreateHaltonSampler(sampParams, camera->film->GetSampleBounds());
 

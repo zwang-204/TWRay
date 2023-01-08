@@ -4,6 +4,7 @@
 #include "spectrum.h"
 #include "textures/constant.h"
 #include "error.h"
+#include <bits/stdc++.h>
 
 namespace pbrt {
 
