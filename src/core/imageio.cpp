@@ -143,7 +143,6 @@ static void WriteImageEXR(const std::string &name, const float *pixels,
     Box2i displayWindow(V2i(0, 0), V2i(totalXRes - 1, totalYRes - 1));
     Box2i dataWindow(V2i(xOffset, yOffset),
                      V2i(xOffset + xRes - 1, yOffset + yRes - 1));
-
     try {
         RgbaOutputFile file(name.c_str(), displayWindow, dataWindow,
                             WRITE_RGB);
@@ -154,6 +153,9 @@ static void WriteImageEXR(const std::string &name, const float *pixels,
     }
 
     delete[] hrgba;
+#ifdef __linux__
+    abort();
+#endif    
 }
 
 // TGA Function Definitions

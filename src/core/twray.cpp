@@ -31,6 +31,11 @@ Medium* add_medium(std::string name, Vector3f sigma_a=Vector3f(.0011f, .0024f, .
                 Vector3f sigma_s=Vector3f(2.55f, 3.21f, 3.77f), float g=0.0f, 
                 float scale=1.0f){
     ParamSet mediumParam;
+
+    std::unique_ptr<float[]> s(new float[1]);
+    s[0] = scale;
+    mediumParam.AddFloat("scale", std::move(s), 1);
+    
     if(name != ""){
         std::unique_ptr<std::string[]> n(new std::string[1]);
         n[0] = name;
@@ -50,20 +55,16 @@ Medium* add_medium(std::string name, Vector3f sigma_a=Vector3f(.0011f, .0024f, .
     _g[0] = g;
     mediumParam.AddFloat("g", std::move(_g), 1);
 
-    std::unique_ptr<float[]> s(new float[1]);
-    s[0] = scale;
-    mediumParam.AddFloat("scale", std::move(s), 1);
-
     return MakeMedium(mediumParam);
 }
 
-std::shared_ptr<Material> add_glass_mat(){
+std::shared_ptr<Material> add_glass_mat(float rough){
     ParamSet matParams;
     auto floatTextures1 = std::make_shared<FloatTextureMap>();
     auto spectrumTextures1 = std::make_shared<SpectrumTextureMap>();
     
     auto roughness = std::make_unique<float[]>(1);
-    roughness[0] = 0.0;
+    roughness[0] = rough;
     matParams.AddFloat("uroughness", std::move(roughness), 1);
     matParams.AddFloat("vroughness", std::move(roughness), 1);
 
@@ -344,7 +345,7 @@ std::vector<std::shared_ptr<Primitive>> add_stanford_bunny(Vector3f pos, float c
     std::vector<std::shared_ptr<Primitive>> prims;
 
     auto filename = std::make_unique<std::string[]>(1);
-    filename[0] = std::string("/Users/Security/TA/C++Tutorial/RayTracing/TWRay/ply/bunny_uncomp.ply");
+    filename[0] = std::string("ply/bunny_uncomp.ply");
     paramSet.AddString("filename", std::move(filename), 1);
 
     std::map<std::string, std::shared_ptr<Texture<float>>> *floatTextures;
@@ -362,7 +363,7 @@ std::vector<std::shared_ptr<Primitive>> add_stanford_bunny(Vector3f pos, float c
     std::shared_ptr<AreaLight> area; 
     // std::shared_ptr<Material> mat;
     // auto mat = add_subsurface_mat(Vector3f(1.0, 1.0, 1.0), "Apple", 1.0, 0.05);
-    auto mat = add_glass_mat();
+    auto mat = add_glass_mat(0.);
     // mi.inside = add_medium("", Vector3f(0.06, .06, .06), Vector3f(.2, .2, .2), 0.7, 0.2);
     mi.inside = add_medium("Apple");
     for (auto s : shapes) {
@@ -379,7 +380,7 @@ std::vector<std::shared_ptr<Primitive>> add_stanford_dragon(Vector3f pos, float 
     std::vector<std::shared_ptr<Primitive>> prims;
 
     auto filename = std::make_unique<std::string[]>(1);
-    filename[0] = std::string("/Users/Security/TA/C++Tutorial/RayTracing/TWRay/ply/dragon_uncomp.ply");
+    filename[0] = std::string("ply/dragon_uncomp.ply");
     paramSet.AddString("filename", std::move(filename), 1);
 
     std::map<std::string, std::shared_ptr<Texture<float>>> *floatTextures;
@@ -412,7 +413,7 @@ std::vector<std::shared_ptr<Primitive>> add_glass_bottle(Vector3f pos, float col
     std::vector<std::shared_ptr<Primitive>> prims;
 
     auto filename = std::make_unique<std::string[]>(1);
-    filename[0] = std::string("/Users/Security/TA/C++Tutorial/RayTracing/TWRay/ply/glass.ply");
+    filename[0] = std::string("ply/glass.ply");
     paramSet.AddString("filename", std::move(filename), 1);
 
     std::map<std::string, std::shared_ptr<Texture<float>>> *floatTextures;
@@ -428,7 +429,7 @@ std::vector<std::shared_ptr<Primitive>> add_glass_bottle(Vector3f pos, float col
 
     std::vector<std::shared_ptr<Shape>> shapes = CreatePLYMesh(ObjectToWorld, WorldToObject, false, paramSet, floatTextures);
     std::shared_ptr<AreaLight> area; 
-    auto mat = add_glass_mat();
+    auto mat = add_glass_mat(0.);
 
     for (auto s : shapes) {
         prims.push_back(
@@ -444,7 +445,7 @@ std::vector<std::shared_ptr<Primitive>> add_caustics_plane(MediumInterface mi){
     std::vector<std::shared_ptr<Primitive>> prims;
 
     auto filename = std::make_unique<std::string[]>(1);
-    filename[0] = std::string("/Users/Security/TA/C++Tutorial/RayTracing/TWRay/ply/plane.ply");
+    filename[0] = std::string("TWRay/ply/plane.ply");
     paramSet.AddString("filename", std::move(filename), 1);
 
     std::map<std::string, std::shared_ptr<Texture<float>>> *floatTextures;
@@ -535,7 +536,7 @@ void add_cornell_box(std::vector<std::shared_ptr<Primitive>> &objects,
     Vector3f rightScale(555, 555, 1);
     std::vector<std::shared_ptr<Primitive>> right = add_plane_prim(rightPos, rightRot, rightScale, green, nullptr, mi);
 
-    // std::string mapName = "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/textures/envmap.exr";
+    // std::string mapName = "textures/envmap.exr";
     // auto infiniteLight = add_infinite_light(mapName, Vector3f(intensity, intensity, intensity), mi);
     // lights.push_back(infiniteLight);
 
@@ -557,7 +558,7 @@ void add_cornell_box(std::vector<std::shared_ptr<Primitive>> &objects,
     auto light = add_point_light(Vector3f(278, 554, 278), lightIntensity, mi);
     lights.push_back(light);
 
-    std::string mapName = "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/textures/envmap.exr";
+    std::string mapName = "textures/envmap.exr";
     auto inflight = add_infinite_light(mapName, Vector3f(5, 5, 5), mi);
     lights.push_back(inflight);
 
@@ -578,7 +579,7 @@ void add_sample_scene(std::vector<std::shared_ptr<Primitive>> &objects,
     float color[3] = {1.0, 1.0, 1.0};
     objects += add_stanford_dragon(Vector3f(0., -0., -0.5), color, mi);
 
-    std::string mapName = "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/textures/envmap.exr";
+    std::string mapName = "textures/envmap.exr";
     auto light = add_infinite_light(mapName, Vector3f(intensity, intensity, intensity), mi);
     lights.push_back(light);
 
@@ -592,7 +593,7 @@ void add_caustics_scene(std::vector<std::shared_ptr<Primitive>> &objects,
     auto plane = add_caustics_plane(mi);
     objects += plane;
 
-    std::string mapName = "/Users/Security/TA/C++Tutorial/RayTracing/TWRay/textures/envmap.exr";
+    std::string mapName = "textures/envmap.exr";
     auto light = add_infinite_light(mapName, Vector3f(intensity, intensity, intensity), mi);
     lights.push_back(light);
 
@@ -617,16 +618,21 @@ void add_wine_glass_scene(std::vector<std::shared_ptr<Primitive>> &objects,
 
     //add glass
     Vector3f pos(0,0, 0);
-    auto mat = add_glass_mat();
-    add_poly("ply/wineglass/glass.ply", pos, mat,
+    auto mat = add_glass_mat(0.1);
+    add_poly("ply/splashwater/glass.ply", pos, mat,
             mi, objects, lights);
     
     //add liquid
-    auto liqMat =  add_subsurface_mat(Vector3f(1.0, 1.0, 1.0), "Regular Milk", 350.0, 0.0);
-    // auto medium = add_medium("Ketchup");
+    auto liqMat =  add_subsurface_mat(Vector3f(1.0, 1.0, 1.0), "Regular Milk", 100.0, 0.0);
+    // auto liqMat = add_glass_mat();
+    // auto medium = add_medium("Coke");
     // MediumInterface liquidmi(mi);
     // liquidmi.inside = medium;
-    add_poly("ply/wineglass/liquid.ply", pos, liqMat,
+    // Vector3f sigma_a(.06, .07, .0785);
+    // Vector3f sigma_s(.02, .01, .0015);
+    // auto medium = add_medium("", sigma_a, sigma_s, 0.0, 100.);
+    // mi.inside = medium;
+    add_poly("ply/splashwater/liquid.ply", pos, liqMat,
             mi, objects, lights);
 
     //add plane

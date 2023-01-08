@@ -6,7 +6,11 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_C_COMPILER clang)
 set(CMAKE_CXX_COMPILER clang++)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fcolor-diagnostics -fansi-escape-codes -stdlib=libstdc++ -std=c++17")
+if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Darwin")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fcolor-diagnostics -fansi-escape-codes")
+elseif(CMAKE_HOST_SYSTEM_NAME STREQUAL "Linux")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fcolor-diagnostics -fansi-escape-codes -stdlib=libstdc++ -std=c++17")
+endif()
 
 if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Darwin")
   # macOS-specific commands go here

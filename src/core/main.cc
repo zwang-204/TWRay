@@ -6,7 +6,7 @@ int main(){
 
     ParallelInit();
     InitProfiler();
-    SetSearchDirectory("/home/ririka/TWRay/");
+    SetSearchDirectory("/home/ririka/PBR/TWRay/");
 
     // World
     std::vector<std::shared_ptr<Primitive>> objects;
@@ -30,7 +30,7 @@ int main(){
     // add_cornell_box(objects, lights, 20.0, mi);
     // add_sample_scene(objects, lights, 2, mi);
     // add_caustics_scene(objects, lights, 0.3, mi);
-    add_wine_glass_scene(objects, lights, 2, mi);
+    add_wine_glass_scene(objects, lights, 1, mi);
     // Create BVH
     ParamSet bvhParams;
     std::shared_ptr<Primitive> bvh = CreateBVHAccelerator(objects, bvhParams);
@@ -63,19 +63,19 @@ int main(){
     Vector3f up(0, 0, 1);
     float fov = 23;
 
-    auto camera = add_camera(origin, lookAt, up, fov, 500, 500, mi);
+    auto camera = add_camera(origin, lookAt, up, fov, 800, 800, mi);
     
     // Sampler
     ParamSet sampParams;
     auto samplePerPixel = std::make_unique<int[]>(1);
-    samplePerPixel[0] = 2000;
+    samplePerPixel[0] = 1;
     sampParams.AddInt("pixelsamples", std::move(samplePerPixel), 1);
     auto sampler = CreateHaltonSampler(sampParams, camera->film->GetSampleBounds());
 
     // Integrator
     ParamSet integParams;
     auto maxDepth = std::make_unique<int[]>(1);
-    maxDepth[0] = 25;
+    maxDepth[0] = 15;
     integParams.AddInt("maxdepth", std::move(maxDepth), 1);
 
     auto iterations = std::make_unique<int[]>(1);

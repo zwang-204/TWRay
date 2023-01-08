@@ -4,8 +4,9 @@
 #include "spectrum.h"
 #include "textures/constant.h"
 #include "error.h"
-#include <bits/stdc++.h>
-
+#ifdef __linux__
+    #include <bits/stdc++.h>
+#endif
 namespace pbrt {
 
 // ParamSet Macros
