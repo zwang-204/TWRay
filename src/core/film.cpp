@@ -179,16 +179,6 @@ void Film::WriteImage(float splatScale) {
 
 Film *CreateFilm(const ParamSet &params, std::unique_ptr<Filter> filter) {
     std::string filename;
-    // if (PbrtOptions.imageFile != "") {
-    //     filename = PbrtOptions.imageFile;
-    //     std::string paramsFilename = params.FindOneString("filename", "");
-    //     if (paramsFilename != "")
-    //         Warning(
-    //             "Output filename supplied on command line, \"%s\" is overriding "
-    //             "filename provided in scene description file, \"%s\".",
-    //             PbrtOptions.imageFile.c_str(), paramsFilename.c_str());
-    // } else
-    //     filename = params.FindOneString("filename", "pbrt.exr");
     filename = params.FindOneString("filename", "pbrt.exr");
 
     int xres = params.FindOneInt("xresolution", 1280);

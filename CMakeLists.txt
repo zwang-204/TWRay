@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(RayTracing CXX)
+project(TWRay CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_C_COMPILER clang)
@@ -9,8 +9,10 @@ set(CMAKE_CXX_COMPILER clang++)
 if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Darwin")
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fcolor-diagnostics -fansi-escape-codes")
 elseif(CMAKE_HOST_SYSTEM_NAME STREQUAL "Linux")
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fcolor-diagnostics -fansi-escape-codes -stdlib=libstdc++ -std=c++17")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fcolor-diagnostics -fansi-escape-codes -stdlib=libstdc++ -std=c++17 -fPIC")
 endif()
+
+find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
 if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Darwin")
   # macOS-specific commands go here
@@ -43,6 +45,10 @@ elseif(CMAKE_HOST_SYSTEM_NAME STREQUAL "Linux")
     src
     src/core
     /usr/include/OpenEXR
+    /usr/include/x86_64-linux-gnu/qt5
+    /usr/include/x86_64-linux-gnu/qt5/QtCore
+    /usr/include/x86_64-linux-gnu/qt5/QtGui
+    /usr/include/x86_64-linux-gnu/qt5/QtWidgets
     /usr/local/include/glog/
     /usr/local/include/gflags/
   )
@@ -123,6 +129,7 @@ add_library(pbrt STATIC
   src/shapes/heightfield.cpp
   src/textures/constant.cpp
   src/textures/checkerboard.cpp
+  src/qt/qt.cpp
 )
 
 FILE ( GLOB PBRT_SOURCE
@@ -137,6 +144,7 @@ FILE ( GLOB PBRT_SOURCE
   src/shapes/*
   src/textures/*
   src/media/*
+  src/qt/*
 )
 
 if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Darwin")
@@ -153,6 +161,8 @@ elseif(CMAKE_HOST_SYSTEM_NAME STREQUAL "Linux")
 
   set(ALL_PBRT_LIBS
     pthread
+    Qt5::Core
+    Qt5::Widgets
     pbrt
     glog
     IlmImf
@@ -161,10 +171,10 @@ elseif(CMAKE_HOST_SYSTEM_NAME STREQUAL "Linux")
   )
 endif()
 
-add_executable(RayTracing
+add_executable(TWRay
   src/core/main.cc
 )
 
-target_link_libraries(RayTracing
+target_link_libraries(TWRay
   ${ALL_PBRT_LIBS}
 )

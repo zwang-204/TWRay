@@ -52,7 +52,7 @@ class AtomicFloat {
 class Barrier {
   public:
     Barrier(int count) : count(count) { CHECK_GT(count, 0); }
-    ~Barrier() { isEqual(count, 0); }
+    ~Barrier() { CHECK_EQ(count, 0); }
     void Wait();
 
   private:
@@ -61,18 +61,16 @@ class Barrier {
     int count;
 };
 
-//extern PBRT_THREAD_LOCAL int ThreadIndex;
-int NumSystemCores();
-
 void ParallelFor(std::function<void(int64_t)> func, int64_t count,
                  int chunkSize = 1);
-extern __thread int ThreadIndex;
+extern thread_local int ThreadIndex;
 void ParallelFor2D(std::function<void(Point2i)> func, const Point2i &count);
 int MaxThreadIndex();
-void ParallelCleanup();
+int NumSystemCores();
+
 void ParallelInit();
+void ParallelCleanup();
 void MergeWorkerThreadStats();
 
 }  // namespace pbrt
-
 #endif  // PBRT_CORE_PARALLEL_H

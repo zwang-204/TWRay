@@ -313,7 +313,7 @@ std::shared_ptr<Light> add_infinite_light(std::string filename, Vector3f intensi
 
 std::shared_ptr<const Camera> add_camera(Point3f origin, Point3f lookAt, Vector3f up, 
                                         float fovc, int image_width, int image_height, 
-                                        MediumInterface mi){
+                                        MediumInterface mi, std::string filename){
     ParamSet camParams;
     Transform *camToWorld = new Transform;
     *camToWorld = Inverse(LookAt(origin, lookAt, up));
@@ -333,6 +333,10 @@ std::shared_ptr<const Camera> add_camera(Point3f origin, Point3f lookAt, Vector3
     y_res[0] = image_height;
     filmParam.AddInt("xresolution", std::move(x_res), 1);
     filmParam.AddInt("yresolution", std::move(y_res), 1);
+    auto name = std::make_unique<std::string[]>(1);
+    name[0] = filename;
+    filmParam.AddString("filename", std::move(name), 1);
+
     Film *film = CreateFilm(filmParam, std::move(boxFilter));
 
     PerspectiveCamera *cam = CreatePerspectiveCamera(camParams, animatedCam2World, film, mi.outside);
@@ -624,16 +628,8 @@ void add_wine_glass_scene(std::vector<std::shared_ptr<Primitive>> &objects,
     
     //add liquid
     auto liqMat =  add_subsurface_mat(Vector3f(1.0, 1.0, 1.0), "Regular Milk", 100.0, 0.0);
-    // auto liqMat = add_glass_mat();
-    // auto medium = add_medium("Coke");
-    // MediumInterface liquidmi(mi);
-    // liquidmi.inside = medium;
-    // Vector3f sigma_a(.06, .07, .0785);
-    // Vector3f sigma_s(.02, .01, .0015);
-    // auto medium = add_medium("", sigma_a, sigma_s, 0.0, 100.);
-    // mi.inside = medium;
-    add_poly("ply/splashwater/liquid.ply", pos, liqMat,
-            mi, objects, lights);
+    // add_poly("ply/splashwater/liquid.ply", pos, liqMat,
+    //         mi, objects, lights);
 
     //add plane
     Vector3f kd(0.6399999857, 0.6399999857, 0.6399999857);

@@ -156,7 +156,7 @@ enum class Prof {
 static_assert((int)Prof::NumProfCategories <= 64,
               "No more than 64 profiling categories may be defined.");
 
-inline std::uint64_t ProfToBits(Prof p) { return 1ull << (int)p; }
+inline uint64_t ProfToBits(Prof p) { return 1ull << (int)p; }
 
 static const char *ProfNames[] = {
     "Scene parsing and creation",
@@ -212,8 +212,8 @@ static_assert((int)Prof::NumProfCategories ==
               "ProfNames[] array and Prof enumerant have different "
               "numbers of entries!");
 
-extern __thread std::uint64_t ProfilerState;
-inline std::uint64_t CurrentProfilerState() { return ProfilerState; }
+extern thread_local uint64_t ProfilerState;
+inline uint64_t CurrentProfilerState() { return ProfilerState; }
 
 class ProfilePhase {
   public:
@@ -232,7 +232,7 @@ class ProfilePhase {
   private:
     // ProfilePhase Private Data
     bool reset;
-    std::uint64_t categoryBit;
+    uint64_t categoryBit;
 };
 
 void InitProfiler();
@@ -245,14 +245,14 @@ void CleanupProfiler();
 
 // Statistics Macros
 #define STAT_COUNTER(title, var)                           \
-    static __thread int64_t var;                  \
+    static thread_local int64_t var;                  \
     static void STATS_FUNC##var(StatsAccumulator &accum) { \
         accum.ReportCounter(title, var);                   \
         var = 0;                                           \
     }                                                      \
     static StatRegisterer STATS_REG##var(STATS_FUNC##var)
 #define STAT_MEMORY_COUNTER(title, var)                    \
-    static __thread int64_t var;                  \
+    static thread_local int64_t var;                  \
     static void STATS_FUNC##var(StatsAccumulator &accum) { \
         accum.ReportMemoryCounter(title, var);             \
         var = 0;                                           \
@@ -272,10 +272,10 @@ void CleanupProfiler();
 #endif
 
 #define STAT_INT_DISTRIBUTION(title, var)                                  \
-    static __thread int64_t var##sum;                             \
-    static __thread int64_t var##count;                           \
-    static __thread int64_t var##min = (STATS_INT64_T_MIN);       \
-    static __thread int64_t var##max = (STATS_INT64_T_MAX);       \
+    static thread_local int64_t var##sum;                             \
+    static thread_local int64_t var##count;                           \
+    static thread_local int64_t var##min = (STATS_INT64_T_MIN);       \
+    static thread_local int64_t var##max = (STATS_INT64_T_MAX);       \
     static void STATS_FUNC##var(StatsAccumulator &accum) {                 \
         accum.ReportIntDistribution(title, var##sum, var##count, var##min, \
                                     var##max);                             \
@@ -287,10 +287,10 @@ void CleanupProfiler();
     static StatRegisterer STATS_REG##var(STATS_FUNC##var)
 
 #define STAT_FLOAT_DISTRIBUTION(title, var)                                  \
-    static __thread double var##sum;                                \
-    static __thread int64_t var##count;                             \
-    static __thread double var##min = (STATS_DBL_T_MIN);            \
-    static __thread double var##max = (STATS_DBL_T_MAX);            \
+    static thread_local double var##sum;                                \
+    static thread_local int64_t var##count;                             \
+    static thread_local double var##min = (STATS_DBL_T_MIN);            \
+    static thread_local double var##max = (STATS_DBL_T_MAX);            \
     static void STATS_FUNC##var(StatsAccumulator &accum) {                   \
         accum.ReportFloatDistribution(title, var##sum, var##count, var##min, \
                                       var##max);                             \
@@ -310,7 +310,7 @@ void CleanupProfiler();
     } while (0)
 
 #define STAT_PERCENT(title, numVar, denomVar)                 \
-    static __thread int64_t numVar, denomVar;        \
+    static thread_local int64_t numVar, denomVar;        \
     static void STATS_FUNC##numVar(StatsAccumulator &accum) { \
         accum.ReportPercentage(title, numVar, denomVar);      \
         numVar = denomVar = 0;                                \
@@ -318,7 +318,7 @@ void CleanupProfiler();
     static StatRegisterer STATS_REG##numVar(STATS_FUNC##numVar)
 
 #define STAT_RATIO(title, numVar, denomVar)                   \
-    static __thread int64_t numVar, denomVar;        \
+    static thread_local int64_t numVar, denomVar;        \
     static void STATS_FUNC##numVar(StatsAccumulator &accum) { \
         accum.ReportRatio(title, numVar, denomVar);           \
         numVar = denomVar = 0;                                \

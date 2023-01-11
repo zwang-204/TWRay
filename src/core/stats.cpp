@@ -25,8 +25,8 @@ static StatsAccumulator statsAccumulator;
 // the number of times that state has been active when the timer interrupt
 // to record a profiling sample has fired.
 struct ProfileSample {
-    std::atomic<std::uint64_t> profilerState{0};
-    std::atomic<std::uint64_t> count{0};
+    std::atomic<uint64_t> profilerState{0};
+    std::atomic<uint64_t> count{0};
 };
 
 // We use a hash table to keep track of the profiler state counts. Because
@@ -169,7 +169,7 @@ void StatsAccumulator::Clear() {
     ratios.clear();
 }
 
-__thread std::uint64_t ProfilerState;
+thread_local uint64_t ProfilerState;
 static std::atomic<bool> profilerRunning{false};
 
 void InitProfiler() {

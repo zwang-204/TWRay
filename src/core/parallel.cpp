@@ -147,6 +147,7 @@ static void workerThreadFunc(int tIndex, std::shared_ptr<Barrier> barrier) {
     LOG(INFO) << "Exiting worker thread " << tIndex;
 }
 
+// Parallel Definitions
 void ParallelFor(std::function<void(int64_t)> func, int64_t count,
                  int chunkSize) {
     CHECK(threads.size() > 0 || MaxThreadIndex() == 1);
@@ -204,13 +205,11 @@ void ParallelFor(std::function<void(int64_t)> func, int64_t count,
     }
 }
 
-__thread int ThreadIndex;
+thread_local int ThreadIndex;
 
 int MaxThreadIndex() {
     return NumSystemCores();
 }
-
-// Parallel Definitions
 
 void ParallelFor2D(std::function<void(Point2i)> func, const Point2i &count) {
     CHECK(threads.size() > 0 || MaxThreadIndex() == 1);

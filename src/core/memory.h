@@ -155,4 +155,4 @@ class BlockedArray {
 
 }  // namespace pbrt
 
-#endif 
+#endif  // PBRT_CORE_MEMORY_H

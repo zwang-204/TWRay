@@ -43,6 +43,7 @@
 
 #include "stats.h"
 #include "parallel.h"
+#include "qt/qt.h"
 
 #include <iostream>
 #include <map>
@@ -74,7 +75,7 @@ std::shared_ptr<AreaLight> add_area_light(std::shared_ptr<Shape> shape, Vector3f
 std::shared_ptr<Light> add_infinite_light(std::string filename, Vector3f intensity, MediumInterface &mi);
 std::shared_ptr<const Camera> add_camera(Point3f origin, Point3f lookAt, Vector3f up, 
                                         float fovc, int image_width, int image_height, 
-                                        MediumInterface mi);
+                                        MediumInterface mi, std::string filename);
 std::vector<std::shared_ptr<Primitive>> add_stanford_bunny(Vector3f pos, float color[3], MediumInterface mi);
 std::vector<std::shared_ptr<Primitive>> add_stanford_dragon(Vector3f pos, float color[3], MediumInterface mi);                                                                            
 std::vector<std::shared_ptr<Primitive>> add_glass_bottle(Vector3f pos, float color[3], MediumInterface mi);

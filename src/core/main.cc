@@ -2,11 +2,14 @@
 
 using namespace pbrt;
 
-int main(){
+struct Parameters{
+    int width = 500;
+    int height = 500;
+    int samplePerPixel = 4;
+    int maxDepth = 5;
+};
 
-    ParallelInit();
-    InitProfiler();
-    SetSearchDirectory("/home/ririka/PBR/TWRay/");
+void Render(Parameters param){
 
     // World
     std::vector<std::shared_ptr<Primitive>> objects;
@@ -63,19 +66,19 @@ int main(){
     Vector3f up(0, 0, 1);
     float fov = 23;
 
-    auto camera = add_camera(origin, lookAt, up, fov, 800, 800, mi);
+    auto camera = add_camera(origin, lookAt, up, fov, param.width, param.height, mi, "twray.png");
     
     // Sampler
     ParamSet sampParams;
     auto samplePerPixel = std::make_unique<int[]>(1);
-    samplePerPixel[0] = 1;
+    samplePerPixel[0] = param.samplePerPixel;
     sampParams.AddInt("pixelsamples", std::move(samplePerPixel), 1);
     auto sampler = CreateHaltonSampler(sampParams, camera->film->GetSampleBounds());
 
     // Integrator
     ParamSet integParams;
     auto maxDepth = std::make_unique<int[]>(1);
-    maxDepth[0] = 15;
+    maxDepth[0] = param.maxDepth;
     integParams.AddInt("maxdepth", std::move(maxDepth), 1);
 
     auto iterations = std::make_unique<int[]>(1);
@@ -90,4 +93,57 @@ int main(){
     // auto integrator = CreateSPPMIntegrator(integParams, camera);
     // Render
     integrator->Render(scene);
+}
+
+int main(int argc, char *argv[]){
+
+    QApplication app(argc, argv);
+    app.setStyle(QStyleFactory::create("Fusion"));
+    ParallelInit();
+    InitProfiler();
+    SetSearchDirectory("/home/ririka/PBR/TWRay/");
+
+    Parameters param;
+    param.samplePerPixel = 4;
+
+    QLabel label;
+    std::string file = AbsolutePath(ResolveFilename("build/twray.png"));
+    QString dir = QString::fromStdString(file);
+    QPixmap pixmap(dir);
+    label.setPixmap(pixmap);
+    QVBoxLayout *buttonSpinboxLayout = new QVBoxLayout;
+
+    // Create a QSpinBox for the pixel samples
+    QSpinBox *width = createSpinBox(1, 2000, 500, " Width", buttonSpinboxLayout);
+    QSpinBox *height = createSpinBox(1, 2000, 500, " Height", buttonSpinboxLayout);
+    QSpinBox *spp = createSpinBox(1, 1024, 4, " SPP", buttonSpinboxLayout);
+    QSpinBox *depth = createSpinBox(1, 50, 5, " Depth", buttonSpinboxLayout);
+
+    std::vector<QSpinBox*> spinBoxes = {width, height, spp, depth};
+
+    QPushButton *renderButton = new QPushButton("Render");
+    renderButton->setFixedSize(200,50);
+    renderButton->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    QObject::connect(renderButton, &QPushButton::clicked, [spinBoxes, dir, &param, &label](){ 
+        param.width = spinBoxes[0]->value();
+        param.height = spinBoxes[1]->value();
+        param.samplePerPixel = spinBoxes[2]->value();
+        param.maxDepth = spinBoxes[3]->value();
+        Render(param); 
+        QPixmap newPixmap(dir);
+        label.setPixmap(newPixmap);
+        label.update();
+    });
+    buttonSpinboxLayout->addWidget(renderButton);
+
+    QHBoxLayout *layout = new QHBoxLayout;
+    layout->addWidget(&label);
+    layout->addLayout(buttonSpinboxLayout);
+
+    QWidget window;
+    window.setStyle(QStyleFactory::create("Fusion"));
+    window.setLayout(layout);
+    window.show();
+
+    return app.exec();
 }

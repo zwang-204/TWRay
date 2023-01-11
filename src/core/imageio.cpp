@@ -152,10 +152,7 @@ static void WriteImageEXR(const std::string &name, const float *pixels,
         Error("Error writing \"%s\": %s", name.c_str(), exc.what());
     }
 
-    delete[] hrgba;
-#ifdef __linux__
-    abort();
-#endif    
+    delete[] hrgba; 
 }
 
 // TGA Function Definitions
