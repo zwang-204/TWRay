@@ -51,6 +51,8 @@ elseif(CMAKE_HOST_SYSTEM_NAME STREQUAL "Linux")
     /usr/include/x86_64-linux-gnu/qt5/QtWidgets
     /usr/local/include/glog/
     /usr/local/include/gflags/
+    /usr/local/cuda/include/
+    /usr/include/opencv4/
   )
 
   link_directories(
@@ -130,6 +132,7 @@ add_library(pbrt STATIC
   src/textures/constant.cpp
   src/textures/checkerboard.cpp
   src/qt/qt.cpp
+  src/optix/optix.cpp
 )
 
 FILE ( GLOB PBRT_SOURCE
@@ -145,6 +148,7 @@ FILE ( GLOB PBRT_SOURCE
   src/textures/*
   src/media/*
   src/qt/*
+  src/optix/*
 )
 
 if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Darwin")

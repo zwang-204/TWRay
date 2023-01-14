@@ -27,7 +27,7 @@ Medium* MakeMedium(const ParamSet &paramSet) {
     return m;
 }
 
-Medium* add_medium(std::string name, Vector3f sigma_a=Vector3f(.0011f, .0024f, .014f), 
+Medium* addMedium(std::string name, Vector3f sigma_a=Vector3f(.0011f, .0024f, .014f), 
                 Vector3f sigma_s=Vector3f(2.55f, 3.21f, 3.77f), float g=0.0f, 
                 float scale=1.0f){
     ParamSet mediumParam;
@@ -58,7 +58,7 @@ Medium* add_medium(std::string name, Vector3f sigma_a=Vector3f(.0011f, .0024f, .
     return MakeMedium(mediumParam);
 }
 
-std::shared_ptr<Material> add_glass_mat(float rough){
+std::shared_ptr<Material> addGlassMat(float rough){
     ParamSet matParams;
     auto floatTextures1 = std::make_shared<FloatTextureMap>();
     auto spectrumTextures1 = std::make_shared<SpectrumTextureMap>();
@@ -78,7 +78,7 @@ std::shared_ptr<Material> add_glass_mat(float rough){
     return std::shared_ptr<Material>(mat);
 }
 
-std::shared_ptr<Material> add_matte_mat(Vector3f color){
+std::shared_ptr<Material> addMatteMat(Vector3f color){
     ParamSet matParams;
     auto floatTextures1 = std::make_shared<FloatTextureMap>();
     auto spectrumTextures1 = std::make_shared<SpectrumTextureMap>();
@@ -93,7 +93,7 @@ std::shared_ptr<Material> add_matte_mat(Vector3f color){
     return std::shared_ptr<Material>(mat);
 }
 
-std::shared_ptr<Material> add_disney_mat(Vector3f color, float metallic){
+std::shared_ptr<Material> addDisneyMat(Vector3f color, float metallic){
     ParamSet matParams;
     auto floatTextures1 = std::make_shared<FloatTextureMap>();
     auto spectrumTextures1 = std::make_shared<SpectrumTextureMap>();
@@ -112,7 +112,7 @@ std::shared_ptr<Material> add_disney_mat(Vector3f color, float metallic){
     return std::shared_ptr<Material>(mat);
 }
 
-std::shared_ptr<Material> add_subsurface_mat(Vector3f color, std::string name, float scale, float roughness){
+std::shared_ptr<Material> addSubsurfaceMat(Vector3f color, std::string name, float scale, float roughness){
     ParamSet matParams;
     auto floatTextures1 = std::make_shared<FloatTextureMap>();
     auto spectrumTextures1 = std::make_shared<SpectrumTextureMap>();
@@ -140,7 +140,7 @@ std::shared_ptr<Material> add_subsurface_mat(Vector3f color, std::string name, f
     return std::shared_ptr<Material>(mat);
 }
 
-std::shared_ptr<Material> add_uber_mat(Vector3f Kd, Vector3f Ks, float roughness, float index){
+std::shared_ptr<Material> addUberMat(Vector3f Kd, Vector3f Ks, float roughness, float index){
     ParamSet matParams;
     auto floatTextures1 = std::make_shared<FloatTextureMap>();
     auto spectrumTextures1 = std::make_shared<SpectrumTextureMap>();
@@ -167,7 +167,7 @@ std::shared_ptr<Material> add_uber_mat(Vector3f Kd, Vector3f Ks, float roughness
     return std::shared_ptr<Material>(mat);
 }
 
-std::shared_ptr<Shape> add_sphere_shape(Vector3f pos, float radius) {
+std::shared_ptr<Shape> addSphereShape(Vector3f pos, float radius) {
     ParamSet sphereParams;
     Transform *sphere2World = new Transform;
     Transform *world2Sphere = new Transform;
@@ -180,7 +180,7 @@ std::shared_ptr<Shape> add_sphere_shape(Vector3f pos, float radius) {
     return sphere;
 }
 
-std::shared_ptr<Primitive> add_basic_disk(Vector3f pos, float radius, MediumInterface mi){
+std::shared_ptr<Primitive> addBasicDisk(Vector3f pos, float radius, MediumInterface mi){
     ParamSet diskParams;
     Transform *disk2World = new Transform;
     Transform *world2disk = new Transform;
@@ -190,13 +190,13 @@ std::shared_ptr<Primitive> add_basic_disk(Vector3f pos, float radius, MediumInte
     *disk2World = Translate(pos);
     *world2disk = Inverse(*disk2World);
     auto disk = CreateDiskShape(disk2World, world2disk, false, diskParams);
-    std::shared_ptr<Material> mat = add_matte_mat(Vector3f(1.0,1.0,1.0));
+    std::shared_ptr<Material> mat = addMatteMat(Vector3f(1.0,1.0,1.0));
     std::shared_ptr<AreaLight> area; 
 
     return std::make_shared<GeometricPrimitive>(disk, mat, area, mi);
 }
 
-std::vector<std::shared_ptr<Shape>> add_plane_shape(Vector3f pos, Vector3f rot, 
+std::vector<std::shared_ptr<Shape>> addPlaneShape(Vector3f pos, Vector3f rot, 
                                                         Vector3f scale){
     ParamSet planeParams;
     Transform *plane2World = new Transform;
@@ -218,14 +218,14 @@ std::vector<std::shared_ptr<Shape>> add_plane_shape(Vector3f pos, Vector3f rot,
     return plane;
 }
 
-std::vector<std::shared_ptr<Primitive>> add_plane_prim(Vector3f pos, Vector3f rot, 
+std::vector<std::shared_ptr<Primitive>> addPlanePrim(Vector3f pos, Vector3f rot, 
                                                         Vector3f scale, Vector3f color,
                                                         std::shared_ptr<AreaLight> area,
                                                         MediumInterface mi){
     std::vector<std::shared_ptr<Primitive>> prims;
-    std::vector<std::shared_ptr<Shape>> plane = add_plane_shape(pos, rot, scale);
+    std::vector<std::shared_ptr<Shape>> plane = addPlaneShape(pos, rot, scale);
     
-    std::shared_ptr<Material> mat = add_matte_mat(color);
+    std::shared_ptr<Material> mat = addMatteMat(color);
     for (auto s : plane) {
         prims.push_back(
             std::make_shared<GeometricPrimitive>(s, mat, area, mi));
@@ -233,7 +233,7 @@ std::vector<std::shared_ptr<Primitive>> add_plane_prim(Vector3f pos, Vector3f ro
     return prims;
 }
 
-std::shared_ptr<Light> add_point_light(Vector3f pos, Vector3f intensity, MediumInterface &mi){
+std::shared_ptr<Light> addPointLight(Vector3f pos, Vector3f intensity, MediumInterface &mi){
     ParamSet lightParams;
     Transform light2World;
     light2World = Translate(pos);
@@ -244,7 +244,7 @@ std::shared_ptr<Light> add_point_light(Vector3f pos, Vector3f intensity, MediumI
     return pointLight;
 }
 
-std::shared_ptr<Light> add_spot_light(Vector3f pos, Vector3f intensity, Vector3f to, float coneangle, MediumInterface &mi){
+std::shared_ptr<Light> addSpotLight(Vector3f pos, Vector3f intensity, Vector3f to, float coneangle, MediumInterface &mi){
     ParamSet lightParams;
     Transform light2World;
     std::unique_ptr<float[]> in(new float[3]);
@@ -266,7 +266,7 @@ std::shared_ptr<Light> add_spot_light(Vector3f pos, Vector3f intensity, Vector3f
     return spotLight;
 }
 
-std::shared_ptr<Light> add_distant_light(Point3f dir, float intensity){
+std::shared_ptr<Light> addDistantLight(Point3f dir, float intensity){
     ParamSet lightParams;
     Transform light2World;
     light2World = Translate(Vector3f(0,0,0));
@@ -280,7 +280,7 @@ std::shared_ptr<Light> add_distant_light(Point3f dir, float intensity){
     return pointLight;
 }
 
-std::shared_ptr<AreaLight> add_area_light(std::shared_ptr<Shape> shape, Vector3f pos, 
+std::shared_ptr<AreaLight> addAreaLight(std::shared_ptr<Shape> shape, Vector3f pos, 
                                             Vector3f intensity, MediumInterface &mi){
     Transform light2World;
     light2World = Translate(pos);
@@ -296,7 +296,7 @@ std::shared_ptr<AreaLight> add_area_light(std::shared_ptr<Shape> shape, Vector3f
     return areaLight;
 }
 
-std::shared_ptr<Light> add_infinite_light(std::string filename, Vector3f intensity, MediumInterface &mi){
+std::shared_ptr<Light> addInfiniteLight(std::string filename, Vector3f intensity, MediumInterface &mi){
     ParamSet lightParams;
     Transform light2World;
     std::unique_ptr<float[]> in(new float[3]);
@@ -311,7 +311,7 @@ std::shared_ptr<Light> add_infinite_light(std::string filename, Vector3f intensi
     return infiniteLight;
 }
 
-std::shared_ptr<const Camera> add_camera(Point3f origin, Point3f lookAt, Vector3f up, 
+std::shared_ptr<const Camera> addCamera(Point3f origin, Point3f lookAt, Vector3f up, 
                                         float fovc, int image_width, int image_height, 
                                         MediumInterface mi, std::string filename){
     ParamSet camParams;
@@ -343,7 +343,7 @@ std::shared_ptr<const Camera> add_camera(Point3f origin, Point3f lookAt, Vector3
     return std::shared_ptr<const Camera>(cam);
 }
 
-std::vector<std::shared_ptr<Primitive>> add_stanford_bunny(Vector3f pos, float color[3], MediumInterface mi){
+std::vector<std::shared_ptr<Primitive>> addStanfordBunny(Vector3f pos, float color[3], MediumInterface mi){
     ParamSet paramSet;
 
     std::vector<std::shared_ptr<Primitive>> prims;
@@ -366,10 +366,10 @@ std::vector<std::shared_ptr<Primitive>> add_stanford_bunny(Vector3f pos, float c
     std::vector<std::shared_ptr<Shape>> shapes = CreatePLYMesh(ObjectToWorld, WorldToObject, false, paramSet, floatTextures);
     std::shared_ptr<AreaLight> area; 
     // std::shared_ptr<Material> mat;
-    // auto mat = add_subsurface_mat(Vector3f(1.0, 1.0, 1.0), "Apple", 1.0, 0.05);
-    auto mat = add_glass_mat(0.);
+    // auto mat = addSubsurfaceMat(Vector3f(1.0, 1.0, 1.0), "Apple", 1.0, 0.05);
+    auto mat = addGlassMat(0.);
     // mi.inside = add_medium("", Vector3f(0.06, .06, .06), Vector3f(.2, .2, .2), 0.7, 0.2);
-    mi.inside = add_medium("Apple");
+    mi.inside = addMedium("Apple");
     for (auto s : shapes) {
         prims.push_back(
             std::make_shared<GeometricPrimitive>(s, mat, area, mi));
@@ -378,7 +378,7 @@ std::vector<std::shared_ptr<Primitive>> add_stanford_bunny(Vector3f pos, float c
     return prims;
 }
 
-std::vector<std::shared_ptr<Primitive>> add_stanford_dragon(Vector3f pos, float color[3], MediumInterface mi){
+std::vector<std::shared_ptr<Primitive>> addStanfordDragon(Vector3f pos, float color[3], MediumInterface mi){
     ParamSet paramSet;
 
     std::vector<std::shared_ptr<Primitive>> prims;
@@ -400,8 +400,8 @@ std::vector<std::shared_ptr<Primitive>> add_stanford_dragon(Vector3f pos, float 
 
     std::vector<std::shared_ptr<Shape>> shapes = CreatePLYMesh(ObjectToWorld, WorldToObject, false, paramSet, floatTextures);
     std::shared_ptr<AreaLight> area; 
-    auto mat = add_subsurface_mat(Vector3f(1.0, 1.0, 1.0), "Marble", 50.0, 0.0);
-    // auto mat = add_glass_mat();
+    auto mat = addSubsurfaceMat(Vector3f(1.0, 1.0, 1.0), "Marble", 50.0, 0.0);
+    // auto mat = addGlassMat();
 
     for (auto s : shapes) {
         prims.push_back(
@@ -411,7 +411,7 @@ std::vector<std::shared_ptr<Primitive>> add_stanford_dragon(Vector3f pos, float 
     return prims;
 }
 
-std::vector<std::shared_ptr<Primitive>> add_glass_bottle(Vector3f pos, float color[3], MediumInterface mi){
+std::vector<std::shared_ptr<Primitive>> addGlassBottle(Vector3f pos, float color[3], MediumInterface mi){
     ParamSet paramSet;
 
     std::vector<std::shared_ptr<Primitive>> prims;
@@ -433,7 +433,7 @@ std::vector<std::shared_ptr<Primitive>> add_glass_bottle(Vector3f pos, float col
 
     std::vector<std::shared_ptr<Shape>> shapes = CreatePLYMesh(ObjectToWorld, WorldToObject, false, paramSet, floatTextures);
     std::shared_ptr<AreaLight> area; 
-    auto mat = add_glass_mat(0.);
+    auto mat = addGlassMat(0.);
 
     for (auto s : shapes) {
         prims.push_back(
@@ -443,7 +443,7 @@ std::vector<std::shared_ptr<Primitive>> add_glass_bottle(Vector3f pos, float col
     return prims;
 }
 
-std::vector<std::shared_ptr<Primitive>> add_caustics_plane(MediumInterface mi){
+std::vector<std::shared_ptr<Primitive>> addCausticsPlane(MediumInterface mi){
     ParamSet paramSet;
 
     std::vector<std::shared_ptr<Primitive>> prims;
@@ -465,7 +465,7 @@ std::vector<std::shared_ptr<Primitive>> add_caustics_plane(MediumInterface mi){
     Vector3f ks(0.1000000015, 0.1000000015, 0.1000000015);
     float roughness = 0.01;
     float index = 1.0;
-    auto mat = add_uber_mat(kd, ks, roughness, index);
+    auto mat = addUberMat(kd, ks, roughness, index);
 
     for (auto s : shapes) {
         prims.push_back(
@@ -475,7 +475,7 @@ std::vector<std::shared_ptr<Primitive>> add_caustics_plane(MediumInterface mi){
     return prims;
 }
 
-void add_poly(std::string path, Vector3f pos, std::shared_ptr<Material> material, MediumInterface mi,
+void addPoly(std::string path, Vector3f pos, std::shared_ptr<Material> material, MediumInterface mi,
                 std::vector<std::shared_ptr<Primitive>> &objects,
                 std::vector<std::shared_ptr<Light>> &lights){
     ParamSet paramSet;
@@ -507,7 +507,7 @@ void add_poly(std::string path, Vector3f pos, std::shared_ptr<Material> material
     }
 }
 
-void add_cornell_box(std::vector<std::shared_ptr<Primitive>> &objects,
+void addCornellBox(std::vector<std::shared_ptr<Primitive>> &objects,
                     std::vector<std::shared_ptr<Light>> &lights,
                     float intensity,
                     MediumInterface mi){
@@ -518,58 +518,58 @@ void add_cornell_box(std::vector<std::shared_ptr<Primitive>> &objects,
     Vector3f downPos(0, 0, 0);
     Vector3f downRot(90,0,0);
     Vector3f downScale(555, 555, 1);
-    std::vector<std::shared_ptr<Primitive>> down = add_plane_prim(downPos, downRot, downScale, white, nullptr, mi);
+    std::vector<std::shared_ptr<Primitive>> down = addPlanePrim(downPos, downRot, downScale, white, nullptr, mi);
 
     Vector3f upPos(0, 555, 0);
     Vector3f upRot(90,0,0);
     Vector3f upScale(555, 555, 1);
-    std::vector<std::shared_ptr<Primitive>> up = add_plane_prim(upPos, upRot, upScale, white, nullptr, mi);
+    std::vector<std::shared_ptr<Primitive>> up = addPlanePrim(upPos, upRot, upScale, white, nullptr, mi);
 
     Vector3f backPos(0, 0, 555);
     Vector3f backRot(0,0,0);
     Vector3f backScale(555, 555, 1);
-    std::vector<std::shared_ptr<Primitive>> back = add_plane_prim(backPos, backRot, backScale, white, nullptr, mi);
+    std::vector<std::shared_ptr<Primitive>> back = addPlanePrim(backPos, backRot, backScale, white, nullptr, mi);
 
     Vector3f leftPos(0, 0, 555);
     Vector3f leftRot(0,90,0);
     Vector3f leftScale(555, 555, 1);
-    std::vector<std::shared_ptr<Primitive>> left = add_plane_prim(leftPos, leftRot, leftScale, red, nullptr, mi);
+    std::vector<std::shared_ptr<Primitive>> left = addPlanePrim(leftPos, leftRot, leftScale, red, nullptr, mi);
 
     Vector3f rightPos(555, 0, 555);
     Vector3f rightRot(0,90,0);
     Vector3f rightScale(555, 555, 1);
-    std::vector<std::shared_ptr<Primitive>> right = add_plane_prim(rightPos, rightRot, rightScale, green, nullptr, mi);
+    std::vector<std::shared_ptr<Primitive>> right = addPlanePrim(rightPos, rightRot, rightScale, green, nullptr, mi);
 
     // std::string mapName = "textures/envmap.exr";
-    // auto infiniteLight = add_infinite_light(mapName, Vector3f(intensity, intensity, intensity), mi);
+    // auto infiniteLight = addInfiniteLight(mapName, Vector3f(intensity, intensity, intensity), mi);
     // lights.push_back(infiniteLight);
 
     Vector3f lightPos(213, 554, 227);
     Vector3f lightRot(90,0,0);
     Vector3f lightScale(130, 105, 1);
     Vector3f lightIntensity(intensity, intensity, intensity);
-    // auto areaShape = add_plane_shape(lightPos, lightRot, lightScale);
+    // auto areaShape = addPlaneShape(lightPos, lightRot, lightScale);
     // for(auto s : areaShape){
-    //     auto areaLight = add_area_light(s, lightPos, lightIntensity, mi);
+    //     auto areaLight = addAreaLight(s, lightPos, lightIntensity, mi);
     //     std::shared_ptr<Material> mat;
     //     lights.push_back(areaLight);
     //     objects.push_back(std::make_shared<GeometricPrimitive>(s, mat, areaLight, mi));
     // }
 
-    //auto light = add_spot_light(Vector3f(278, 554, 278), lightIntensity, Vector3f(278, 0, 278), 35, mi);
+    //auto light = addSpotLight(Vector3f(278, 554, 278), lightIntensity, Vector3f(278, 0, 278), 35, mi);
     //lights.push_back(light);
 
-    auto light = add_point_light(Vector3f(278, 554, 278), lightIntensity, mi);
+    auto light = addPointLight(Vector3f(278, 554, 278), lightIntensity, mi);
     lights.push_back(light);
 
     std::string mapName = "textures/envmap.exr";
-    auto inflight = add_infinite_light(mapName, Vector3f(5, 5, 5), mi);
+    auto inflight = addInfiniteLight(mapName, Vector3f(5, 5, 5), mi);
     lights.push_back(inflight);
 
     objects += down + up + back + left + right;
 }
 
-void add_sample_scene(std::vector<std::shared_ptr<Primitive>> &objects,
+void addSampleScene(std::vector<std::shared_ptr<Primitive>> &objects,
                     std::vector<std::shared_ptr<Light>> &lights,
                     float intensity,
                     MediumInterface mi){
@@ -577,67 +577,80 @@ void add_sample_scene(std::vector<std::shared_ptr<Primitive>> &objects,
     Vector3f planeRot(0,0,0);
     Vector3f planeScale(2000,2000,2000);
     Vector3f planeColor(0.7, 0.7, 0.7);
-    auto plane = add_plane_prim(planePos, planeRot, planeScale, planeColor, nullptr, mi);
+    auto plane = addPlanePrim(planePos, planeRot, planeScale, planeColor, nullptr, mi);
     objects += plane;
 
     float color[3] = {1.0, 1.0, 1.0};
-    objects += add_stanford_dragon(Vector3f(0., -0., -0.5), color, mi);
+    objects += addStanfordDragon(Vector3f(0., -0., -0.5), color, mi);
 
     std::string mapName = "textures/envmap.exr";
-    auto light = add_infinite_light(mapName, Vector3f(intensity, intensity, intensity), mi);
+    auto light = addInfiniteLight(mapName, Vector3f(intensity, intensity, intensity), mi);
     lights.push_back(light);
 
 }
 
-void add_caustics_scene(std::vector<std::shared_ptr<Primitive>> &objects,
+void addCausticsScene(std::vector<std::shared_ptr<Primitive>> &objects,
                     std::vector<std::shared_ptr<Light>> &lights,
                     float intensity,
                     MediumInterface mi){
-    // add_cornell_box(objects, lights, intensity, mi);
-    auto plane = add_caustics_plane(mi);
+    // addCornellBox(objects, lights, intensity, mi);
+    auto plane = addCausticsPlane(mi);
     objects += plane;
 
     std::string mapName = "textures/envmap.exr";
-    auto light = add_infinite_light(mapName, Vector3f(intensity, intensity, intensity), mi);
+    auto light = addInfiniteLight(mapName, Vector3f(intensity, intensity, intensity), mi);
     lights.push_back(light);
 
     Vector3f spotPos(0, 5, 9);
     Vector3f spotTo(-5, 2.75, 0);
-    auto spotLight = add_spot_light(spotPos, Vector3f(0.002, 0.002, 0.002), spotTo, 30, mi);
+    auto spotLight = addSpotLight(spotPos, Vector3f(0.002, 0.002, 0.002), spotTo, 30, mi);
     lights.push_back(spotLight);
 
     Vector3f glassPos(0, 0, 0);
     float color[3] = {1.0, 1.0, 1.0};
-    objects += add_glass_bottle(glassPos, color, mi);
+    objects += addGlassBottle(glassPos, color, mi);
 }
 
-void add_wine_glass_scene(std::vector<std::shared_ptr<Primitive>> &objects,
+void addWineGlassScene(std::vector<std::shared_ptr<Primitive>> &objects,
                     std::vector<std::shared_ptr<Light>> &lights,
                     float intensity,
                     MediumInterface mi){
 
     std::string mapName = "textures/envmap.exr";
-    auto light = add_infinite_light(mapName, Vector3f(intensity, intensity, intensity), mi);
+    auto light = addInfiniteLight(mapName, Vector3f(intensity, intensity, intensity), mi);
     lights.push_back(light);
 
-    //add glass
-    Vector3f pos(0,0, 0);
-    auto mat = add_glass_mat(0.1);
-    add_poly("ply/splashwater/glass.ply", pos, mat,
-            mi, objects, lights);
-    
-    //add liquid
-    auto liqMat =  add_subsurface_mat(Vector3f(1.0, 1.0, 1.0), "Regular Milk", 100.0, 0.0);
-    // add_poly("ply/splashwater/liquid.ply", pos, liqMat,
+    Vector3f spotPos(3.45, -0.328, 4.973);
+    Vector3f spotTo(1.7864, -1.391, 0.0);
+    Vector3f spotInt(0.001, 0.001, 0.001);
+    auto spotLight = addSpotLight(spotPos, spotInt, spotTo, 30.0, mi);
+    lights.push_back(spotLight);
+
+    Vector3f pos(0, 0, 0);
+    // //add glass
+    // Vector3f pos(0,0, 0);
+    // auto mat = addGlassMat(0.1);
+    // addPoly("ply/splashwater/glass.ply", pos, mat,
     //         mi, objects, lights);
+    
+    // //add liquid
+    // auto liqMat =  addSubsurfaceMat(Vector3f(1.0, 1.0, 1.0), "Regular Milk", 100.0, 0.0);
+    // // addPoly("ply/splashwater/liquid.ply", pos, liqMat,
+    // //         mi, objects, lights);
+    
+    // add rose
+    // auto mat = addGlassMat(0.0);
+    auto mat = addSubsurfaceMat(Vector3f(1.0, 1.0, 1.0), "Skin1", 10, 0.05);
+    addPoly("ply/rose.ply", pos, mat,
+            mi, objects, lights);
 
     //add plane
     Vector3f kd(0.6399999857, 0.6399999857, 0.6399999857);
     Vector3f ks(0.1000000015, 0.1000000015, 0.1000000015);
     float roughness = 0.01;
     float index = 1.0;
-    auto planeMat = add_uber_mat(kd, ks, roughness, index);
-    add_poly("ply/wineglass/wineplane.ply", pos, planeMat,
+    auto planeMat = addUberMat(kd, ks, roughness, index);
+    addPoly("ply/wineglass/wineplane.ply", pos, planeMat,
             mi, objects, lights);
 
 }

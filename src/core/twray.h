@@ -51,51 +51,51 @@
 namespace pbrt{
 
 Medium* MakeMedium(const ParamSet &paramSet);
-Medium* add_medium(std::string name, Vector3f sigma_a, 
+Medium* addMedium(std::string name, Vector3f sigma_a, 
             Vector3f sigma_s, float g, 
             float scale);
-std::shared_ptr<Material> add_glass_mat();
-std::shared_ptr<Material> add_matte_mat(Vector3f color);
-std::shared_ptr<Material> add_disney_mat(Vector3f color, float metallic);
-std::shared_ptr<Material> add_subsurface_mat(Vector3f color, std::string name, float scale, float roughness);
-std::shared_ptr<Material> add_uber_mat(Vector3f Kd, Vector3f Ks, float roughness, float index);
-std::shared_ptr<Shape> add_sphere_shape(Vector3f pos, float radius);
-std::shared_ptr<Primitive> add_basic_disk(Vector3f pos, float radius, MediumInterface mi);
-std::vector<std::shared_ptr<Shape>> add_plane_shape(Vector3f pos, Vector3f rot, 
+std::shared_ptr<Material> addGlassMat();
+std::shared_ptr<Material> addMatteMat(Vector3f color);
+std::shared_ptr<Material> addDisneyMat(Vector3f color, float metallic);
+std::shared_ptr<Material> addSubsurfaceMat(Vector3f color, std::string name, float scale, float roughness);
+std::shared_ptr<Material> addUberMat(Vector3f Kd, Vector3f Ks, float roughness, float index);
+std::shared_ptr<Shape> addSphereShape(Vector3f pos, float radius);
+std::shared_ptr<Primitive> addBasicDisk(Vector3f pos, float radius, MediumInterface mi);
+std::vector<std::shared_ptr<Shape>> addPlaneShape(Vector3f pos, Vector3f rot, 
                                                         Vector3f scale);
-std::vector<std::shared_ptr<Primitive>> add_plane_prim(Vector3f pos, Vector3f rot, 
+std::vector<std::shared_ptr<Primitive>> addPlanePrim(Vector3f pos, Vector3f rot, 
                                                         Vector3f scale, Vector3f color,
                                                         std::shared_ptr<AreaLight> area,
                                                         MediumInterface mi);
-std::shared_ptr<Light> add_point_light(Vector3f pos, Vector3f intensity, MediumInterface &mi);
-std::shared_ptr<Light> add_spot_light(Vector3f pos, Vector3f intensity, Vector3f to, float coneangle, MediumInterface &mi);
-std::shared_ptr<Light> add_distant_light(Point3f dir, float intensity);
-std::shared_ptr<AreaLight> add_area_light(std::shared_ptr<Shape> shape, Vector3f pos, 
+std::shared_ptr<Light> addPointLight(Vector3f pos, Vector3f intensity, MediumInterface &mi);
+std::shared_ptr<Light> addSpotLight(Vector3f pos, Vector3f intensity, Vector3f to, float coneangle, MediumInterface &mi);
+std::shared_ptr<Light> addDistantLight(Point3f dir, float intensity);
+std::shared_ptr<AreaLight> addAreaLight(std::shared_ptr<Shape> shape, Vector3f pos, 
                                             Vector3f intensity, MediumInterface &mi);
-std::shared_ptr<Light> add_infinite_light(std::string filename, Vector3f intensity, MediumInterface &mi);
-std::shared_ptr<const Camera> add_camera(Point3f origin, Point3f lookAt, Vector3f up, 
+std::shared_ptr<Light> addInfiniteLight(std::string filename, Vector3f intensity, MediumInterface &mi);
+std::shared_ptr<const Camera> addCamera(Point3f origin, Point3f lookAt, Vector3f up, 
                                         float fovc, int image_width, int image_height, 
                                         MediumInterface mi, std::string filename);
-std::vector<std::shared_ptr<Primitive>> add_stanford_bunny(Vector3f pos, float color[3], MediumInterface mi);
-std::vector<std::shared_ptr<Primitive>> add_stanford_dragon(Vector3f pos, float color[3], MediumInterface mi);                                                                            
-std::vector<std::shared_ptr<Primitive>> add_glass_bottle(Vector3f pos, float color[3], MediumInterface mi);
-std::vector<std::shared_ptr<Primitive>> add_caustics_plane(MediumInterface mi);
-void add_poly(std::string path, Vector3f pos, std::shared_ptr<Material> material, MediumInterface mi,
+std::vector<std::shared_ptr<Primitive>> addStanfordBunny(Vector3f pos, float color[3], MediumInterface mi);
+std::vector<std::shared_ptr<Primitive>> addStanfordDragon(Vector3f pos, float color[3], MediumInterface mi);                                                                            
+std::vector<std::shared_ptr<Primitive>> addGlassBottle(Vector3f pos, float color[3], MediumInterface mi);
+std::vector<std::shared_ptr<Primitive>> addCausticsPlane(MediumInterface mi);
+void addPoly(std::string path, Vector3f pos, std::shared_ptr<Material> material, MediumInterface mi,
                 std::vector<std::shared_ptr<Primitive>> &objects,
                 std::vector<std::shared_ptr<Light>> &lights);
-void add_cornell_box(std::vector<std::shared_ptr<Primitive>> &objects,
+void addCornellBox(std::vector<std::shared_ptr<Primitive>> &objects,
                     std::vector<std::shared_ptr<Light>> &lights,
                     float intensity,
                     MediumInterface mi);
-void add_sample_scene(std::vector<std::shared_ptr<Primitive>> &objects,
+void addSampleScene(std::vector<std::shared_ptr<Primitive>> &objects,
                     std::vector<std::shared_ptr<Light>> &lights,
                     float intensity,
                     MediumInterface mi);  
-void add_caustics_scene(std::vector<std::shared_ptr<Primitive>> &objects,
+void addCausticsScene(std::vector<std::shared_ptr<Primitive>> &objects,
                     std::vector<std::shared_ptr<Light>> &lights,
                     float intensity,
                     MediumInterface mi);    
-void add_wine_glass_scene(std::vector<std::shared_ptr<Primitive>> &objects,
+void addWineGlassScene(std::vector<std::shared_ptr<Primitive>> &objects,
                     std::vector<std::shared_ptr<Light>> &lights,
                     float intensity,
                     MediumInterface mi);

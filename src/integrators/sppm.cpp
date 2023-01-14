@@ -99,6 +99,7 @@ void SPPMIntegrator::Render(const Scene &scene) {
     ProgressReporter progress(2 * nIterations, "Rendering");
     std::vector<MemoryArena> perThreadArenas(MaxThreadIndex());
     for (int iter = 0; iter < nIterations; ++iter) {
+        LOG(INFO) << "SPPM: Iteration " << iter+1;
         // Generate SPPM visible points
         {
             ProfilePhase _(Prof::SPPMCameraPass);
