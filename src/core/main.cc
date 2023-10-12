@@ -44,10 +44,10 @@ void Render(Parameters param){
     // float color[3] = {1.0, 1.0, 1.0};
     // objects += addStanfordDragon(Vector3f(0., -0., -0.5), color, mi);
 
-    // addCornellBox(objects, lights, 20.0, mi);
+    addCornellBox(objects, lights, 20.0, mi);
     // addSampleScene(objects, lights, 2, mi);
     // addCausticsScene(objects, lights, 0.3, mi);
-    addWineGlassScene(objects, lights, 1, mi);
+    // addWineGlassScene(objects, lights, 1, mi);
     // Create BVH
     ParamSet bvhParams;
     std::shared_ptr<Primitive> bvh = CreateBVHAccelerator(objects, bvhParams);
@@ -57,10 +57,10 @@ void Render(Parameters param){
     // Camera
 
     // Cornell box camera params
-    // Point3f origin(278, 278, -800);
-    // Point3f lookAt(278, 278, 0);
-    // Vector3f up(0, 1, 0);
-    // float fov = 40.0;
+    Point3f origin(278, 278, -800);
+    Point3f lookAt(278, 278, 0);
+    Vector3f up(0, 1, 0);
+    float fov = 40.0;
 
     // Sample scene camera params
     // Point3f origin(3.69558, -3.46243, 3.25463);
@@ -75,10 +75,10 @@ void Render(Parameters param){
     // float fov = 40;
 
     // Wine glass camera params
-    Point3f origin(7.3589, -6.9258, 4.9583);
-    Point3f lookAt(2.0204, -1.8232, 1);
-    Vector3f up(0, 0, 1);
-    float fov = 23;
+    // Point3f origin(7.3589, -6.9258, 4.9583);
+    // Point3f lookAt(2.0204, -1.8232, 1);
+    // Vector3f up(0, 0, 1);
+    // float fov = 23;
 
     auto camera = addCamera(origin, lookAt, up, fov, param.width, param.height, mi, "twray.exr");
     
@@ -127,7 +127,7 @@ int main(int argc, char *argv[]){
     app.setStyle(QStyleFactory::create("Fusion"));
     ParallelInit();
     InitProfiler();
-    SetSearchDirectory("/home/ririka/PBR/TWRay/");
+    SetSearchDirectory("/Users/Security/TA/C++Tutorial/RayTracing/TWRay/");
 
     Parameters param(500, 500, 4, 5, 64, 0.025, IntegratorType::PATHTRACER);
     param.samplePerPixel = 4;

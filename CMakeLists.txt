@@ -24,6 +24,11 @@ if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Darwin")
     /usr/local/Cellar/openexr/3.1.3/include/OpenEXR/
     /usr/local/Cellar/imath/3.1.3/include/Imath/
     /usr/local/Cellar/gflags/2.2.2/include/
+    /usr/local/Qt-5.12.12/include/
+    /Users/Security/TA/C++Tutorial/RayTracing/TWRay/lib/qt-everywhere-src-5.12.12/qtbase/include/
+    /Users/Security/TA/C++Tutorial/RayTracing/TWRay/lib/qt-everywhere-src-5.12.12/qtbase/include/QtWidgets/
+    /Users/Security/TA/C++Tutorial/RayTracing/TWRay/lib/qt-everywhere-src-5.12.12/qtbase/include/QtGui/
+    /Users/Security/TA/C++Tutorial/RayTracing/TWRay/lib/qt-everywhere-src-5.12.12/qtbase/include/QtCore/
     src
     src/core
   )
@@ -34,6 +39,8 @@ if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Darwin")
     /usr/local/Cellar/openexr/3.1.3/lib/
     /usr/local/Cellar/imath/3.1.3/lib/
     /usr/local/Cellar/gflags/2.2.2/lib/
+    /usr/local/Qt-5.12.12/lib/
+    /Users/wangzitong/Downloads/qt-everywhere-src-5.12.12/qtbase/lib/
   )
 
 elseif(CMAKE_HOST_SYSTEM_NAME STREQUAL "Linux")
@@ -154,6 +161,8 @@ FILE ( GLOB PBRT_SOURCE
 if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Darwin")
   # macOS-specific commands go here
   set(ALL_PBRT_LIBS
+    Qt5::Core
+    Qt5::Widgets
     pbrt
     gflags
     glog
