@@ -1,6 +1,6 @@
 # TWRay
 
-TWRay is a PBRT-styled raytracer created by Tony (Zitong) Wang. It is built with modern C++.
+TWRay is a PBRT-styled raytracer created by Tony Wang. It is built with C++ inspired by "Physically Based Rendering: From Theory to Implementation 3rd Edition" by Matt Pharr et al.
 
 ## Features
 
